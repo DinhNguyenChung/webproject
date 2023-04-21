@@ -576,7 +576,7 @@ html {
 
 .filter {
     margin-top: 20px;
-    margin-left: 30px;
+    /* margin-left: 30px; */
 }
 
 .filter .filter-sort-list .sort2 .button {
@@ -861,7 +861,7 @@ a {
 
 .footer .rows .columns .columns-rows h5,
 p {
-    margin-left: 10px;
+    /* margin-left: 10px; */
     margin-top: 0px;
 }
 
