@@ -1,0 +1,330 @@
+.container {
+    height: 100vh;
+}
+
+.df {
+    display: flex;
+}
+
+.container {
+    padding-top: 48px;
+    margin: 0px 120px;
+    height: fit-content;
+}
+
+.product-header {
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 16px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.27);
+ 
+}
+
+.product-rate {
+    gap: 8px;
+    align-items: center;
+}
+
+.product-rate>a {
+    color: blue;
+    cursor: pointer;
+}
+
+.product-rate>a:hover {
+    text-decoration: underline;
+}
+
+.product-info {
+    margin-top: 16px;
+    justify-content: space-between;
+}
+
+.product-img {
+    margin-left: 128px;
+}
+
+.other {
+    text-align: center;
+    gap: 32px;
+    margin-top: 32px;
+}
+
+.other>a:hover {
+    color: blue;
+    cursor: pointer;
+}
+
+.product-in4-header {
+    justify-content: space-between;
+    gap: 300px;
+    align-items: center;
+}
+
+.product-pay {
+    text-align: right;
+}
+
+.product-in4 {
+    flex-direction: column;
+}
+
+.product-options {
+    margin-top: 8px;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.option {
+    cursor: pointer;
+}
+
+.product-options>div {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: rgb(247, 249, 250);
+    padding: 10px 28px;
+    border-radius: 8px;
+}
+
+--khi chọn sẽ thay đổi màu nền và đạm viền 
+.product-options>div:hover {
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    background-color: rgb(247, 249, 250);
+    padding: 10px 28px;
+    border-radius: 8px;
+}
+
+.product-colors>div {
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    background-color: rgb(247, 249, 250);
+    padding: 10px 28px;
+    border-radius: 8px;
+    text-align: center;
+    line-height: 8px;
+}
+
+.product-colors {
+    align-items: center;
+    margin-top: 8px;
+}
+
+.color {
+    cursor: pointer;
+}
+
+.product-endow {
+    margin-top: 20px;
+    padding: 8px 0px;
+    background-color: rgb(247, 249, 250);
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+}
+
+.endow {
+    margin-bottom: 4px;
+}
+
+.product-endow>h4 {
+    margin-bottom: 4px;
+    margin-left: 8px;
+}
+
+.product-endow>div {
+    margin-left: 16px;
+}
+
+.other-endows {
+    margin-top: 4px;
+    margin-bottom: 4px;
+    background-color: rgb(232, 236, 239);
+    border-radius: 4px;
+    padding: 6px 4px;
+    width: fit-content;
+}
+
+.tick {
+    background-color: aquamarine;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+}
+
+.other-endow {
+   line-height: 13px;
+   gap: 4px;
+}
+
+.other-endow>div {
+    margin-bottom: 8px;
+}
+
+.pay {
+    margin-top: 8px;
+    text-align: center;
+}
+
+.pay-now {
+    background-color: rgb(203, 27, 33);
+    border-radius: 6px;
+    color: white;
+    padding: 8px;
+    line-height: 24px;
+    cursor: pointer;
+}
+
+.pay-after {
+    margin-top: 4px;
+    justify-content: space-between;
+    line-height: 20px;
+    cursor: pointer;
+}
+
+.pay-after-1, .pay-after-2 {
+    background-color: rgb(5, 100, 249);
+    border-radius: 6px;
+    color: white;
+    padding: 8px 40px;
+}
+
+.product-describe-news {
+    justify-content: space-between;
+}
+
+.product-describe {
+    background-color: rgb(248, 248, 250);
+    flex-direction: column;
+    gap: 8px;
+    border-radius: 16px;
+    margin-top: 16px;
+    height: fit-content;
+    width: 50%;
+    margin-top: 32px;
+    
+}
+
+.product-describe>ul>li {
+    margin-top: 12px;
+    color: rgb(73, 80, 87);
+    list-style: none;
+}
+
+.more-describe {
+    margin-left: 28px;
+}
+
+.product-news {
+    margin-top: 32px;
+    flex-direction: column;
+    width: 48%;
+    background-color: aliceblue;
+    border-radius: 16px;
+}
+
+.content>img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.content>a {
+    margin-top: 8px;
+}
+
+.product-news>div {
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
+.news-header {
+    margin-top: 16px;
+    margin-bottom: 8px;
+    justify-content: space-between;
+}
+
+.content {
+    gap: 12px;
+    font-weight: 500;
+    line-height: 24px;
+    font-size: 18px;
+    text-align: justify;
+
+}
+
+.news-contents {
+    flex-direction: column;
+    gap: 8px;
+    padding-bottom: 8px;
+}
+
+.user-rates {
+    flex-direction: column;
+    background-color: rgb(248, 248, 250);
+    margin-top: 32px;
+    gap: 16px;
+    border-radius: 8px;
+}
+
+.user-rates>h3 {
+    margin-top: 16px;
+    margin-left: 8px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.27);
+}
+
+.user {
+    flex-direction: column;
+    gap: 8px;
+}
+
+.name {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 24px;
+    color: #32373d;
+}
+
+.cmt {
+    font-size: 16px;
+    line-height: 24px;
+    color: #32373d;
+}
+
+.user-rates>div {
+    padding:  4px 0px;
+}
+
+.user-rates>div:nth-child(odd) {
+    background-color: #32373d05;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.07);
+}
+
+.pages>ul {
+    list-style: none;
+}
+
+.pages {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.page {
+    gap: 16px;
+    align-items: center;
+}
+
+.page>li {
+    border-radius: 4px;
+    width: 32px;
+    height: 32px;
+    border: 1px solid black;
+    text-align: center;
+    line-height: 32px;
+}
+
+
+
+.page>li:hover {
+    background-color: red;
+    cursor: pointer;
+}

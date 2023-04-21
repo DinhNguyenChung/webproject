@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Nhập</title>
+    <link rel="stylesheet" href="../CSS/trangchu.css">
+    <link rel="stylesheet" href="../Font/fontawesome-free-6.3.0-web/css/all.css">
+    <link rel="stylesheet" href="../CSS/dangnhap.css">
+    <link rel="stylesheet" href="../CSS/bootstrap.min.css">
+    <script src="../JavaScript/jquery-3.3.1.min.js"></script>
+    <script src="../JavaScript/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="header">
+        <div class="header-Title">
+            <h1>
+                CPhone
+            </h1>
+            <!-- <img src="../picture/Logo_phone-removebg-preview.png" alt="logo"> -->
+        </div>
+        <div class="hover header-category">
+            <a href="#"><i class="fa-solid fa-bars"></i></a>
+            <a href="" id="text">Danh mục</a>
+        </div>
+        <div class="hover header-viewPrice">
+            <a href="#"><i class="fa-solid fa-location-dot"></i></a>
+            <div class="header-viewPrice-position">
+                <p>Xem giá tại </p>
+                <h1>Hồ Chí Minh</h1>
+            </div>
+        </div>
+        <div class="header-seach">
+            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+            <input type="text" name="" id="text" placeholder="Bạn cần tìm gì ?">
+        </div>
+        <div class="hover header-call">
+            <a href=""><i class="fa-solid fa-phone"></i></a>
+            <div class="header-call-text">
+                <a href="">Gọi mua hàng</a>
+                <a href="">1800.2097</a>
+            </div>
+        </div>
+        <div class="hover header-position">
+            <a href=""><i class="fa-solid fa-location-dot"></i></a>
+            <a href="">Cửa hàng gần bạn</a>
+        </div>
+        <div class="hover header-check">
+            <a href=""><i class="fa-solid fa-truck-fast"></i></a>
+            <a href="">Tra cứu đơn hàng</a>
+        </div>
+        <div class="hover header-shopping">
+            <a href=""><i class="fa-solid fa-cart-plus"></i></a>
+            <a href="./Giohang.html">Giỏ hàng</a>
+        </div>
+        <div class="header-user" id="btn_login-line">
+            <!-- <a href="../../FormDangNhap/CodeNew/index.html">Đăng Nhập</a> -->
+            <button class="hover btn btnLogin">
+               <a href="./DangNhap.html">
+                <i class="fa-regular fa-circle-user"></i>
+                <label>Đăng nhập</label>
+               </a>
+            </button>
+        </div>
+        <div class="header-user">
+            <!-- <i class="fa-regular fa-circle-user"></i> -->
+            <span id="info_user"></span>
+        </div>
+
+        <div class="wrapper" id="handle_close-modal">
+            <div class="wrap-box-form">
+                <div class="set-width-box-sg">
+                    <span class="icon-close"><i class="fa-solid fa-xmark"></i></span>
+                    <div class="form-box login">
+                        <h2>Login</h2>
+                        <form action="#" onsubmit="login()">
+                            <div class="input-box">
+                                <span class="icon">
+                                    <i class="fa-solid fa-user"></i>
+                                </span>
+                                <input type="text" name="" id="username-login" required>
+                                <label for="">Username</label>
+                            </div>
+                            <div class="input-box">
+                                <span class="icon">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </span>
+                                <input type="email" name="" id="email-login" required>
+                                <label for="">Email</label>
+                            </div>
+                            <div class="input-box">
+                                <span class="icon">
+                                    <i class="fa-solid fa-lock"></i>
+                                </span>
+                                <input type="password" name="" id="password-login" required>
+                                <label for="">Password</label>
+                            </div>
+                            <div class="remember-forgot">
+                                <label for="#">
+                                    <input type="checkbox">
+                                    Remember me
+                                </label>
+                                <a href="#">Forgot Password ?</a>
+
+                            </div>
+                            <button type="submit" class="btn btndangnhap">Login</button>
+                            <div class="login-register">
+                                <p>Don't have an account ?
+                                    <a href="#" class="register-link">Register</a>
+                                </p>
+
+                            </div>
+                        </form>
+                    </div>
+                    <div class="form-box register">
+                        <h2>Registration</h2>
+                        <form action="#" onsubmit="signUp()">
+
+                            <div class="input-box">
+                                <span class="icon">
+                                    <i class="fa-solid fa-user"></i>
+                                </span>
+                                <input type="text" name="" id="username-res" required>
+                                <label for="">Username</label>
+                            </div>
+                            <div class="input-box">
+                                <span class="icon">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </span>
+                                <input type="email" name="" id="email-res" required>
+                                <label for="">Email</label>
+                            </div>
+                            <div class="input-box">
+                                <span class="icon">
+                                    <i class="fa-solid fa-lock"></i>
+                                </span>
+                                <input type="password" name="" id="password-res" required>
+                                <label for="">Password</label>
+                            </div>
+                            <div class="input-box">
+                                <span class="icon">
+                                    <i class="fa-solid fa-lock"></i>
+                                </span>
+                                <input type="password" name="" id="retypepassword-res" required>
+                                <label for="">Retype Password</label>
+                            </div>
+                            <div class="remember-forgot">
+                                <label for="#">
+                                    <input type="checkbox">
+                                    I agree to the term & condittions
+                                </label>
+                                <!-- <a href="#">Forgot Password ?</a> -->
+
+                            </div>
+                            <button type="submit" class="btn">Register</button>
+                            <div class="login-register">
+                                <p>Already have an Account ?
+                                    <a href="#" class="login-link">Login</a>
+                                </p>
+
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="height-header"></div>
+    <div class="content-list">
+        <div class="list">
+            <a href=""><i class="fa-solid fa-house"></i></a>
+            <a href="./Trangchu.html">Trang chủ</a>
+        </div>
+        <div class="list">
+            <a href=""><i class="fa-thin fa-greater-than"></i></a>
+            <a href="#">Điện thoại</a>
+        </div>
+    </div>
+    <div class="height-content-list"></div>
+    <div class="content-poster">
+        <div id="poster">
+            <img src="../picture/poster1(1).webp" alt="">
+            <img src="../picture/poster1(2).webp" alt="">
+            <img src="../picture/poster1(3).webp" alt="">
+            <img src="../picture/poster1(4).webp" alt="">
+            <img src="../picture/poster1(5).webp" alt="">
+            <img src="../picture/poster1(6).webp" alt="">
+            <img src="../picture/poster1(7).webp" alt="">
+        </div>
+        <div id="posters">
+            <img src="../picture/poster1(2).webp" alt="">
+            <img src="../picture/poster1(1).webp" alt="">
+            <img src="../picture/poster1(6).webp" alt="">
+            <img src="../picture/poster1(7).webp" alt="">
+            <img src="../picture/poster1(4).webp" alt="">
+            <img src="../picture/poster1(5).webp" alt="">
+            <img src="../picture/poster1(3).webp" alt="">
+        </div>
+    </div>
+    <div class="content-logo">
+        <a href=""><img src="../picture/logo_apple.png" alt=""></a>
+        <a href=""><img src="../picture/AnyConv.com__logo_asus.png" alt=""></a>
+        <a href=""><img src="../picture/AnyConv.com__logo_nokia.png" alt=""></a>
+        <a href=""><img src="../picture/AnyConv.com__logo_nuoiq.png" alt=""></a>
+        <a href=""><img src="../picture/AnyConv.com__logo_oneplus.png" alt=""></a>
+        <a href=""><img src="../picture/AnyConv.com__logo_oppo.png" alt=""></a>
+        <a href=""><img src="../picture/AnyConv.com__logo_realme.png" alt=""></a>
+        <a href=""><img src="../picture/AnyConv.com__logo_samsung.png" alt=""></a>
+        <a href=""><img src="../picture/AnyConv.com__logo_tecno.png" alt=""></a>
+        <a href=""><img src="../picture/AnyConv.com__logo_vivo.png" alt=""></a>
+        <a href=""><img src="../picture/AnyConv.com__logo_xiaomi.png" alt=""></a>
+    </div>
+    <div class="content-info">
+        <a href="">
+            <p>ĐIỆN THOẠI PHỔ THÔNG</p>
+        </a><a href="">
+            <p>HÀNG MỚI NHẤT</p>
+        </a><a href="">
+            <p>THÔNG TIN MỚI NHẤT</p>
+        </a>
+    </div>
+
+    <div class="filter">
+        <div class="filter-title">
+            <h1 style="font-size: 20px; color:rgb(44, 44, 44) ;">CHỌN THEO TIÊU CHÍ</h1>
+        </div>
+        <div class="filter-sort-list">
+            <div class="sort1">
+                <button>
+                    <div class="button">
+                        <div class="sort1-icon"><i class="fa-sharp fa-solid fa-filter"></i></i></div>
+                        <div class="sort1-text">Bộ Lọc</div>
+                    </div>
+                </button>
+            </div>
+            <div class="sort2">
+                <button>
+                    <div class="button">
+                        <div class="sort2-icon"><i class="fa-sharp fa-solid fa-truck-fast"></i></div>
+                        <div class="sort2-text">Hàng Sẵn</div>
+                    </div>
+                </button>
+            </div>
+            <div class="sort3">
+                <button>
+                    <div class="button">
+                        <div class="sort3-icon"><i class="fa-solid fa-money-bill"></i></div>
+                        <div class="sort3-text">Giá</div>
+                    </div>
+                </button>
+            </div>
+
+        </div>
+        <div class="filters2">
+            <div class="filters-text">
+                <h1 style="font-size: 20px;">SẮP XẾP THEO</h1>
+            </div>
+            <div class="sort-list-filter">
+                <a href="" class="btn-filter">
+                    <div class="icon"><i class="fa-solid fa-arrow-down-wide-short"></i></div>
+                    <p>Giá Cao - Thấp</p>
+                </a>
+                <a href="" class="btn-filter">
+                    <div class="icon"><i class="fa-solid fa-arrow-down-short-wide"></i></div>
+                    <p>Giá Thấp - Cao</p>
+                </a>
+                <a href="" class="btn-filter">
+                    <div class="icon"><i class="fa-solid fa-percent"></i></div>
+                    <p>Khuyến Mãi Hot</p>
+                </a>
+                <a href="" class="btn-filter">
+                    <div class="icon"><i class="fa-solid fa-eye"></i></div>
+                    <p>Xem Nhiều</p>
+                </a>
+            </div>
+        </div>
+        <div class="picture-content">
+            <div class="picture-content-img">
+
+                <div class="img-content">
+                    <div class="filter-sales">
+                        <p>-30%</p>
+                    </div>
+                    <a href=""> <img src="../picture/ip14proMax128Gb.webp" alt="Iphone14"></a>
+                    <a href="">
+                        <figure class="text-figure">
+                            <h3>iPhone 14 Pro Max 128GB | Chính hãng VN/A </h3>
+                        </figure>
+                    </a>
+                </div>
+                <div class="info">
+                    <a href="" class="btn-info">
+                        <p>6.7 inches</p>
+                    </a>
+                    <a href="" class="btn-info">
+                        <p>6 GB</p>
+                    </a>
+                    <a href="" class="btn-info">
+                        <p>128 GB</p>
+                    </a>
+                </div>
+                <div class="price">
+                    <a href="">
+                        <p><b style="color: red; font-size: 15px;">28.090.000</b> <b
+                                style="color: red; text-decoration: underline; font-size: 13px;">đ</b></p>
+                    </a>
+                    <a href="">
+                        <p><s style="color: gray; font-size: 12px;">34.990.000</s> <del
+                                style="color: gray; font-size: 11px;text-decoration: underline;">đ</del></p>
+                    </a>
+                </div>
+                <div class="content">
+                    <a href="">
+                        <p>Nhập mã APPLEMOCA - giảm 600k
+                            khi mua iPhone, iPad, Mac tü' 19...</p>
+                    </a>
+                </div>
+                <div class="assec">
+                    <div class="icon-star"><i class="fa-solid fa-star"></i></div>
+                    <div class="icon-star"><i class="fa-solid fa-star"></i></div>
+                    <div class="icon-star"><i class="fa-solid fa-star"></i></div>
+                    <div class="icon-star"><i class="fa-solid fa-star"></i></div>
+                    <div class="icon-star"><i class="fa-solid fa-star"></i></div>
+                </div>
+                <div class="footer-picture">
+                    <div class="content-footer">
+                        <p>Yêu Thích</p>
+                        <div class="heart"><i class="fa-solid fa-heart"></i></div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="picture-content-img">
+                <div class="img-content">
+                    <div class="filter-sales">
+                        <p></p>
+                    </div>
+                    <a href=""> <img src="../picture/Renno8T.webp" alt="OppoReno8T"></a>
+                    <a href="">
+                        <figure class="text-figure"><b>OPPO Reno8 T 5G (8GB - 128GB)</b></figure>
+                    </a>
+                </div>
+                <div class="info">
+                    <a href="" class="btn-info">
+                        <p>6.7 inches</p>
+                    </a>
+                    <a href="" class="btn-info">
+                        <p>8GB + Mở rộng 8GB</p>
+                    </a>
+                    <a href="" class="btn-info">
+                        <p>128 GB</p>
+                    </a>
+                </div>
+                <div class="price">
+                    <a href="">
+                        <p><b style="color: red; font-size: 15px;">9.990.000</b> <b
+                                style="color: red; text-decoration: underline; font-size: 13px;">đ</b></p>
+                    </a>
+                    <a href="">
+                        <p><s style="color: gray; font-size: 12px;"></s> <del
+                                style="color: gray; font-size: 11px;text-decoration: underline;"></del></p>
+                    </a>
+                </div>
+                <div class="content">
+                    <a href="">
+                        <p>Giảm ngay 200.00đ khi thanh toán qua QR ngân hàng và 2km khác</p>
+                    </a>
+                </div>
+                <div class="assec">
+                    <div class="icon-star"><i class="fa-solid fa-star"></i></div>
+                    <div class="icon-star"><i class="fa-solid fa-star"></i></div>
+                    <div class="icon-star"><i class="fa-solid fa-star"></i></div>
+                    <div class="icon-star"><i class="fa-solid fa-star"></i></div>
+                    <div class="icon-star"><i class="fa-solid fa-star"></i></div>
+                </div>
+                <div class="footer-picture">
+                    <div class="content-footer">
+                        <p>Yêu Thích</p>
+                        <div class="heart"><i class="fa-solid fa-heart"></i></div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="picture-content-img">
+                <div class="img-content">
+                    <div class="filter-sales">
+                        <p>-30%</p>
+                    </div>
+                    <a href=""> <img src="../picture/SSglaxyS23Ultra256GB.webp" alt="SamSungS23"></a>
+                    <a href="">
+                        <figure class="text-figure"><b>Samsung Galaxy S23 Ultra 256GB</b></figure>
+                    </a>
+                </div>
+                <div class="info">
+                    <a href="" class="btn-info">
+                        <p>6.8 inches</p>
+                    </a>
+                    <a href="" class="btn-info">
+                        <p>8 GB</p>
+                    </a>
+                    <a href="" class="btn-info">
+                        <p>256 GB</p>
+                    </a>
+                </div>
+                <div class="price">
+                    <a href="">
+                        <p><b style="color: red; font-size: 15px;">28.990.000</b> <b
+                                style="color: red; text-decoration: underline; font-size: 13px;">đ</b></p>
+                    </a>
+                    <a href="">
+                        <p><s style="color: gray; font-size: 12px;">31.990.000</s> <del
+                                style="color: gray; font-size: 11px;text-decoration: underline;">đ</del></p>
+                    </a>
+                </div>
+                <div class="content">
+                    <a href="">
+                        <p>Giảm ngay 4000.000đ khi tham gia thu cũ đổi mới-Giá thu tốt nhất thị trường và 3km khác</p>
+                    </a>
+                </div>
+                <div class="assec">
+                    <div class="icon-star"><i class="fa-solid fa-star"></i></div>
+                    <div class="icon-star"><i class="fa-solid fa-star"></i></div>
+                    <div class="icon-star"><i class="fa-solid fa-star"></i></div>
+                    <div class="icon-star"><i class="fa-solid fa-star"></i></div>
+                    <div class="icon-star"><i class="fa-solid fa-star"></i></div>
+                </div>
+                <div class="footer-picture">
+                    <div class="content-footer">
+                        <p>Yêu Thích</p>
+                        <div class="heart"><i class="fa-solid fa-heart"></i></div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="picture-content-img">
+                <div class="img-content">
+                    <div class="filter-sales">
+                        <p>-30%</p>
+                    </div>
+                    <a href=""> <img src="../picture/ViVoT1X.webp" alt="ViVoT1X"></a>
+                    <a href="">
+                        <figure class="text-figure"><b>Vivo T1X </b></figure>
+                    </a>
+                </div>
+                <div class="info">
+                    <a href="" class="btn-info">
+                        <p>6.58 inches</p>
+                    </a>
+                    <a href="" class="btn-info">
+                        <p>4GB + Mở rộng 1GB</p>
+                    </a>
+                    <a href="" class="btn-info">
+                        <p>64 GB</p>
+                    </a>
+                </div>
+                <div class="price">
+                    <a href="">
+                        <p><b style="color: red; font-size: 15px;">4.190.000</b> <b
+                                style="color: red; text-decoration: underline; font-size: 13px;">đ</b></p>
+                    </a>
+                    <a href="">
+                        <p><s style="color: gray; font-size: 12px;">4.490.000</s> <del
+                                style="color: gray; font-size: 11px;text-decoration: underline;">đ</del></p>
+                    </a>
+                </div>
+                <div class="content">
+                    <a href="">
+                        <p>Tặng thêm dịch vụ bảo hành Vip 12 tháng 1 đổi 1</p>
+                    </a>
+                </div>
+                <div class="assec">
+                    <div class="icon-star"><i class="fa-solid fa-star"></i></div>
+                    <div class="icon-star"><i class="fa-solid fa-star"></i></div>
+                    <div class="icon-star"><i class="fa-solid fa-star"></i></div>
+                    <div class="icon-star"><i class="fa-solid fa-star"></i></div>
+                    <div class="icon-star"><i class="fa-solid fa-star"></i></div>
+                </div>
+                <div class="footer-picture">
+                    <div class="content-footer">
+                        <p>Yêu Thích</p>
+                        <div class="heart"><i class="fa-solid fa-heart"></i></div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="picture-content-img">
+                <div class="img-content">
+                    <div class="filter-sales">
+                        <p>-30%</p>
+                    </div>
+                    <a href=""> <img src="../picture/XiaomiRedmiNote11_128GB.webp" alt="XiamiNote11"></a>
+                    <a href="">
+                        <figure class="text-figure"><b>Xiaomi Redmi Note 11 128GB </b></figure>
+                    </a>
+                </div>
+                <div class="info">
+                    <a href="" class="btn-info">
+                        <p>6.43 inches</p>
+                    </a>
+                    <a href="" class="btn-info">
+                        <p>4GB</p>
+                    </a>
+                    <a href="" class="btn-info">
+                        <p>128 GB</p>
+                    </a>
+                </div>
+                <div class="price">
+                    <a href="">
+                        <p><b style="color: red; font-size: 15px;">4.090.000</b> <b
+                                style="color: red; text-decoration: underline; font-size: 13px;">đ</b></p>
+                    </a>
+                    <a href="">
+                        <p><s style="color: gray; font-size: 12px;">4.990.000</s> <del
+                                style="color: gray; font-size: 11px;text-decoration: underline;">đ</del></p>
+                    </a>
+                </div>
+                <div class="content">
+                    <a href="">
+                        <p>Thu cũ đổi mới- Trợ giá đến 300.000đ</p>
+                    </a>
+                </div>
+                <div class="assec">
+                    <div class="icon-star"><i class="fa-solid fa-star"></i></div>
+                    <div class="icon-star"><i class="fa-solid fa-star"></i></div>
+                    <div class="icon-star"><i class="fa-solid fa-star"></i></div>
+                    <div class="icon-star"><i class="fa-solid fa-star"></i></div>
+                    <div class="icon-star"><i class="fa-solid fa-star"></i></div>
+                </div>
+                <div class="footer-picture">
+                    <div class="content-footer">
+                        <p>Yêu Thích</p>
+                        <div class="heart"><i class="fa-solid fa-heart"></i></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="picture-content">
+            <div class="picture-content-img">
+
+                <div class="img-content">
+                    <div class="filter-sales">
+                        <p>-30%</p>
+                    </div>
+                    <a href=""> <img src="../picture/ip14proMax128Gb.webp" alt="Iphone14"></a>
+                    <a href="">
+                        <figure class="text-figure">
+                            <h3>iPhone 14 Pro Max 128GB | Chính hãng VN/A </h3>
+                        </figure>
+                    </a>
+                </div>
+                <div class="info">
+                    <a href="" class="btn-info">
+                        <p>6.7 inches</p>
+                    </a>
+                    <a href="" class="btn-info">
+                        <p>6 GB</p>
+                    </a>
+                    <a href="" class="btn-info">
+                        <p>128 GB</p>
+                    </a>
+                </div>
+                <div class="price">
+                    <a href="">
+                        <p><b style="color: red; font-size: 15px;">28.090.000</b> <b
+                                style="color: red; text-decoration: underline; font-size: 13px;">đ</b></p>
+                    </a>
+                    <a href="">
+                        <p><s style="color: gray; font-size: 12px;">34.990.000</s> <del
+                                style="color: gray; font-size: 11px;text-decoration: underline;">đ</del></p>
+                    </a>
+                </div>
+                <div class="content">
+                    <a href="">
+                        <p>Nhập mã APPLEMOCA - giảm 600k
+                            khi mua iPhone, iPad, Mac tü' 19...</p>
+                    </a>
+                </div>
+                <div class="assec">
+                    <div class="icon-star"><i class="fa-solid fa-star"></i></div>
+                    <div class="icon-star"><i class="fa-solid fa-star"></i></div>
+                    <div class="icon-star"><i class="fa-solid fa-star"></i></div>
+                    <div class="icon-star"><i class="fa-solid fa-star"></i></div>
+                    <div class="icon-star"><i class="fa-solid fa-star"></i></div>
+                </div>
+                <div class="footer-picture">
+                    <div class="content-footer">
+                        <p>Yêu Thích</p>
+                        <div class="heart"><i class="fa-solid fa-heart"></i></div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="picture-content-img">
+                <div class="img-content">
+                    <div class="filter-sales">
+                        <p></p>
+                    </div>
+                    <a href=""> <img src="../picture/Renno8T.webp" alt="OppoReno8T"></a>
+                    <a href="">
+                        <figure class="text-figure"><b>OPPO Reno8 T 5G (8GB - 128GB)</b></figure>
+                    </a>
+                </div>
+                <div class="info">
+                    <a href="" class="btn-info">
+                        <p>6.7 inches</p>
+                    </a>
+                    <a href="" class="btn-info">
+                        <p>8GB + Mở rộng 8GB</p>
+                    </a>
+                    <a href="" class="btn-info">
+                        <p>128 GB</p>
+                    </a>
+                </div>
+                <div class="price">
+                    <a href="">
+                        <p><b style="color: red; font-size: 15px;">9.990.000</b> <b
+                                style="color: red; text-decoration: underline; font-size: 13px;">đ</b></p>
+                    </a>
+                    <a href="">
+                        <p><s style="color: gray; font-size: 12px;"></s> <del
+                                style="color: gray; font-size: 11px;text-decoration: underline;"></del></p>
+                    </a>
+                </div>
+                <div class="content">
+                    <a href="">
+                        <p>Giảm ngay 200.00đ khi thanh toán qua QR ngân hàng và 2km khác</p>
+                    </a>
+                </div>
+                <div class="assec">
+                    <div class="icon-star"><i class="fa-solid fa-star"></i></div>
+                    <div class="icon-star"><i class="fa-solid fa-star"></i></div>
+                    <div class="icon-star"><i class="fa-solid fa-star"></i></div>
+                    <div class="icon-star"><i class="fa-solid fa-star"></i></div>
+                    <div class="icon-star"><i class="fa-solid fa-star"></i></div>
+                </div>
+                <div class="footer-picture">
+                    <div class="content-footer">
+                        <p>Yêu Thích</p>
+                        <div class="heart"><i class="fa-solid fa-heart"></i></div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="picture-content-img">
+                <div class="img-content">
+                    <div class="filter-sales">
+                        <p>-30%</p>
+                    </div>
+                    <a href=""> <img src="../picture/SSglaxyS23Ultra256GB.webp" alt="SamSungS23"></a>
+                    <a href="">
+                        <figure class="text-figure"><b>Samsung Galaxy S23 Ultra 256GB</b></figure>
+                    </a>
+                </div>
+                <div class="info">
+                    <a href="" class="btn-info">
+                        <p>6.8 inches</p>
+                    </a>
+                    <a href="" class="btn-info">
+                        <p>8 GB</p>
+                    </a>
+                    <a href="" class="btn-info">
+                        <p>256 GB</p>
+                    </a>
+                </div>
+                <div class="price">
+                    <a href="">
+                        <p><b style="color: red; font-size: 15px;">28.990.000</b> <b
+                                style="color: red; text-decoration: underline; font-size: 13px;">đ</b></p>
+                    </a>
+                    <a href="">
+                        <p><s style="color: gray; font-size: 12px;">31.990.000</s> <del
+                                style="color: gray; font-size: 11px;text-decoration: underline;">đ</del></p>
+                    </a>
+                </div>
+                <div class="content">
+                    <a href="">
+                        <p>Giảm ngay 4000.000đ khi tham gia thu cũ đổi mới-Giá thu tốt nhất thị trường và 3km khác</p>
+                    </a>
+                </div>
+                <div class="assec">
+                    <div class="icon-star"><i class="fa-solid fa-star"></i></div>
+                    <div class="icon-star"><i class="fa-solid fa-star"></i></div>
+                    <div class="icon-star"><i class="fa-solid fa-star"></i></div>
+                    <div class="icon-star"><i class="fa-solid fa-star"></i></div>
+                    <div class="icon-star"><i class="fa-solid fa-star"></i></div>
+                </div>
+                <div class="footer-picture">
+                    <div class="content-footer">
+                        <p>Yêu Thích</p>
+                        <div class="heart"><i class="fa-solid fa-heart"></i></div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="picture-content-img">
+                <div class="img-content">
+                    <div class="filter-sales">
+                        <p>-30%</p>
+                    </div>
+                    <a href=""> <img src="../picture/ViVoT1X.webp" alt="ViVoT1X"></a>
+                    <a href="">
+                        <figure class="text-figure"><b>Vivo T1X </b></figure>
+                    </a>
+                </div>
+                <div class="info">
+                    <a href="" class="btn-info">
+                        <p>6.58 inches</p>
+                    </a>
+                    <a href="" class="btn-info">
+                        <p>4GB + Mở rộng 1GB</p>
+                    </a>
+                    <a href="" class="btn-info">
+                        <p>64 GB</p>
+                    </a>
+                </div>
+                <div class="price">
+                    <a href="">
+                        <p><b style="color: red; font-size: 15px;">4.190.000</b> <b
+                                style="color: red; text-decoration: underline; font-size: 13px;">đ</b></p>
+                    </a>
+                    <a href="">
+                        <p><s style="color: gray; font-size: 12px;">4.490.000</s> <del
+                                style="color: gray; font-size: 11px;text-decoration: underline;">đ</del></p>
+                    </a>
+                </div>
+                <div class="content">
+                    <a href="">
+                        <p>Tặng thêm dịch vụ bảo hành Vip 12 tháng 1 đổi 1</p>
+                    </a>
+                </div>
+                <div class="assec">
+                    <div class="icon-star"><i class="fa-solid fa-star"></i></div>
+                    <div class="icon-star"><i class="fa-solid fa-star"></i></div>
+                    <div class="icon-star"><i class="fa-solid fa-star"></i></div>
+                    <div class="icon-star"><i class="fa-solid fa-star"></i></div>
+                    <div class="icon-star"><i class="fa-solid fa-star"></i></div>
+                </div>
+                <div class="footer-picture">
+                    <div class="content-footer">
+                        <p>Yêu Thích</p>
+                        <div class="heart"><i class="fa-solid fa-heart"></i></div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="picture-content-img">
+                <div class="img-content">
+                    <div class="filter-sales">
+                        <p>-30%</p>
+                    </div>
+                    <a href=""> <img src="../picture/XiaomiRedmiNote11_128GB.webp" alt="XiamiNote11"></a>
+                    <a href="">
+                        <figure class="text-figure"><b>Xiaomi Redmi Note 11 128GB </b></figure>
+                    </a>
+                </div>
+                <div class="info">
+                    <a href="" class="btn-info">
+                        <p>6.43 inches</p>
+                    </a>
+                    <a href="" class="btn-info">
+                        <p>4GB</p>
+                    </a>
+                    <a href="" class="btn-info">
+                        <p>128 GB</p>
+                    </a>
+                </div>
+                <div class="price">
+                    <a href="">
+                        <p><b style="color: red; font-size: 15px;">4.090.000</b> <b
+                                style="color: red; text-decoration: underline; font-size: 13px;">đ</b></p>
+                    </a>
+                    <a href="">
+                        <p><s style="color: gray; font-size: 12px;">4.990.000</s> <del
+                                style="color: gray; font-size: 11px;text-decoration: underline;">đ</del></p>
+                    </a>
+                </div>
+                <div class="content">
+                    <a href="">
+                        <p>Thu cũ đổi mới- Trợ giá đến 300.000đ</p>
+                    </a>
+                </div>
+                <div class="assec">
+                    <div class="icon-star"><i class="fa-solid fa-star"></i></div>
+                    <div class="icon-star"><i class="fa-solid fa-star"></i></div>
+                    <div class="icon-star"><i class="fa-solid fa-star"></i></div>
+                    <div class="icon-star"><i class="fa-solid fa-star"></i></div>
+                    <div class="icon-star"><i class="fa-solid fa-star"></i></div>
+                </div>
+                <div class="footer-picture">
+                    <div class="content-footer">
+                        <p>Yêu Thích</p>
+                        <div class="heart"><i class="fa-solid fa-heart"></i></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="footer df">
+            <div class="footer-left df">
+                <div class="about df ">
+                    <h2>About</h2>
+                    <a href="" class="home" id="">Home</a>
+                    <a href="" class="shop">Shop</a>
+                    <a href="" class="our-story">Our story</a>
+                    <a href="" class="blogs">Blogs</a>
+                </div>
+                <div class="help df">
+                    <h2>Help</h2>
+                    <a href="" class="ship-and-return" id="">Shipping & Returns</a>
+                    <a href="" class="track-order">Track Order</a>
+                    <a href="" class="FAQs">FAQs</a>
+                </div>
+                <div class="contact df">
+                    <h2>Contact</h2>
+                    <div class="phone">Phone: </div>
+                    <div class="ph">(+84) 345 444 356</div>
+                    <div class="email">Email: </div>
+                    <div class="em">cphone@email.com</div>
+                </div>
+            </div>
+            <div class="receive df">
+                <h2>Receive new promotions</h2>
+                <span>Send me your comments or wishes</span>
+                <div class="sub-email df">
+                    <input type="text" class="emai" placeholder="Input your email">
+                    <div class="sub">Subscribe</div>
+                </div>
+                <div class="social df">
+                    <img src="../picture/Twitter 1.png" alt="twitter" class="twitter">
+                    <img src="../picture/Facebook 1.png" alt="fb" class="fb">
+                    <img src="../picture/LinkedIn 1.png" alt="in" class="inlink">
+                    <img src="../picture/YouTube 1.png" alt="ytb" class="ytb">
+                </div>
+                <div class="address">Address: 12 Nguyen Van Bao, Go Vap, Ho Chi Minh City</div>
+            </div>
+
+        </div>
+        <script src="../JavaScript/main.js"></script>
+</body>
+</html>
