@@ -7,9 +7,11 @@
     justify-content: space-between;
     background-color: rgb(247, 255, 252);
     padding: 12px;
+    overflow-x: scroll;
+    
 }
 .product-item{
-    width: 21%;
+    width: 300px;
     text-align: center;
     align-items: center;
     padding: 20px;
