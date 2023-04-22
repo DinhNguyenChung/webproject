@@ -24,6 +24,7 @@
     width: max-content;
     height: max-content;
     gap: 16px;
+    padding-right: 12px;
 }
 
 .tick {
@@ -56,4 +57,20 @@
 
 .types {
    gap: 4px;
+}
+
+.list-products {
+    width: fit-content;
+    height: fit-content;
+    padding-top: 16px;
+    background-color: azure;
+    border-radius: 16px;
+}
+
+.filter-header {
+    margin-left: 32px;
+}
+
+.product-describe {
+    font-size: 12px;
 }
