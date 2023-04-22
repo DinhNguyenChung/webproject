@@ -1,4 +1,5 @@
 const btn = document.querySelectorAll("button")
+ const tbns = document.querySelectorAll("fa-cart-plus")
 //cpnslo.log(btn)
 
 btn.forEach(function(button,index){

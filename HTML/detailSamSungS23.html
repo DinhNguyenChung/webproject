@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OppoReno8T</title>
+    <link rel="stylesheet" href="../CSS/trangchu.css">
+    <link rel="stylesheet" href="../CSS/iphone14.css">
+    <link rel="stylesheet" href="../Font/fontawesome-free-6.3.0-web/css/all.css">
+</head>
+
+<body>
+    <div class="full-page">
+        <div class="header">
+            <div class="header-Title">
+                <h1>
+                    CPhone
+                </h1>
+                <!-- <img src="../picture/Logo_phone-removebg-preview.png" alt="logo"> -->
+            </div>
+            <div class="hover header-category">
+                <a href="#"><i class="fa-solid fa-bars"></i></a>
+                <a href="" id="text">Danh mục</a>
+            </div>
+            <div class="hover header-viewPrice">
+                <a href="#"><i class="fa-solid fa-location-dot"></i></a>
+                <div class="header-viewPrice-position">
+                    <p>Xem giá tại </p>
+                    <h1>Hồ Chí Minh</h1>
+                </div>
+            </div>
+            <div class="header-seach">
+                <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                <input type="text" name="" id="text" placeholder="Bạn cần tìm gì ?">
+            </div>
+            <div class="hover header-call">
+                <a href=""><i class="fa-solid fa-phone"></i></a>
+                <div class="header-call-text">
+                    <a href="">Gọi mua hàng</a>
+                    <a href="">1800.2097</a>
+                </div>
+            </div>
+            <div class="hover header-position">
+                <a href=""><i class="fa-solid fa-location-dot"></i></a>
+                <a href="">Cửa hàng gần bạn</a>
+            </div>
+            <div class="hover header-check">
+                <a href=""><i class="fa-solid fa-truck-fast"></i></a>
+                <a href="">Tra cứu đơn hàng</a>
+            </div>
+            <div class="hover header-shopping">
+                <a href=""><i class="fa-solid fa-cart-plus"></i></a>
+                <a href="">Giỏ hàng</a>
+            </div>
+            <div class="header-user" id="btn_login-line">
+                <!-- <a href="../../FormDangNhap/CodeNew/index.html">Đăng Nhập</a> -->
+                <button class="hover btn btnLogin">
+                    <i class="fa-regular fa-circle-user"></i>
+                    <label>Đăng nhập</label>
+                </button>
+            </div>
+            <div class="header-user">
+                <!-- <i class="fa-regular fa-circle-user"></i> -->
+                <span id="info_user"></span>
+            </div>
+
+            <div class="wrapper" id="handle_close-modal">
+                <div class="wrap-box-form">
+                    <div class="set-width-box-sg">
+                        <span class="icon-close"><i class="fa-solid fa-xmark"></i></span>
+                        <div class="form-box login">
+                            <h2>Login</h2>
+                            <form action="#" onsubmit="login()">
+                                <div class="input-box">
+                                    <span class="icon">
+                                        <i class="fa-solid fa-user"></i>
+                                    </span>
+                                    <input type="text" name="" id="username-login" required>
+                                    <label for="">Username</label>
+                                </div>
+                                <div class="input-box">
+                                    <span class="icon">
+                                        <i class="fa-solid fa-envelope"></i>
+                                    </span>
+                                    <input type="email" name="" id="email-login" required>
+                                    <label for="">Email</label>
+                                </div>
+                                <div class="input-box">
+                                    <span class="icon">
+                                        <i class="fa-solid fa-lock"></i>
+                                    </span>
+                                    <input type="password" name="" id="password-login" required>
+                                    <label for="">Password</label>
+                                </div>
+                                <div class="remember-forgot">
+                                    <label for="#">
+                                        <input type="checkbox">
+                                        Remember me
+                                    </label>
+                                    <a href="#">Forgot Password ?</a>
+
+                                </div>
+                                <button type="submit" class="btn btndangnhap">Login</button>
+                                <div class="login-register">
+                                    <p>Don't have an account ?
+                                        <a href="#" class="register-link">Register</a>
+                                    </p>
+
+                                </div>
+                            </form>
+                        </div>
+                        <div class="form-box register">
+                            <h2>Registration</h2>
+                            <form action="#" onsubmit="signUp()">
+
+                                <div class="input-box">
+                                    <span class="icon">
+                                        <i class="fa-solid fa-user"></i>
+                                    </span>
+                                    <input type="text" name="" id="username-res" required>
+                                    <label for="">Username</label>
+                                </div>
+                                <div class="input-box">
+                                    <span class="icon">
+                                        <i class="fa-solid fa-envelope"></i>
+                                    </span>
+                                    <input type="email" name="" id="email-res" required>
+                                    <label for="">Email</label>
+                                </div>
+                                <div class="input-box">
+                                    <span class="icon">
+                                        <i class="fa-solid fa-lock"></i>
+                                    </span>
+                                    <input type="password" name="" id="password-res" required>
+                                    <label for="">Password</label>
+                                </div>
+                                <div class="input-box">
+                                    <span class="icon">
+                                        <i class="fa-solid fa-lock"></i>
+                                    </span>
+                                    <input type="password" name="" id="retypepassword-res" required>
+                                    <label for="">Retype Password</label>
+                                </div>
+                                <div class="remember-forgot">
+                                    <label for="#">
+                                        <input type="checkbox">
+                                        I agree to the term & condittions
+                                    </label>
+                                    <!-- <a href="#">Forgot Password ?</a> -->
+
+                                </div>
+                                <button type="submit" class="btn">Register</button>
+                                <div class="login-register">
+                                    <p>Already have an Account ?
+                                        <a href="#" class="login-link">Login</a>
+                                    </p>
+
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="height-header"></div>
+        <div class="content-list">
+            <div class="list">
+                <a href=""><i class="fa-solid fa-house"></i></a>
+                <a href="">Trang chủ</a>
+            </div>
+            <div class="list">
+                <a href=""><i class="fa-thin fa-greater-than"></i></a>
+                <a href="#">Samsung</a>
+            </div>
+        </div>
+        <div class="container">
+            <div class="product-header df">
+                <div class="product-name">
+                    <h2>Samsung Galaxy S23 Plus 5G 256GB</h2>
+                </div>
+                <div class="product-rate df">
+                    <div class="rate"><img src="../picture/Rating 1 (1).png" alt=""></div>
+                    <a href="" class="evaluate">87 đánh giá</a>
+                    <div class="|">|</div>
+                    <a href="" class="q&a">17 Hỏi & đáp</a>
+                    <div class="|">|</div>
+                    <a href="" class="compare">So sánh</a>
+                </div>
+            </div>
+            <div class="product-info df">
+                <div class="product-img">
+                    <img src="../picture/SSglaxyS23Ultra256GB.webp" alt="">
+                    <div class="other df">
+                        <a href="" class="other-img">
+                            <div class="icon-photo"><img src="../picture/instagram.png" alt=""></div>
+                            <div>Xem thêm 17 ảnh</div>
+                        </a>
+                        <a href="" class="other-video">
+                            <div class="icon-video"><img src="../picture/instagram.png" alt=""></div>
+                            <div>Video trên tay</div>
+                        </a>
+                        <a href="" class="other-inbox">
+                            <div class="icon-"><img src="../picture/instagram.png" alt=""></div>
+                            <div>Trong hộp có gì</div>
+                        </a>
+                    </div>
+                </div>
+                <div class="product-in4 df">
+                    <div class="product-in4-header df">
+                        <div class="product-price df">
+                            <h2 style="color: red;">21.990.000₫</h2>
+                        </div>
+                        <div class="product-pay ">
+                            <p>Trả góp chỉ từ <br> 1.927.500đ/tháng</p>
+                        </div>
+                    </div>
+                    <div class="product-options df">
+                        <div class="option">
+                            <input type="radio" name="op" id="128GB" class="128GB">
+                            <label for="op">256GB <br> 21.990.000đ</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" name="op" id="256GB" class="256GB">
+                            <label for="op">512GB <br> 24.990.000đ</label>
+                        </div>
+                        <!-- <div class="option">
+                            <input type="radio" name="op" id="512GB" class="512GB">
+                            <label for="op">512GB <br> 35.790.000đ</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" name="op" id="1TB" class="1TB">
+                            <label for="op">1TB <br> 41.990.000đ</label>
+                        </div> -->
+                    </div>
+                    <div class="product-colors df">
+                        <p style="margin-right: 8px;">Màu sắc sản phẩm: </p>
+                        <div class="color">
+                            <input type="radio" name="cl" id="den" class="den">
+                            <label for="cl">Đen</label>
+                        </div>
+                        <div class="color">
+                            <input type="radio" name="cl" id="tim" class="tim">
+                            <label for="cl">Vàng</label>
+                        </div>
+                        <div class="color">
+                            <input type="radio" name="cl" id="vang" class="vang">
+                            <label for="cl">Kem</label>
+                        </div>
+                        <div class="color">
+                            <input type="radio" name="cl" id="bac" class="bac">
+                            <label for="cl">Tim</label>
+                        </div>
+                    </div>
+                    <div class="product-endow">
+                        <h4>Nhận ngay khuyến khuyến mãi đặc biệt</h4>
+                        <div class="endow">
+                            <input type="radio" name="ed" id="giamNgay7" class="giamNgay7">
+                            <label for="ed">Trả gớp 0%</label>
+                        </div>
+                        <div class="endow">
+                            <input type="radio" name="ed" id="giamNgay2" class="giamNgay2">
+                            <label for="ed">Giảm 37% khi mua Tai nghe Bluetooth giá chỉ 500.000 <sup>đ</sup></label>
+                        </div>
+                        <div class="other-endows">Ưu đãi thêm:</div>
+                        <div class="other-endow df">
+                            <div class="tick"></div>
+                            <div>Độc quyền bảo hành 2 năm</div>
+                        </div>
+                        <div class="other-endow df">
+                            <div class="tick"></div>
+                            <div>Giảm ngay 50% ốp lưng Adidas </div>
+                        </div>
+                        <div class="other-endow df">
+                            <div class="tick"></div>
+                            <div>Đặc quyền trả góp 0% thẻ tín dụng đến 24 tháng qua Quà tặng Galaxy</div>
+                        </div>
+                        <div class="other-endow df">
+                            <div class="tick"></div>
+                            <div>Tặng phiếu mua hàng 500.000đ mua đơn hàng Robot hút bụi/ máy lọc nước trên 5.000.000đ</div>
+                        </div>
+                        <div class="other-endow df">
+                            <div class="tick"></div>
+                            <div>Đặc quyền trả góp 0% thẻ tín dụng đến 24 tháng qua Quà tặng Galaxy</div>
+                        </div>
+                        <div class="other-endow df">
+                            <div class="tick"></div>
+                            <div>Đặc quyền trả góp 0% thẻ tín dụng đến 24 tháng qua Quà tặng Galaxy</div>
+                        </div>
+                    </div>
+                    <div class="pay">
+                        <div class="pay-now">
+                            <h3>MUA NGAY</h3>
+                            <p>Giao hàng miễn phí hoặc nhận tại shop</p>
+                        </div>
+                        <div class="pay-after df">
+                            <div class="pay-after-1">TRẢ GÓP 0% <br> Duyệt nhanh qua điện thoại</div>
+                            <div class="pay-after-2">TRẢ GÓP QUA THẺ <br> Visa, Master Card, JCB, AMEX</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="product-describe-news df">
+                <div class="product-describe df">
+                    <ul>
+                        <li class="screen df">
+                            <div class="screen-icon">icon</div>
+                            <p>6.7 inch, Super Retina XDR, 2796 x 1290 Pixels</p>
+                        </li>
+                        <li class="camera-afer df">
+                            <div class="camera-after-icon">icon</div>
+                            <p>48.0 MP + 12.0 MP + 12.0 MP</p>
+                        </li>
+                        <li class="camere-selfie df">
+                            <div class="camera-selfie-icon">icon</div>
+                            <p>12.0 MP</p>
+                        </li>
+                        <li class="cpu df">
+                            <div class="cpu-icon">icon</div>
+                            <p>Apple A16 Bionic</p>
+                        </li>
+                        <li class="memory df">
+                            <div class="memory-icon">icon</div>
+                            <p>128 GB</p>
+                        </li>
+                    </ul>
+                    <a href="" class="more-describe">Xem chi tiết thông số kỹ thuật</a>
+                </div>
+                <div class="product-news df">
+                    <div class="news-header df">
+                        <h3>Tin tức về iPhone 14 Pro Max</h3>
+                        <a href="">Xem tất cả</a>
+                    </div>
+                    <div class="news-contents df">
+                        <div class="content df">
+                            <img src="../picture/test-ss-ip.webp" alt="">
+                            <a href="">Thử nghiệm thả rơi SamSung Galaxy S23 Ultra và IPhone 14 Pro Max: Smartphone nào
+                                bền bỉ hơn?</a>
+                        </div>
+                        <div class="content df">
+                            <img src="../picture/speed-ss-ip.webp" alt="">
+                            <a href="">Đọ tốc độ Samsung Galaxy S23 Ultra và Apple iPhone 14 Pro Max</a>
+                        </div>
+                        <div class="content df">
+                            <img src="../picture/ip-price.webp" alt="">
+                            <a href="">iPhone 14 Pro Max có chi phí sản xuất cao hơn 4% so với thế hệ trước</a>
+                        </div>
+                        <div class="content df">
+                            <img src="../picture/ip-vs-a.webp" alt="">
+                            <a href="">iPhone 14 Pro Max đánh bại các flagship Android về tốc độ mạng 5G</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="user-rates df">
+                <h3>Đánh giá sản phẩm</h3>
+                <div class="user-rate df">
+                    <div class="avt">
+                        <img src="../picture/facebook.png" alt="">
+                    </div>
+                    <div class="user df">
+                        <div class="name">Hồng Anh</div>
+                        <div class="rate"><img src="../picture/Rating 1 (1).png" alt=""></div>
+                        <div class="cmt">Công nhận đây là giá sốc nhất từ trước đến giờ, quá ngon</div>
+                    </div>
+                </div>
+                <div class="user-rate df">
+                    <div class="avt">
+                        <img src="../picture/facebook.png" alt="">
+                    </div>
+                    <div class="user df">
+                        <div class="name">LINH</div>
+                        <div class="rate"><img src="../picture/Rating 1 (2).png" alt=""></div>
+                        <div class="cmt">Không hiểu sao Face id máy lại k nhạy khi mình đeo khẩu trang. Lúc đầu tưởng
+                            cài chưa đúng nhưng cài đi cài lại vẫn không mở được khi mình đeo khẩu trang.</div>
+                    </div>
+                </div>
+                <div class="user-rate df">
+                    <div class="avt">
+                        <img src="../picture/facebook.png" alt="">
+                    </div>
+                    <div class="user df">
+                        <div class="name">Thanh Lộc</div>
+                        <div class="rate"><img src="../picture/Rating 1 (3).png" alt=""></div>
+                        <div class="cmt">Điện thoại chụp hình đẹp, pin trâu, chơi game tẹt ga. Quá ngon luôn</div>
+                    </div>
+                </div>
+                <div class="user-rate df">
+                    <div class="avt">
+                        <img src="../picture/facebook.png" alt="">
+                    </div>
+                    <div class="user df">
+                        <div class="name">Hải Hoàng</div>
+                        <div class="rate"><img src="../picture/Rating 1 (3).png" alt=""></div>
+                        <div class="cmt">Máy có thiết kế cứng cáp cao cấp, cảm ứng mượt và cấu hình mạnh, mỗi tội hôm đó
+                            shop hơi đông nên bạn nhân viên tư vấn chưa được chi tiết cho lắm, shop nên xếp thêm nhân sự
+                            trong ca shop nhé.</div>
+                    </div>
+                </div>
+                <div class="pages df">
+                    <ul class="page df">
+                        <li class="page-idex-before">
+                            <a href="">
+                                <</a>
+                        </li>
+                        <li class="page-idex">
+                            <a href="">1</a>
+                        </li>
+                        <li class="page-idex" style="background-color: red;">
+                            <a href="">2</a>
+                        </li>
+                        <li class="page-idex">
+                            <a href="">3</a>
+                        </li>
+                        <li class="page-idex">
+                            <a href="">4</a>
+                        </li>
+                        <li class="page-idex-after">
+                            <a href="">></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <div class="footer df">
+            <div class="footer-left df">
+                <div class="about df ">
+                    <h2>About</h2>
+                    <a href="" class="home" id="">Home</a>
+                    <a href="" class="shop">Shop</a>
+                    <a href="" class="our-story">Our story</a>
+                    <a href="" class="blogs">Blogs</a>
+                </div>
+                <div class="help df">
+                    <h2>Help</h2>
+                    <a href="" class="ship-and-return" id="">Shipping & Returns</a>
+                    <a href="" class="track-order">Track Order</a>
+                    <a href="" class="FAQs">FAQs</a>
+                </div>
+                <div class="contact df">
+                    <h2>Contact</h2>
+                    <div class="phone">Phone: </div>
+                    <div class="ph">(+84) 345 444 356</div>
+                    <div class="email">Email: </div>
+                    <div class="em">cphone@email.com</div>
+                </div>
+            </div>
+            <div class="receive df">
+                <h2>Receive new promotions</h2>
+                <span>Send me your comments or wishes</span>
+                <div class="sub-email df">
+                    <input type="text" class="emai" placeholder="Input your email">
+                    <div class="sub">Subscribe</div>
+                </div>
+                <div class="social df">
+                    <img src="../picture/Twitter 1.png" alt="twitter" class="twitter">
+                    <img src="../picture/Facebook 1.png" alt="fb" class="fb">
+                    <img src="../picture/LinkedIn 1.png" alt="in" class="inlink">
+                    <img src="../picture/YouTube 1.png" alt="ytb" class="ytb">
+                </div>
+                <div class="address">Address: 12 Nguyen Van Bao, Go Vap, Ho Chi Minh City</div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>

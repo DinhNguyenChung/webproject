@@ -1,8 +1,11 @@
 .conntent{
     height: 100vh;
 }
-.product-items{
+.products {
     width: 100%;
+}
+.product-items{
+    /* width: 100%; */
     display: flex;
     justify-content: space-between;
     background-color: rgb(247, 255, 252);
@@ -11,7 +14,7 @@
     
 }
 .product-item{
-    width: 300px;
+    width: 25%;
     text-align: center;
     align-items: center;
     padding: 20px;
@@ -20,7 +23,7 @@
     margin: 0 10px;
 }
 .product-item img{
-    width: 100%;
+    width: 305px;
     align-items: center;
     padding: 20px;
     margin-bottom: 20px;
@@ -31,7 +34,8 @@
 }
 .product-item button{
     margin-top: 12px ;
-    height: 30px;
+    width: 50px;
+    height: 40px;
     cursor: pointer;
     width: 50px;
     border-radius: 10px;
