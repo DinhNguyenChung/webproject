@@ -329,3 +329,75 @@
     background-color: red;
     cursor: pointer;
 }
+
+.product-info .product-img .product-img-container button{
+    position: absolute;
+    margin-top: 165px;
+    border: none;
+    height: 30px;
+    width: 50px;
+    border-radius: 15px;
+    cursor: pointer;
+    background-color: aliceblue;
+    transition: 0.3s;
+
+}
+.product-info .product-img .product-img-container button:hover{
+background-color: rgb(121, 172, 212);
+
+}
+.product-info .product-img .product-img-container button i{
+    width: 30px;
+}
+
+.product-info .product-img .product-img-container button i{
+   width: 30px;
+}
+
+.product-info .product-img .product-img-container .button-left{
+   left: 230px;
+}
+
+
+.product-info .product-img .product-img-container .button-right{
+   margin-left: 370px;
+}
+
+.product-info .product-img .product-img-container{
+    display: flex;
+    padding: 10px;
+}
+
+.product-info .product-img .product-img-container img{
+    width: 357.99px;
+    height: 357.99px;
+    display: none;
+    
+}
+
+.product-info .product-img .product-img-container img:first-child{
+
+    display: block;
+    
+}
+
+.product-info .products-items .product-img{
+    display: none;
+}
+.product-info .products-items .product-img:first-child{
+    display: block;
+}
+
+.product-colors .colors input[name="color"]:checked ~ .product-info .products-items .product-img {
+    display: block;
+}
+
+/* Định dạng input radio và ảnh */
+.product-colors .colors  input[type="radio"] {
+    margin-right: 10px;
+}
+
+.products-items .product-img {
+    width: 300px;
+    height: 200px;
+}
