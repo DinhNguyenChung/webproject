@@ -53,6 +53,7 @@
 
 .type-phones {
     gap: 32px;
+    width: max-content;
 }
 
 .types {
