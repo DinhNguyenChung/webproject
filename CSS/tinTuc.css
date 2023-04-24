@@ -1,0 +1,11 @@
+ * {
+    /* margin: auto; */
+    padding: 0;
+    box-sizing: border-box;
+ }
+
+ .container {
+    height: fit-content;
+    margin: 0px 120px;
+    margin-top: 32px;
+ }

@@ -579,7 +579,7 @@ html {
 
 .filter {
     margin-top: 20px;
-    /* margin-left: 30px; */
+    margin-left: 30px;
 }
 
 .filter .filter-sort-list .sort2 .button {
@@ -686,7 +686,7 @@ html {
 .filters2 {
     display: block;
     margin-top: 20px;
-    margin-left: 30px;
+    /* margin-left: 30px; */
 }
 
 .sort-list-filter .btn-filter {
