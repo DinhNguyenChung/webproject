@@ -1,19 +1,22 @@
-.conntent{
+.conntent {
     height: 100vh;
 }
+
 .products {
     width: 100%;
 }
-.product-items{
+
+.product-items {
     /* width: 100%; */
     display: flex;
     justify-content: space-between;
     background-color: rgb(247, 255, 252);
     padding: 12px;
     overflow-x: scroll;
-    
+
 }
-.product-item{
+
+.product-item {
     width: 25%;
     text-align: center;
     align-items: center;
@@ -22,18 +25,21 @@
     border-radius: 20px;
     margin: 0 10px;
 }
-.product-item img{
+
+.product-item img {
     width: 305px;
     align-items: center;
     padding: 20px;
     margin-bottom: 20px;
 }
-.product-item-text{
+
+.product-item-text {
     display: flex;
     justify-content: space-between;
 }
-.product-item button{
-    margin-top: 12px ;
+
+.product-item button {
+    margin-top: 12px;
     width: 50px;
     height: 40px;
     cursor: pointer;
@@ -43,9 +49,11 @@
     border: none;
     transition: all 0.3s ease;
 }
-.product-item button:hover{
+
+.product-item button:hover {
     background-color: rgb(255, 145, 0);
 }
+
 /*-------------------cart -------------*/
 .cart {
     width: 50%;
@@ -53,30 +61,35 @@
     text-align: center;
     padding-top: 30px;
 }
-.cart h2{
+
+.cart h2 {
     margin-bottom: 20px;
 }
 
-.cart table{
+.cart table {
     width: 100%;
 }
-.cart table thead tr th:first-child{
+
+.cart table thead tr th:first-child {
     text-align: left;
 }
+
 .cart table tr td {
     border-bottom: 1px solid #ddd;
     padding: 12px 0;
 }
-.cart table thead tr th:last-child{
-    text-align: right;
 
-}   
-.cart table tbody tr td:last-child{
+.cart table thead tr th:last-child {
     text-align: right;
 
 }
 
-.cart{
+.cart table tbody tr td:last-child {
+    text-align: right;
+
+}
+
+.cart {
     margin-top: 98px;
     position: fixed;
     height: 100vh;
@@ -86,10 +99,11 @@
     background-color: #ddd;
     padding: 10px 20px;
     overflow-y: scroll;
-    right:-100% ;
+    right: -100%;
 }
-.cart button{
-    margin-top: 12px ;
+
+.cart button {
+    margin-top: 12px;
     height: 30px;
 
     cursor: pointer;
@@ -100,21 +114,24 @@
     transition: all 0.3s ease;
 }
 
-.cart button:hover{
+.cart button:hover {
     background-color: rgb(255, 145, 0);
 }
 
-.cart-icon i{
+.cart-icon i {
     cursor: pointer;
 }
-.close{
+
+.close {
     /* width: 16.01px; */
     cursor: pointer;
     text-align: end;
 }
-.close:hover i{
+
+.close:hover i {
     color: rgb(255, 0, 0);
 }
-.conntent{
+
+.conntent {
     margin: 0 50px;
 }
