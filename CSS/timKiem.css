@@ -47,7 +47,8 @@
     margin-bottom: 8px;
 }
 
-.type-phone-1, .type-phone-2 {
+.type-phone-1,
+.type-phone-2 {
     gap: 4px;
 }
 
@@ -57,7 +58,7 @@
 }
 
 .types {
-   gap: 4px;
+    gap: 4px;
 }
 
 .list-products {
