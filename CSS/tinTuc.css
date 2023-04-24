@@ -113,4 +113,5 @@
  .content-containers .second-content .right-content-list>div:hover,
  .content-containers .second-content .left-content>div:hover {
      cursor: pointer;
+     background-color: rgb(224, 255, 255);
  }
