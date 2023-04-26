@@ -135,3 +135,13 @@
 .conntent {
     margin: 0 50px;
 }
+.ratting{
+    display: flex;
+    justify-content: end;
+    margin-top: 20px;
+    padding-bottom: 0px;
+    margin-bottom: 0;
+}
+.ratting img{
+    width: 120px;
+}
