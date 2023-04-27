@@ -1,0 +1,118 @@
+
+.df {
+    display: flex;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 200px 200px 100px 100px 150px 120px;
+    grid-template-rows: auto auto auto auto auto auto;
+}
+
+.full-page {
+    width: 100%;
+    background-color: azure;
+    position: relative;
+}
+
+.content {
+    height: fit-content;
+    margin: 0px 120px;
+}
+
+
+.header-table {
+    justify-content: space-around;
+    margin: 0px 32px;
+    text-align: center;
+    font-weight: bolder;
+    font-size: larger;
+    padding: 16px 0px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+    border-right: 1px solid rgba(0, 0, 0, 0.5);
+    background-color: white;
+    border-radius: 12px;
+
+}
+
+.product {
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 16px 0px;
+}
+
+.list-products {
+    flex-direction: column;
+    margin: 8px 32px;
+    background-color: white;
+    border-right: 1px solid rgba(0, 0, 0, 0.5);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);;
+    border-radius: 16px;
+}
+ 
+.list-products .product .type-product > select{
+    width: 100px;
+    height: 32px;
+    font-size: medium;
+    text-align: justify;
+}
+
+.list-products .product .qty-product {
+    gap: calc(100%/10);
+    align-items: center;
+    justify-content: space-evenly
+}
+
+.list-products .product .qty-product > div {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    width: calc(100%/3);
+}
+
+.list-products .product .img-product img{
+    width: 250px;
+}
+
+.list-products>div:nth-child(odd) {
+    background-color: aliceblue;
+}
+
+.pay {
+    padding: 8px 16px;
+    margin: 32px 152px;
+    background-color: white;
+    gap: 32px;
+    align-items: center;
+    justify-content: space-evenly;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.pay .code .discount-code {
+    border-radius: 4px;
+    outline: auto;
+    border: none;
+    line-height: 32px;
+}
+
+.pay .order-btn {
+    width: fit-content;
+    padding: 8px;
+    background-color: skyblue;
+    border-radius: 16px;
+    font-size: x-large;
+    text-align: center;
+}
+
+.pay .order .total-price {
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+}
+
+.pay .code, .order {
+    align-items: center;
+    gap: 32px;
+}
