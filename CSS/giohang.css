@@ -1,6 +1,4 @@
-.conntent {
-    height: 100vh;
-}
+
 
 .products {
     width: 100%;
@@ -12,22 +10,27 @@
     justify-content: space-between;
     background-color: rgb(247, 255, 252);
     padding: 12px;
-    overflow-x: scroll;
-
+    /* overflow-x: scroll;
+     */
+     flex-wrap: wrap;
+    margin-bottom: ;
 }
 
 .product-item {
-    width: 25%;
+    width: 20%;
     text-align: center;
     align-items: center;
-    padding: 20px;
+    padding: 20px ;
+    padding-bottom: 0px;
     border: 1px solid;
     border-radius: 20px;
-    margin: 0 10px;
+    /* margin: 0 10px; */
+    margin-left: 10px;
+    margin-bottom: 10px;
 }
 
-.product-item img {
-    width: 305px;
+.product-item .img-items {
+    width: 100%;
     align-items: center;
     padding: 20px;
     margin-bottom: 20px;
@@ -91,7 +94,8 @@
 
 .cart {
     margin-top: 98px;
-    position: fixed;
+    position: absolute;
+
     height: 100vh;
     width: 400px;
     top: 0;
@@ -100,6 +104,7 @@
     padding: 10px 20px;
     overflow-y: scroll;
     right: -100%;
+    border-radius: 10px;
 }
 
 .cart button {
@@ -143,5 +148,10 @@
     margin-bottom: 0;
 }
 .ratting img{
-    width: 120px;
+    width: 80px;
+}
+
+.content-cotai{
+    /* display: grid;
+    grid-template-columns: 70% 40%; */
 }
