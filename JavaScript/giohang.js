@@ -24,7 +24,7 @@ function addCart(productImg, productName, productPrice) {
         var productT = document.querySelectorAll(".title")
         if (productT[i].innerHTML == productName) {
             // alert("Sản phẩm đã có trong giỏ hàng !")
-            alert("Sản phẩm đã có trong giỏ hàng,nếu cần thêm vui lòng tăng số lượng!");
+           
             document.querySelector("#tb").innerHTML = "Sản phẩm đã có trong giỏ hàng,nếu cần thêm vui lòng tăng số lượng !"
             return
         }
@@ -96,10 +96,9 @@ var btnClose = document.querySelector(".close")
 var btnshow = document.querySelector(".cart-icon")
 
 btnshow.addEventListener("click", function () {
-    document.querySelector(".cart").style.right = "0"
+    document.querySelector(".cart").style.display = "block"
     document.querySelector(".content-cotai").style.display = "grid"
-    document.querySelector(".content-cotai").style.gridtemplatecolumns = "70% 40%"
-    // document.querySelectorAll(".product-item").style.width ="28%"
+    document.querySelector(".content-cotai").style.gridtemplatecolumns = "60% 40%"
     var items = document.querySelectorAll(".product-item"); // Đã sửa lại từ 'document.querySelectorAllA' sang 'document.querySelectorAll'
     for (var i = 0; i < items.length; i++) {
         items[i].style.width = "28%";
@@ -107,10 +106,10 @@ btnshow.addEventListener("click", function () {
 });
 
 btnClose.addEventListener("click", function () {
-    document.querySelector(".cart").style.right = "-100%"
+    document.querySelector(".cart").style.display = "none"
     document.querySelector(".content-cotai").style.display = "flex"
     document.querySelector(".content-cotai").style.width = "100%"
-    // document.querySelectorAll(".product-item").style.width ="20%"
+
     var items = document.querySelectorAll(".product-item"); // Đã sửa lại từ 'document.querySelectorAllA' sang 'document.querySelectorAll'
     for (var i = 0; i < items.length; i++) {
         items[i].style.width = "20%";
@@ -121,28 +120,28 @@ btnClose.addEventListener("click", function () {
 
 //Đây là JS mới để mở bảng thanh toán
 
-const buyBtns = document.querySelectorAll('.cart-icon') //gom 3 nut thanh 1 bien
-const model = document.querySelector('.cart')
-const modelClose = document.querySelector('.close')
-const modelContainer = document.querySelector('.model-container')
+// const buyBtns = document.querySelectorAll('.cart-icon') //gom 3 nut thanh 1 bien
+// const model = document.querySelector('.cart')
+// const modelClose = document.querySelector('.close')
+// const modelContainer = document.querySelector('.model-container')
 
-//Hàm hiển thị model mua vé, them class open vào class model
-function showBuyTicket() {
-    model.classList.add('open')
-}
-//Hàm ẩn model mua vé, loại bỏ class open trong class model
-function hideBuyTickets() {
-    model.classList.remove('open')
-}
+// //Hàm hiển thị model mua vé, them class open vào class model
+// function showBuyTicket() {
+//     model.classList.add('open')
+// }
+// //Hàm ẩn model mua vé, loại bỏ class open trong class model
+// function hideBuyTickets() {
+//     model.classList.remove('open')
+// }
 
-for (const buyBtn of buyBtns) { // mot bien btn nam trong btns
-    buyBtn.addEventListener('click', showBuyTicket)
-}
+// for (const buyBtn of buyBtns) { // mot bien btn nam trong btns
+//     buyBtn.addEventListener('click', showBuyTicket)
+// }
 
-modelClose.addEventListener('click', hideBuyTickets)
+// modelClose.addEventListener('click', hideBuyTickets)
 
-//Tránh bị ẩn buy-model khi click vào trong form (liên quna đến đến nổi bọt)
-model.addEventListener('click', hideBuyTickets)
-modelContainer.addEventListener('click', function (event) {
-    event.stopPropagation()
-})
+// //Tránh bị ẩn buy-model khi click vào trong form (liên quna đến đến nổi bọt)
+// model.addEventListener('click', hideBuyTickets)
+// modelContainer.addEventListener('click', function (event) {
+//     event.stopPropagation()
+// })
