@@ -22,15 +22,16 @@ function addCart(productImg,productName,productPrice){
     for (var i = 0; i < cartItem.length; i++){
         var productT = document.querySelectorAll(".title")
         if(productT[i].innerHTML == productName){
-            alert("Sản phẩm đã có trong giỏ hàng !")
+            // alert("Sản phẩm đã có trong giỏ hàng !")
+            document.querySelector("#tb").innerHTML="Sản phẩm đã có trong giỏ hàng,nếu cần thêm vui lòng tăng số lượng !"
             return
         }
     }
-    var trcontent = '<tr><td style="display: flex; align-items: center;"><img src="'+productImg+'" alt="" style="width: 70px;"><span class="title">'+productName+'</span></td><td><p><span class="price">'+productPrice+'</span><sup>đ</sup></p></td><td><input style="width: 35px;outline: none;" type="number" value="1" min="1"></td><td style="cursor: pointer;"><span class="cart-delete">Xóa</span></td></tr>'
+    var trcontent = '<tr><td style="display: flex; align-items: center;"><img src="'+productImg+'" alt="" style="width: 70px;"><span class="title">'+productName+'</span></td><td><p><span class="price">'+productPrice+'</span><sup>đ</sup></p></td><td><input style="width: 35px;outline: none;" type="number" value="1" min="1" id="number"></td><td style="cursor: pointer;"><span class="cart-delete">Xóa</span></td></tr>'
     addtr.innerHTML = trcontent
     var carTable = document.querySelector("tbody")
     carTable.append(addtr)
-
+    document.querySelector("#tb").innerHTML=""
     cartTotal();
     cartDelete();
 }
@@ -94,8 +95,22 @@ var btnshow = document.querySelector(".cart-icon")
 
 btnshow.addEventListener("click",function(){
     document.querySelector(".cart").style.right = "0"
+    document.querySelector(".content-cotai").style.display ="grid"
+    document.querySelector(".content-cotai").style.gridtemplatecolumns = "70% 40%"
+    // document.querySelectorAll(".product-item").style.width ="28%"
+    var items = document.querySelectorAll(".product-item"); // Đã sửa lại từ 'document.querySelectorAllA' sang 'document.querySelectorAll'
+    for(var i = 0; i < items.length; i++) {
+        items[i].style.width ="28%";
+    }
 });
 
 btnClose.addEventListener("click",function(){
     document.querySelector(".cart").style.right = "-100%"
+    document.querySelector(".content-cotai").style.display ="flex"
+    document.querySelector(".content-cotai").style.width ="100%"
+    // document.querySelectorAll(".product-item").style.width ="20%"
+    var items = document.querySelectorAll(".product-item"); // Đã sửa lại từ 'document.querySelectorAllA' sang 'document.querySelectorAll'
+    for(var i = 0; i < items.length; i++) {
+        items[i].style.width ="20%";
+    }
 });
