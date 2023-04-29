@@ -70,7 +70,7 @@
 
 .product-options {
     margin-top: 8px;
-    justify-content: space-between;
+    justify-content: left;
     align-items: center;
     text-align: center;
 }
