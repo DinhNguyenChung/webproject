@@ -72,6 +72,7 @@
     margin: auto;
     text-align: center;
     padding-top: 30px;
+    display: none;
 }
 
 .cart h2 {
@@ -104,7 +105,7 @@
 .cart {
     margin-top: 150px;
     position: absolute;
-    display: block;
+    /* display: block; */
     height: 100vh;
     width: 450px;
     top: 0;
@@ -163,6 +164,8 @@
 .content-cotai{
     display: grid;
     grid-template-columns: 70% 40%;
+    /* display: flex;
+    width: 100%; */
 }
 .title{
     font-size: 14px;
@@ -176,4 +179,16 @@
 }
 table th{
     font-size: 14px;
+}
+
+.open {
+    display: flex;
+}
+
+.header-cart {
+    justify-content: space-between;
+}
+
+.cart {
+    flex-direction: column;
 }
