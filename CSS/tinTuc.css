@@ -39,6 +39,17 @@
      padding-bottom: 8px;
  }
 
+ .content-containers .read-more {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    width: 128px;
+    padding: 8px 0px;
+    border-radius: 16px;
+    border: 1px solid rgba(0, 0, 0, 0.085);
+    background-color: azure;
+ }
+
  .content-containers .left-content {
      background-color: azure;
      width: 65%;
