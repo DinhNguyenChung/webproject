@@ -3,10 +3,8 @@ var btnKhuyenMai = document.querySelector(".khuyen-mai");
 var btnDienMay = document.querySelector(".dienmay-giadung");
 var btnThuThuat = document.querySelector(".thu-thuat");
 var btnForGamer = document.querySelector(".for-gamer");
-var btnVideo = document.querySelector(".video");
 var btnDanhGia = document.querySelector(".danh-gia");
 var btnAppGame = document.querySelector(".app-game");
-var btnSuKien= document.querySelector(".su-kien");
 var title = document.getElementById('title');
 
 document.querySelector(".modal-khuyen-mai").style.display = "none";
@@ -16,8 +14,7 @@ document.querySelector(".modal-thu-thuat").style.display = "none";
 document.querySelector(".modal-for-gamer").style.display = "none";
 document.querySelector(".modal-video").style.display = "none";
 document.querySelector(".modal-danh-gia").style.display = "none";
-document.querySelector(".modal-app-game").style.display = "none";
-document.querySelector(".modal-su-kien").style.display = "none";
+document.querySelector(".modal-app-game").style.display = "none"
 title.innerHTML = "TIN MỚI";
 btnTinMoi.classList.add('clicked');
 
@@ -30,17 +27,14 @@ btnKhuyenMai.addEventListener("click", function () {
     document.querySelector(".modal-video").style.display = "none";
     document.querySelector(".modal-danh-gia").style.display = "none";
     document.querySelector(".modal-app-game").style.display = "none";
-    document.querySelector(".modal-su-kien").style.display = "none";
     title.innerHTML = "KHUYẾN MÃI";
     btnTinMoi.classList.remove('clicked');
     btnKhuyenMai.classList.add('clicked');
     btnDienMay.classList.remove('clicked');
     btnThuThuat.classList.remove('clicked');
     btnForGamer.classList.remove('clicked');
-    btnVideo.classList.remove('clicked');
     btnDanhGia.classList.remove('clicked');
     btnAppGame.classList.remove('clicked');
-    btnSuKien.classList.remove('clicked');
 })
 
 btnTinMoi.addEventListener("click", function () {
@@ -52,17 +46,14 @@ btnTinMoi.addEventListener("click", function () {
     document.querySelector(".modal-video").style.display = "none";
     document.querySelector(".modal-danh-gia").style.display = "none";
     document.querySelector(".modal-app-game").style.display = "none";
-    document.querySelector(".modal-su-kien").style.display = "none";
     title.innerHTML = "TIN MỚI";
     btnTinMoi.classList.add('clicked');
     btnKhuyenMai.classList.remove('clicked');
     btnDienMay.classList.remove('clicked');
     btnThuThuat.classList.remove('clicked');
     btnForGamer.classList.remove('clicked');
-    btnVideo.classList.remove('clicked');
     btnDanhGia.classList.remove('clicked');
     btnAppGame.classList.remove('clicked');
-    btnSuKien.classList.remove('clicked');
 })
 
 btnDienMay.addEventListener("click", function () {
@@ -74,14 +65,12 @@ btnDienMay.addEventListener("click", function () {
     document.querySelector(".modal-video").style.display = "none";
     document.querySelector(".modal-danh-gia").style.display = "none";
     document.querySelector(".modal-app-game").style.display = "none";
-    document.querySelector(".modal-su-kien").style.display = "none";
     title.innerHTML = "ĐIỆN MÁY - GIA DỤNG";
     btnTinMoi.classList.remove('clicked');
     btnKhuyenMai.classList.remove('clicked');
     btnDienMay.classList.add('clicked');
     btnThuThuat.classList.remove('clicked');
     btnForGamer.classList.remove('clicked');
-    btnVideo.classList.remove('clicked');
     btnDanhGia.classList.remove('clicked');
     btnAppGame.classList.remove('clicked');
     btnSuKien.classList.remove('clicked');
@@ -96,17 +85,14 @@ btnThuThuat.addEventListener("click", function () {
     document.querySelector(".modal-video").style.display = "none";
     document.querySelector(".modal-danh-gia").style.display = "none";
     document.querySelector(".modal-app-game").style.display = "none";
-    document.querySelector(".modal-su-kien").style.display = "none";
     title.innerHTML = "THỦ THUẬT";
     btnTinMoi.classList.remove('clicked');
     btnKhuyenMai.classList.remove('clicked');
     btnDienMay.classList.remove('clicked');
     btnThuThuat.classList.add('clicked');
     btnForGamer.classList.remove('clicked');
-    btnVideo.classList.remove('clicked');
     btnDanhGia.classList.remove('clicked');
     btnAppGame.classList.remove('clicked');
-    btnSuKien.classList.remove('clicked');
 })
 
 btnForGamer.addEventListener("click", function () {
@@ -118,39 +104,14 @@ btnForGamer.addEventListener("click", function () {
     document.querySelector(".modal-video").style.display = "none";
     document.querySelector(".modal-danh-gia").style.display = "none";
     document.querySelector(".modal-app-game").style.display = "none";
-    document.querySelector(".modal-su-kien").style.display = "none";
     title.innerHTML = "FOR GAMERS";
     btnTinMoi.classList.remove('clicked');
     btnKhuyenMai.classList.remove('clicked');
     btnDienMay.classList.remove('clicked');
     btnThuThuat.classList.remove('clicked');
     btnForGamer.classList.add('clicked');
-    btnVideo.classList.remove('clicked');
     btnDanhGia.classList.remove('clicked');
     btnAppGame.classList.remove('clicked');
-    btnSuKien.classList.remove('clicked');
-})
-
-btnVideo.addEventListener("click", function () {
-    document.querySelector(".modal-khuyen-mai").style.display = "none";
-    document.querySelector(".modal-tin-moi").style.display = "none";
-    document.querySelector(".modal-dienmay").style.display = "none";
-    document.querySelector(".modal-thu-thuat").style.display = "none";
-    document.querySelector(".modal-for-gamer").style.display = "none";
-    document.querySelector(".modal-video").style.display = "flex";
-    document.querySelector(".modal-danh-gia").style.display = "none";
-    document.querySelector(".modal-app-game").style.display = "none";
-    document.querySelector(".modal-su-kien").style.display = "none";
-    title.innerHTML = "VIDEO HOT";
-    btnTinMoi.classList.remove('clicked');
-    btnKhuyenMai.classList.remove('clicked');
-    btnDienMay.classList.remove('clicked');
-    btnThuThuat.classList.remove('clicked');
-    btnForGamer.classList.remove('clicked');
-    btnVideo.classList.add('clicked');
-    btnDanhGia.classList.remove('clicked');
-    btnAppGame.classList.remove('clicked');
-    btnSuKien.classList.remove('clicked');
 })
 
 btnDanhGia.addEventListener("click", function () {
@@ -162,17 +123,14 @@ btnDanhGia.addEventListener("click", function () {
     document.querySelector(".modal-video").style.display = "none";
     document.querySelector(".modal-danh-gia").style.display = "flex";
     document.querySelector(".modal-app-game").style.display = "none";
-    document.querySelector(".modal-su-kien").style.display = "none";
     title.innerHTML = "ĐÁNH GIÁ";
     btnTinMoi.classList.remove('clicked');
     btnKhuyenMai.classList.remove('clicked');
     btnDienMay.classList.remove('clicked');
     btnThuThuat.classList.remove('clicked');
     btnForGamer.classList.remove('clicked');
-    btnVideo.classList.remove('clicked');
     btnDanhGia.classList.add('clicked');
     btnAppGame.classList.remove('clicked');
-    btnSuKien.classList.remove('clicked');
 })
 
 btnAppGame.addEventListener("click", function () {
@@ -184,17 +142,14 @@ btnAppGame.addEventListener("click", function () {
     document.querySelector(".modal-video").style.display = "none";
     document.querySelector(".modal-danh-gia").style.display = "none";
     document.querySelector(".modal-app-game").style.display = "flex";
-    document.querySelector(".modal-su-kien").style.display = "none";
     title.innerHTML = "APP GAME";
     btnTinMoi.classList.remove('clicked');
     btnKhuyenMai.classList.remove('clicked');
     btnDienMay.classList.remove('clicked');
     btnThuThuat.classList.remove('clicked');
     btnForGamer.classList.remove('clicked');
-    btnVideo.classList.remove('clicked');
     btnDanhGia.classList.remove('clicked');
     btnAppGame.classList.add('clicked');
-    btnSuKien.classList.remove('clicked');
 })
 
 
@@ -207,15 +162,12 @@ btnSuKien.addEventListener("click", function () {
     document.querySelector(".modal-video").style.display = "none";
     document.querySelector(".modal-danh-gia").style.display = "none";
     document.querySelector(".modal-app-game").style.display = "none";
-    document.querySelector(".modal-su-kien").style.display = "flex";
     title.innerHTML = "SỰ KIỆN";
     btnTinMoi.classList.remove('clicked');
     btnKhuyenMai.classList.remove('clicked');
     btnDienMay.classList.remove('clicked');
     btnThuThuat.classList.remove('clicked');
     btnForGamer.classList.remove('clicked');
-    btnVideo.classList.remove('clicked');
     btnDanhGia.classList.remove('clicked');
     btnAppGame.classList.remove('clicked');
-    btnSuKien.classList.add('clicked');
 })
