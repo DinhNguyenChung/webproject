@@ -88,6 +88,11 @@
      border-radius: 50%;
  }
 
+
+.left-content .item img {
+    width: 50%;
+}
+
  .first-content .right-content .right-content-list,
  .second-content .right-content .right-content-list {
      flex-direction: column;
@@ -114,4 +119,10 @@
  .content-containers .second-content .left-content>div:hover {
      cursor: pointer;
      background-color: rgb(224, 255, 255);
+ }
+
+ .clicked {
+     font-weight: 600;
+     text-decoration-line: underline;
+     color: blue;
  }
