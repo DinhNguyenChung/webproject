@@ -41,13 +41,16 @@ document.addEventListener('DOMContentLoaded', () => {
     wrapper.classList.remove('active-btnlogin');
     document.body.style.overflow = "auto"
   });
-  // var bgr_close = document.getElementById("handle_close-modal")
+  var bgr_close = document.getElementById("handle_close-modal")
 
 
-  // bgr_close.addEventListener('click', ()=>{
-  //   wrapper.classList.remove('active-btnlogin');
-  //   document.body.style.overflow = "auto"
-  // });
+  bgr_close.addEventListener('click',function (event){
+    if(event.target.closest(".form-box")){
+      return;
+    }
+    wrapper.classList.remove('active-btnlogin');
+    document.body.style.overflow = "auto"
+  });
 
   // bodyclose.addEventListener('click',()=>{
   //   wrapper.classList.add('active-btnlogin');
@@ -112,3 +115,28 @@ function login(e) {
 
   } else alert("Đăng nhập thất bại !")
 }
+
+
+//Mở modal thành viên nhóm
+var btnShowmembers = document.querySelector("#modal-member");
+var closeMembers = document.querySelector("#close");
+var bodymembers = document.querySelector("#members");
+var notclose = document.querySelector("#notclose")
+
+btnShowmembers.addEventListener("click",function(){
+  document.querySelector("#members").style.display ="block";
+  document.body.style.overflow = "hidden"
+})
+
+closeMembers.addEventListener("click",function(){
+  document.querySelector("#members").style.display ="none";
+  document.body.style.overflow = "auto"
+})
+
+bodymembers.addEventListener("click",function(event){
+  if(event.target.closest("form")){
+    return;
+  }
+  document.querySelector("#members").style.display ="none";
+  document.body.style.overflow = "auto"
+})
