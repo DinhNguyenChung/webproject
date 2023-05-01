@@ -47,6 +47,8 @@
     text-align: center;
     gap: 32px;
     margin-top: 32px;
+    display: flex;
+    justify-content: space-around;
 }
 
 .other>a:hover {
@@ -341,9 +343,9 @@
     width: 50px;
     border-radius: 100%;
     cursor: pointer;
-    background-color: aliceblue;
+    background-color: rgb(170, 176, 182);
     transition: 0.3s;
-
+    color: #fff;
 }
 
 .product-info .product-img .product-img-container button:hover {
@@ -366,7 +368,7 @@
 
 
 .product-info .product-img .product-img-container .button-right {
-    margin-left: 370px;
+    margin-left: 375px;
     display: block;
 }
 
@@ -541,9 +543,11 @@
 .modal-content #image-title {
     text-align: center;
     position: absolute;
-    background-color: #f2f2f2;
-    padding: 8px 5px;
+    background-color: #3f3f3f;
+    padding: 6px 26px;
     border-radius: 10px;
+    color: #fff;
+    font-size: 14px;
 }
 
 .modal-content span {
@@ -610,4 +614,52 @@
 .modal-footer {
     height: 20%;
 
+}
+
+.box-open{
+    background-color: #32373d;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: none;
+}
+
+.exits{
+color: #fff; margin: 10px 20px; text-align: end; cursor: pointer;
+}
+.exits:hover i{
+    color: rgb(5, 100, 249);
+}
+.box-open img{
+    width: 600px;
+    border-radius: 10px;
+}
+.hidden {
+    display: none;
+    }
+
+    .cl-vang{
+        display: none;
+    }
+
+    .cl-den{
+        display: none;
+    }
+    .cl-bac{
+        display: none;
+    }
+
+.other {
+    margin: 32px -75px 0 83px;
+}
+
+.option:hover{
+    background-color: #bcbaba;
+}
+
+.product-img{
+    margin-left: 74px;
 }

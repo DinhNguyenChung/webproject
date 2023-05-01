@@ -36,10 +36,12 @@ document.addEventListener('DOMContentLoaded', () => {
   btnLogin.addEventListener('click', () => {
     wrapper.classList.add('active-btnlogin');
     document.body.style.overflow = "hidden"
+    document.querySelector(".content-list").style.zIndex ="-1"
   });
   close.addEventListener('click', () => {
     wrapper.classList.remove('active-btnlogin');
     document.body.style.overflow = "auto"
+    document.querySelector(".content-list").style.zIndex ="0"
   });
   var bgr_close = document.getElementById("handle_close-modal")
 
@@ -50,6 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     wrapper.classList.remove('active-btnlogin');
     document.body.style.overflow = "auto"
+    document.querySelector(".content-list").style.zIndex ="0"
   });
 
   // bodyclose.addEventListener('click',()=>{

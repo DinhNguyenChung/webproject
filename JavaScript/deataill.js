@@ -1,88 +1,48 @@
-var images = document.querySelectorAll(".image-container .img-items");
+// mau den
+
+var images = document.querySelectorAll(".img-items");
 var buttonleft = document.querySelector(".button-left")
 var buttonright = document.querySelector(".button-right")
 var index = 0;
 
-  function nextImage() {
-    images[index].style.display = "none";  // Ẩn ảnh hiện tại
-    index = (index + 1) % images.length;   // Tính chỉ mục của ảnh tiếp theo
-    buttonleft.style.display ="block"
-    // Kiểm tra nếu đang ở ảnh thứ 8 thì chuyển về ảnh đầu tiên
-    // if (index == 8&& images.length >7) {
-    //   images[images.length-1].style.display = "none"; // Ẩn ảnh cuối cùng
-    //   index = 0;  // Reset lại chỉ mục
-    // }
-    if(index==7){
-      buttonright.style.display ="none"
+ var currentImgIndex = 0;
+    var imgs = document.getElementsByClassName("img-items");
+
+    function backImage() {
+        imgs[currentImgIndex].style.display = "none";
+        currentImgIndex--;
+        buttonright.style.display ="block"
+        if (currentImgIndex < 0) {
+            currentImgIndex = imgs.length - 1;
+        }
+           if(currentImgIndex==0){
+              buttonleft.style.display ="none"
+            }
+        imgs[currentImgIndex].style.display = "block";
     }
-    
-    images[index].style.display = "block"; // Hiển thị ảnh tiếp theo
-  }
-  
-  
-  function backImage() {
-    images[index].style.display = "none";  // Ẩn ảnh hiện tại
-    index = (index - 1 + images.length) % images.length;  // Tính chỉ mục của ảnh trước đó
-    buttonright.style.display ="block"
-    images[index].style.display = "block"; // Hiển thị ảnh trước đó
-    if(index==0){
-      buttonleft.style.display ="none"
+
+    function nextImage() {
+        imgs[currentImgIndex].style.display = "none";
+        currentImgIndex++;
+        buttonleft.style.display ="block"
+        if (currentImgIndex >= imgs.length) {
+            currentImgIndex = 0;
+            
+        }
+        if(currentImgIndex==7){
+        buttonright.style.display ="none"
     }
-  }
-
-
-// var images = document.getElementsByClassName("image-container")[0].getElementsByTagName("img");
-// // var images = document.querySelectorAll(".image-container .img-items")
-// var buttonLeft = document.querySelector(".button-left");
-// var buttonRight = document.querySelector(".button-right");
-
-// var index = 0;
-
-// function showHideButtons() {
-//   // Hide left button when first image is shown
-//   if (index === 0) {
-//     buttonLeft.style.display = "none";
-//   } else {
-//     buttonLeft.style.display = "block";
-//   }
-
-//   // Hide right button when last image is shown
-//   if (index === images.length - 1) {
-//     buttonRight.style.display = "none";
-//   } else {
-//     buttonRight.style.display = "block";
-//   }
-// }
-
-// function nextImage() {
-//   images[index].style.display = "none";  // Hide current image
-//   index = (index + 1) % images.length;   // Calculate index of next image
-//   images[index].style.display = "block"; // Show next image
-//   showHideButtons();
-// }
-
-// function backImage() {
-//   images[index].style.display = "none";  // Hide current image
-//   index = (index - 1 + images.length) % images.length; // Calculate index of previous image
-//   images[index].style.display = "block"; // Show previous image
-//   showHideButtons();
-// }
-
-// // Hide left button on initial load
-// buttonLeft.style.display = "none";
-// // Show first image
-// images[index].style.display = "block";
-// // Show/hide buttons based on index
-// showHideButtons();
+        imgs[currentImgIndex].style.display = "block";
+    }
 
 
 
 //   //  Chuyển sang điện thoại màu khác
 
-  var btn_tim = document.querySelector(".cl-tim")
-  var btn_vang = document.querySelector(".cl-vang")
-  var btn_den = document.querySelector(".cl-den")
-  var btn_bac = document.querySelector(".cl-bac") 
+  var btn_tim = document.querySelector(".cl-tim");
+  var btn_vang = document.querySelector(".cl-vang");
+  var btn_den = document.querySelector(".cl-den");
+  var btn_bac = document.querySelector(".cl-bac") ;
 
 
 function updateColorDisplay(color) {
@@ -93,18 +53,25 @@ function updateColorDisplay(color) {
 }
 function productTim() {
   updateColorDisplay('tim');
+  buttonright.style.display ="block"
 }
 
 function productVang() {
   updateColorDisplay('vang');
+  buttonleft.style.display ="none"
+  buttonright.style.display ="none"
 }
 
 function productDen() {
   updateColorDisplay('den');
+  buttonleft.style.display ="none"
+  buttonright.style.display ="none"
 }
 
 function productBac() {
   updateColorDisplay('bac');
+  buttonleft.style.display ="none"
+  buttonright.style.display ="none"
 }
 // video
 // Lấy tham chiếu đến các phần tử DOM
@@ -169,3 +136,26 @@ btn.onclick = function() {
   modalImage.src = images[0].src;
   modalTitle.innerHTML = images[0].alt;
 }
+
+
+//Mở hộp
+
+var boxOpen = document.querySelector(".other-inbox")
+var boxExits = document.querySelector(".exits")
+var bodybox = document.querySelector(".box-open")
+
+boxOpen.addEventListener("click",function(){
+  document.querySelector(".box-open").style.display ="block";
+})
+
+boxExits.addEventListener("click",function(){
+  document.querySelector(".box-open").style.display = "none";
+})
+
+bodybox.addEventListener("click", function(e){
+  if(e.target.closest("img")){
+    return;
+  }
+  document.querySelector(".box-open").style.display = "none";
+
+})
