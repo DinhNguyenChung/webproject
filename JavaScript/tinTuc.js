@@ -153,6 +153,7 @@ btnAppGame.addEventListener("click", function () {
 })
 
 
+<<<<<<< HEAD
 // btnSuKien.addEventListener("click", function () {
 //     document.querySelector(".modal-khuyen-mai").style.display = "none";
 //     document.querySelector(".modal-tin-moi").style.display = "none";
@@ -276,3 +277,5 @@ function login(e) {
 
   } else alert("Đăng nhập thất bại !")
 }
+=======
+>>>>>>> fb2da05edf8416d9acca597228a4e41e8f46703e
