@@ -153,21 +153,3 @@ btnAppGame.addEventListener("click", function () {
 })
 
 
-btnSuKien.addEventListener("click", function () {
-    document.querySelector(".modal-khuyen-mai").style.display = "none";
-    document.querySelector(".modal-tin-moi").style.display = "none";
-    document.querySelector(".modal-dienmay").style.display = "none";
-    document.querySelector(".modal-thu-thuat").style.display = "none";
-    document.querySelector(".modal-for-gamer").style.display = "none";
-    document.querySelector(".modal-video").style.display = "none";
-    document.querySelector(".modal-danh-gia").style.display = "none";
-    document.querySelector(".modal-app-game").style.display = "none";
-    title.innerHTML = "SỰ KIỆN";
-    btnTinMoi.classList.remove('clicked');
-    btnKhuyenMai.classList.remove('clicked');
-    btnDienMay.classList.remove('clicked');
-    btnThuThuat.classList.remove('clicked');
-    btnForGamer.classList.remove('clicked');
-    btnDanhGia.classList.remove('clicked');
-    btnAppGame.classList.remove('clicked');
-})
