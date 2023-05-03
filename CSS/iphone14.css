@@ -209,6 +209,7 @@
     margin-top: 12px;
     color: rgb(73, 80, 87);
     list-style: none;
+    gap: 8px;
 }
 
 .more-describe {
