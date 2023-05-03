@@ -191,22 +191,96 @@
                 </div>
             </div>
             <div class="product-info df">
-                <div class="product-img">
-                    <img src="../picture/iPhone12 64Gb.webp" alt="iPhone 12 648GB">
-                    <div class="other df">
-                        <a href="" class="other-img">
-                            <div class="icon-photo"><img src="../picture/instagram.png" alt=""></div>
-                            <div>Xem thêm 7 ảnh</div>
-                        </a>
-                        <a href="" class="other-video">
-                            <div class="icon-video"><img src="../picture/instagram.png" alt=""></div>
-                            <div>Video trên tay</div>
-                        </a>
-                        <a href="" class="other-inbox">
-                            <div class="icon-"><img src="../picture/instagram.png" alt=""></div>
-                            <div>Trong hộp có gì</div>
-                        </a>
+                <div class="products-items">
+                    <div class="product-img  color-container">
+                        <div class="product-img-container">
+                            <button onclick="backImage()" class="button-left button-left-tim"><i
+                                    class="fa-solid fa-less-than"></i></button>
+                            <div class="image-container cl-tim">
+                                <img class="img-items" src="../picture/iPhone12 64Gb.webp"
+                                    alt="iPhone 14 Pro Max 128GB">
+                            </div>
+
+                            <button onclick="nextImage()" class="button-right button-right-tim"><i
+                                    class="fa-solid fa-greater-than"></i></button>
+                        </div>
+                        <div class="other df">
+
+
+                            <!-- Button to open the modal -->
+                            <a id="modal-button" class="openModal">
+                                <div class="icon-photo"><i class="fa-solid fa-image fa-xl"></i></div>
+                                <span>Xem thêm 7 ảnh</span>
+                            </a>
+
+                            <!-- The Modal -->
+                            <div id="image-modal" class="modal">
+                                <!-- Modal content -->
+                                <div class="modal-content">
+                                    <span class="close">&times;</span>
+                                    <h2 id="image-title"> </h2>
+                                    <img id="modal-image" src="" alt="Iphone14 ProMax">
+                                </div>
+
+                                <!-- Modal footer -->
+                                <div class="modal-footer">
+                                    <h3>Other Images:</h3>
+                                    <ul id="image-list">
+                                        <li><img src="../picture/638129176875910469_iphone-14pro-14prm-2.webp"
+                                                alt="Iphone14 ProMax"></li>
+                                        <li><img src="../picture/638129176877496345_iphone-14promax-1.webp"
+                                                alt="Iphone14 ProMax"></li>
+                                        <li><img src="../picture/638129176877756103_iphone-14pro-14prm-4.webp"
+                                                alt="Iphone14 ProMax"></li>
+                                        <li><img src="../picture/638129176880563423_iphone-14pro-14prm-3.webp"
+                                                alt="Iphone14 ProMax"></li>
+                                        <li><img src="../picture/iPhone 14 Promax (den).webp" alt="Iphone14 ProMax">
+                                        </li>
+                                        <li><img src="../picture/iPhone 14 Promax-Yellow.webp" alt="Iphone14 ProMax">
+                                        </li>
+                                        <li><img src="../picture/iPhone 14 PromaxBac.webp" alt="Iphone14 ProMax"></li>
+                                        <li><img src="../picture/iPhone 14 PromaxTim.webp" alt="Iphone14 ProMax"></li>
+
+                                    </ul>
+                                </div>
+                            </div>
+
+
+
+
+                            <a id="openModal" class="openModal">
+                                <div class="icon-video"><i class="fa-solid fa-video fa-xl"></i></div>
+                                <span>Video trên tay</span>
+                            </a>
+
+                            <div id="modalContainer" class="other-video">
+                                <div id="modalContent">
+                                    <span id="closeModal">&times;</span>
+                                    <!-- <iframe src="https://www.youtube.com/embed/VIDEO_ID_HERE"></iframe> -->
+                                    <iframe width="950" height="640" src="https://www.youtube.com/embed/2uZpN5wXu-8"
+                                        title="Social Video iPhone 14 Pro-14 Pro max" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        allowfullscreen></iframe>
+                                </div>
+                            </div>
+
+
+                            <a href="#" class="other-inbox">
+                                <div class="icon-"><i class="fa-solid fa-box-open fa-xl"></i></div>
+                                <span>Trong hộp có gì</span>
+                            </a>
+                            <div class="box-open">
+                                <div class="exits"><i class="fa-solid fa-circle-xmark fa-xl"></i></div>
+                                <h3 style="color: #fff; margin: 20px 0;">Trong hộp Iphone 14 Pro Max 128GB</h3>
+
+                                <img src="../picture/638129177600949647_iphone-14prm-den-3.webp" alt="">
+
+                            </div>
+                        </div>
                     </div>
+
+
+
                 </div>
                 <div class="product-in4 df">
                     <div class="product-in4-header df">

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NokiaC31 4GB/128GB</title>
+    <title>NokiaC31</title>
     <link rel="stylesheet" href="../CSS/trangchu.css">
     <link rel="stylesheet" href="../CSS/iphone14.css">
     <link rel="stylesheet" href="../Font/fontawesome-free-6.3.0-web/css/all.css">
@@ -22,7 +22,12 @@
             </div>
             <div class="hover header-category">
                 <a href="#"><i class="fa-solid fa-bars"></i></a>
-                <a href="" id="text">Danh mục</a>
+                <p>Danh Mục</p>
+                <ul>
+                    <li>Sản phẩm mới</li>
+                    <li>Khuyến Mãi</li>
+                    <li>Trả góp</li>
+                </ul>
             </div>
             <div class="hover header-viewPrice">
                 <a href="#"><i class="fa-solid fa-location-dot"></i></a>
@@ -36,10 +41,10 @@
                 <input type="text" name="" id="text" placeholder="Bạn cần tìm gì ?">
             </div>
             <div class="hover header-call">
-                <a href=""><i class="fa-solid fa-phone"></i></a>
+                <a href="../HTML/thanhToan.html"><i class="fa-solid fa-phone"></i></a>
                 <div class="header-call-text">
-                    <a href="">Gọi mua hàng</a>
-                    <a href="">1800.2097</a>
+                    <a href="../HTML/thanhToan.html">Gọi mua hàng</a>
+                    <a href="../HTML/thanhToan.html">1800.2097</a>
                 </div>
             </div>
             <div class="hover header-position">
@@ -51,8 +56,8 @@
                 <a href="">Tra cứu đơn hàng</a>
             </div>
             <div class="hover header-shopping">
-                <a href=""><i class="fa-solid fa-cart-plus"></i></a>
-                <a href="">Giỏ hàng</a>
+                <a href="../HTML/Giohang.html"><i class="fa-solid fa-cart-plus"></i></a>
+                <a href="../HTML/Giohang.html">Giỏ hàng</a>
             </div>
             <div class="header-user" id="btn_login-line">
                 <!-- <a href="../../FormDangNhap/CodeNew/index.html">Đăng Nhập</a> -->
@@ -199,7 +204,7 @@
                             <div class="image-container cl-tim">
                                 <img class="img-items" src="../picture/NoKiaC314Gb128Gb.webp"
                                     alt="iPhone 14 Pro Max 128GB">
-                                <img class="img-items" src="../picture/638129176875910469_iphone-14pro-14prm-2.webp"
+                                <!-- <img class="img-items" src="../picture/638129176875910469_iphone-14pro-14prm-2.webp"
                                     alt="iPhone 14 Pro Max 128GB">
                                 <img class="img-items" src="../picture/iphone-14pro-den-camerasau-4.webp"
                                     alt="iPhone 14 Pro Max 128GB">
@@ -212,9 +217,9 @@
                                 <img class="img-items" src="../picture/iphone-14pro-den-camerasau-4.webp"
                                     style="display:none;">
                                 <img class="img-items" src="../picture/iPhone 14 Promax den 2 mat .webp"
-                                    alt="iPhone 14 Pro Max 128GB">
+                                    alt="iPhone 14 Pro Max 128GB"> -->
                             </div>
-                            <div class="image-container cl-vang">
+                            <!-- <div class="image-container cl-vang">
                                 <img class="img-items-vang" src="../picture/iPhone 14 Promax-Yellow.webp"
                                     alt="iPhone 14 Pro Max 128GB">
                                 <img class="img-items-vang" src="../picture/638129176875910469_iphone-14pro-14prm-2.webp"
@@ -261,7 +266,7 @@
                                 <img src="../picture/iphone-14pro-den-camerasau-4.webp" style="display:none;">
                                 <img src="../picture/638129176875910469_iphone-14pro-14prm-2.webp"
                                     alt="iPhone 14 Pro Max 128GB">
-                            </div>
+                            </div> -->
 
                             <button onclick="nextImage()" class="button-right button-right-tim"><i
                                     class="fa-solid fa-greater-than"></i></button>
@@ -364,14 +369,6 @@
                             <input type="radio" name="op" id="256GB" class="256GB">
                             <label for="op">4GB/128GB <br> 2.390.000đ</label>
                         </div>
-                        <!-- <div class="option">
-                            <input type="radio" name="op" id="512GB" class="512GB">
-                            <label for="op">512GB <br> Ngừng kinh doanh</label>
-                        </div>
-                        <div class="option">
-                            <input type="radio" name="op" id="1TB" class="1TB">
-                            <label for="op">1TB <br> 41.990.000đ</label>
-                        </div> -->
                     </div>
                     <div class="product-colors df">
                         <p style="margin-right: 8px;">Màu sắc sản phẩm: </p>
@@ -384,30 +381,30 @@
                             <label for="cl">Xanh lá</label>
                         </div>
 
-                        
+
                     </div>
                     <div class="product-endow">
-                        <h4>Nhận ngay khuyến khuyến mãi đặc biệt</h4>
+                        <h4>Chọn 1 trong 2 khuyến mãi sau:</h4>
                         <div class="endow">
                             <input type="radio" name="ed" id="giamNgay7" class="giamNgay7">
-                            <label for="ed">Trả gớp 0%</label>
+                            <label for="ed">Giảm ngay 7.000.000 khi mua màu Đen áp dụng đến 20/04</label>
                         </div>
                         <div class="endow">
                             <input type="radio" name="ed" id="giamNgay2" class="giamNgay2">
-                            <label for="ed">Giảm 37% khi mua Tai nghe Bluetooth giá chỉ 500.000 <sup>đ</sup></label>
+                            <label for="ed">Giảm ngay 2.000.000 áp dụng đến 20/04 + Trả góp 0%</label>
                         </div>
                         <div class="other-endows">Ưu đãi thêm:</div>
                         <div class="other-endow df">
                             <div class="tick"></div>
-                            <div>Thu cũ đổi mới trợ giá ngay 15% đến 3 triệu (SmartExchange)</div>
+                            <div>Giảm giá đến 30% hệ sinh thái Apple</div>
                         </div>
                         <div class="other-endow df">
                             <div class="tick"></div>
-                            <div>Sim Vinaphone Combo 120 3T giá chỉ 299.000đ khi mua kèm máy</div>
+                            <div>Thu cũ đổi mới giảm ngay 15% đến 3 triệu</div>
                         </div>
                         <div class="other-endow df">
                             <div class="tick"></div>
-                            <div>Tặng phiếu mua hàng 500.000đ mua đơn hàng Robot hút bụi/ máy lọc nước trên 5.000.000đ</div>
+                            <div>Sim MobiFone Super Data 1T giá trị 199.000đ khi mua kèm máy</div>
                         </div>
                     </div>
                     <div class="pay">
@@ -566,20 +563,19 @@
                     <div class="sub">Subscribe</div>
                 </div>
                 <div class="social df">
-                    <a href="https://twitter.com/?lang=vi" target="_blank"> <img src="../picture/Twitter 1.png"
-                            alt="twitter" class="twitter"></a>
-                    <a href="https://www.facebook.com" target="_blank"><img src="../picture/Facebook 1.png" alt="fb"
-                            class="fb"></a>
-                    <a href="https://www.linkedin.com" target="_blank"> <img src="../picture/LinkedIn 1.png" alt="in"
-                            class="inlink"></a>
-                    <a href="https://www.youtube.com" target="_blank"><img src="../picture/YouTube 1.png" alt="ytb"
-                            class="ytb"></a>
+                    <a href="https://twitter.com/?lang=vi" target="_blank"> <img src="../picture/Twitter 1.png" alt="twitter" class="twitter"></a>
+                    <a href="https://www.facebook.com" target="_blank"><img src="../picture/Facebook 1.png" alt="fb" class="fb"></a>
+                    <a href="https://www.linkedin.com" target="_blank"> <img src="../picture/LinkedIn 1.png" alt="in" class="inlink"></a>
+                    <a href="https://www.youtube.com" target="_blank"><img src="../picture/YouTube 1.png" alt="ytb" class="ytb"></a>
                 </div>
                 <div class="address">Address: 12 Nguyen Van Bao, Go Vap, Ho Chi Minh City</div>
             </div>
 
         </div>
     </div>
+    <script src="../JavaScript/deataill.js"></script>
+    <script src="../JavaScript/thanhtoan.js"></script>
+    <script src="../JavaScript/main.js"></script>
 </body>
 
 </html>
