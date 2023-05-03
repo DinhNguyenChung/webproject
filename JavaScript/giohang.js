@@ -1,4 +1,4 @@
-const btn = document.querySelectorAll("button")
+const btn = document.querySelectorAll(".button");
 const tbns = document.querySelectorAll("fa-cart-plus")
 //cpnslo.log(btn)
 
@@ -83,6 +83,7 @@ function cartDelete() {
 
 function inputchange() {
     var cartItem = document.querySelectorAll("tbody tr")
+    document.querySelector("#tb").innerHTML ="";
     for (var i = 0; i < cartItem.length; i++) {
         var valueInput = cartItem[i].querySelector("input")
         valueInput.addEventListener("change", function () {
@@ -114,6 +115,7 @@ btnClose.addEventListener("click", function () {
     for (var i = 0; i < items.length; i++) {
         items[i].style.width = "20%";
     }
+    document.querySelector("#tb").innerHTML ="";
 });
 
 
@@ -158,3 +160,4 @@ hoverBtn.addEventListener('mouseover', function() {
 hoverBtn.addEventListener('mouseout', function() {
   contentList.style.zIndex = '0';
 });
+
