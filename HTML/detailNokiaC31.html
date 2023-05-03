@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OppoReno8T</title>
+    <title>NokiaC31</title>
     <link rel="stylesheet" href="../CSS/trangchu.css">
     <link rel="stylesheet" href="../CSS/iphone14.css">
     <link rel="stylesheet" href="../Font/fontawesome-free-6.3.0-web/css/all.css">
@@ -22,7 +22,12 @@
             </div>
             <div class="hover header-category">
                 <a href="#"><i class="fa-solid fa-bars"></i></a>
-                <a href="" id="text">Danh mục</a>
+                <p>Danh Mục</p>
+                <ul>
+                    <li>Sản phẩm mới</li>
+                    <li>Khuyến Mãi</li>
+                    <li>Trả góp</li>
+                </ul>
             </div>
             <div class="hover header-viewPrice">
                 <a href="#"><i class="fa-solid fa-location-dot"></i></a>
@@ -36,10 +41,10 @@
                 <input type="text" name="" id="text" placeholder="Bạn cần tìm gì ?">
             </div>
             <div class="hover header-call">
-                <a href=""><i class="fa-solid fa-phone"></i></a>
+                <a href="../HTML/thanhToan.html"><i class="fa-solid fa-phone"></i></a>
                 <div class="header-call-text">
-                    <a href="">Gọi mua hàng</a>
-                    <a href="">1800.2097</a>
+                    <a href="../HTML/thanhToan.html">Gọi mua hàng</a>
+                    <a href="../HTML/thanhToan.html">1800.2097</a>
                 </div>
             </div>
             <div class="hover header-position">
@@ -51,8 +56,8 @@
                 <a href="">Tra cứu đơn hàng</a>
             </div>
             <div class="hover header-shopping">
-                <a href=""><i class="fa-solid fa-cart-plus"></i></a>
-                <a href="">Giỏ hàng</a>
+                <a href="../HTML/Giohang.html"><i class="fa-solid fa-cart-plus"></i></a>
+                <a href="../HTML/Giohang.html">Giỏ hàng</a>
             </div>
             <div class="header-user" id="btn_login-line">
                 <!-- <a href="../../FormDangNhap/CodeNew/index.html">Đăng Nhập</a> -->
@@ -173,110 +178,171 @@
             </div>
             <div class="list">
                 <a href=""><i class="fa-thin fa-greater-than"></i></a>
-                <a href="#">iPhone 11 64GB</a>
+                <a href="#">NokiaC31 4GB/128GB</a>
             </div>
         </div>
         <div class="container">
             <div class="product-header df">
                 <div class="product-name">
-                    <h2>iPhone 11 64GB</h2>
+                    <h2>NokiaC31 4GB/128GB</h2>
                 </div>
                 <div class="product-rate df">
-                    <div class="rate"><img src="../picture/Rating 1 (1).png" alt=""></div>
-                    <a href="" class="evaluate">594 đánh giá</a>
+                    <div class="rate"><img src="../picture/Rating 1 (3).png" alt=""></div>
+                    <a href="" class="evaluate">142 đánh giá</a>
                     <div class="|">|</div>
-                    <a href="" class="q&a">6746 Hỏi & đáp</a>
+                    <a href="" class="q&a">78Hỏi & đáp</a>
                     <div class="|">|</div>
                     <a href="" class="compare">So sánh</a>
                 </div>
             </div>
             <div class="product-info df">
-                <div class="product-img">
-                    <img src="../picture/iPhone1164Gb.webp" alt="iPhone 14 Pro Max 128GB">
-                    <div class="other df">
-                        <a href="" class="other-img">
-                            <div class="icon-photo"><img src="../picture/instagram.png" alt=""></div>
-                            <div>Xem thêm 6 ảnh</div>
-                        </a>
-                        <a href="" class="other-video">
-                            <div class="icon-video"><img src="../picture/instagram.png" alt=""></div>
-                            <div>Video trên tay</div>
-                        </a>
-                        <a href="" class="other-inbox">
-                            <div class="icon-"><img src="../picture/instagram.png" alt=""></div>
-                            <div>Trong hộp có gì</div>
-                        </a>
+                <div class="products-items">
+                    <div class="product-img  color-container">
+                        <div class="product-img-container">
+                            <button onclick="backImage()" class="button-left button-left-tim"><i
+                                    class="fa-solid fa-less-than"></i></button>
+                            <div class="image-container cl-tim">
+                                <img class="img-items" src="../picture/nokiac31.webp"
+                                    alt="iPhone 14 Pro Max 128GB">
+                            </div>
+
+                            <button onclick="nextImage()" class="button-right button-right-tim"><i
+                                    class="fa-solid fa-greater-than"></i></button>
+                        </div>
+                        <div class="other df">
+
+
+                            <!-- Button to open the modal -->
+                            <a id="modal-button" class="openModal">
+                                <div class="icon-photo"><i class="fa-solid fa-image fa-xl"></i></div>
+                                <span>Xem thêm 17 ảnh</span>
+                            </a>
+
+                            <!-- The Modal -->
+                            <div id="image-modal" class="modal">
+                                <!-- Modal content -->
+                                <div class="modal-content">
+                                    <span class="close">&times;</span>
+                                    <h2 id="image-title"> </h2>
+                                    <img id="modal-image" src="" alt="Iphone14 ProMax">
+                                </div>
+
+                                <!-- Modal footer -->
+                                <div class="modal-footer">
+                                    <h3>Other Images:</h3>
+                                    <ul id="image-list">
+                                        <li><img src="../picture/638129176875910469_iphone-14pro-14prm-2.webp"
+                                                alt="Iphone14 ProMax"></li>
+                                        <li><img src="../picture/638129176877496345_iphone-14promax-1.webp"
+                                                alt="Iphone14 ProMax"></li>
+                                        <li><img src="../picture/638129176877756103_iphone-14pro-14prm-4.webp"
+                                                alt="Iphone14 ProMax"></li>
+                                        <li><img src="../picture/638129176880563423_iphone-14pro-14prm-3.webp"
+                                                alt="Iphone14 ProMax"></li>
+                                        <li><img src="../picture/iPhone 14 Promax (den).webp" alt="Iphone14 ProMax">
+                                        </li>
+                                        <li><img src="../picture/iPhone 14 Promax-Yellow.webp" alt="Iphone14 ProMax">
+                                        </li>
+                                        <li><img src="../picture/iPhone 14 PromaxBac.webp" alt="Iphone14 ProMax"></li>
+                                        <li><img src="../picture/iPhone 14 PromaxTim.webp" alt="Iphone14 ProMax"></li>
+
+                                    </ul>
+                                </div>
+                            </div>
+
+
+
+
+                            <a id="openModal" class="openModal">
+                                <div class="icon-video"><i class="fa-solid fa-video fa-xl"></i></div>
+                                <span>Video trên tay</span>
+                            </a>
+
+                            <div id="modalContainer" class="other-video">
+                                <div id="modalContent">
+                                    <span id="closeModal">&times;</span>
+                                    <!-- <iframe src="https://www.youtube.com/embed/VIDEO_ID_HERE"></iframe> -->
+                                    <iframe width="950" height="640" src="https://www.youtube.com/embed/2uZpN5wXu-8"
+                                        title="Social Video iPhone 14 Pro-14 Pro max" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        allowfullscreen></iframe>
+                                </div>
+                            </div>
+
+
+                            <a href="#" class="other-inbox">
+                                <div class="icon-"><i class="fa-solid fa-box-open fa-xl"></i></div>
+                                <span>Trong hộp có gì</span>
+                            </a>
+                            <div class="box-open">
+                                <div class="exits" ><i class="fa-solid fa-circle-xmark fa-xl"></i></div>
+                                <h3 style="color: #fff; margin: 20px 0;">Trong hộp Iphone 14 Pro Max 128GB</h3>
+
+                                <img src="../picture/638129177600949647_iphone-14prm-den-3.webp" alt="">
+
+                            </div>
+                        </div>
                     </div>
+                   
+                   
+                    
                 </div>
-                <div class="product-in4 df">
+
+
+                <div class="product-in4 df" style="margin-left: 233px;">
                     <div class="product-in4-header df">
                         <div class="product-price df">
-                            <h2 style="color: red;">10.299.000đ</h2>
+                            <h2 style="color: red;">2.390.000đ</h2>
                         </div>
                         <div class="product-pay ">
-                            <p>Trả góp chỉ từ <br> 921.000đ/tháng</p>
+                            <p>Trả góp chỉ từ <br> 354.500đ/tháng</p>
                         </div>
                     </div>
                     <div class="product-options df">
                         <div class="option">
                             <input type="radio" name="op" id="128GB" class="128GB">
-                            <label for="op">64GB <br> 10.299.000đ</label>
+                            <label for="op">3GB/32GB <br> 1.980.000đ</label>
                         </div>
                         <div class="option">
                             <input type="radio" name="op" id="256GB" class="256GB">
-                            <label for="op">128GB <br> 11.999.000đ</label>
+                            <label for="op">4GB/128GB <br> 2.390.000đ</label>
                         </div>
-                        <!-- <div class="option">
-                            <input type="radio" name="op" id="512GB" class="512GB">
-                            <label for="op">512GB <br> 35.790.000đ</label>
-                        </div>
-                        <div class="option">
-                            <input type="radio" name="op" id="1TB" class="1TB">
-                            <label for="op">1TB <br> 41.990.000đ</label>
-                        </div> -->
                     </div>
                     <div class="product-colors df">
                         <p style="margin-right: 8px;">Màu sắc sản phẩm: </p>
                         <div class="color">
                             <input type="radio" name="cl" id="den" class="den">
-                            <label for="cl">Đen</label>
-                        </div>
-                        <div class="color">
-                            <input type="radio" name="cl" id="tim" class="tim">
-                            <label for="cl">Vàng</label>
-                        </div>
-                        <!-- <div class="color">
-                            <input type="radio" name="cl" id="vang" class="vang">
-                            <label for="cl">Vàng</label>
+                            <label for="cl">Xanh dương</label>
                         </div>
                         <div class="color">
                             <input type="radio" name="cl" id="bac" class="bac">
-                            <label for="cl">Bạc</label>
-                        </div> -->
+                            <label for="cl">Xanh lá</label>
+                        </div>
+
+
                     </div>
                     <div class="product-endow">
-                        <h4>Nhận ngay khuyến khuyến mãi đặc biệt</h4>
+                        <h4>Chọn 1 trong 2 khuyến mãi sau:</h4>
                         <div class="endow">
                             <input type="radio" name="ed" id="giamNgay7" class="giamNgay7">
-                            <label for="ed">Trả gớp 0%</label>
+                            <label for="ed">Giảm ngay 7.000.000 khi mua màu Đen áp dụng đến 20/04</label>
                         </div>
                         <div class="endow">
                             <input type="radio" name="ed" id="giamNgay2" class="giamNgay2">
-                            <label for="ed">Giảm 37% khi mua Tai nghe Bluetooth giá chỉ 500.000 <sup>đ</sup></label>
+                            <label for="ed">Giảm ngay 2.000.000 áp dụng đến 20/04 + Trả góp 0%</label>
                         </div>
                         <div class="other-endows">Ưu đãi thêm:</div>
                         <div class="other-endow df">
                             <div class="tick"></div>
-                            <div>Thu cũ đổi mới trợ giá ngay 15% đến 3 triệu (SmartExchange)</div>
+                            <div>Giảm giá đến 30% hệ sinh thái Apple</div>
                         </div>
                         <div class="other-endow df">
                             <div class="tick"></div>
-                            <div>Sim Vinaphone Combo 120 3T giá chỉ 299.000đ khi mua kèm máy</div>
+                            <div>Thu cũ đổi mới giảm ngay 15% đến 3 triệu</div>
                         </div>
                         <div class="other-endow df">
                             <div class="tick"></div>
-                            <div>Giảm đén 30% hệ sinh thái Apple
-                            </div>
+                            <div>Sim MobiFone Super Data 1T giá trị 199.000đ khi mua kèm máy</div>
                         </div>
                     </div>
                     <div class="pay">
@@ -295,50 +361,44 @@
                 <div class="product-describe df">
                     <ul>
                         <li class="screen df">
-                            <div class="screen-icon">icon</div>
-                            <p>6.1 inch, IPS LCD, Liquid Retina HD,2796 x 1290 Pixels</p>
+                            <div class="screen-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+                            <p>6.52 inch, IPS LCD, HD+, 720 x 1600 Pixels</p>
                         </li>
                         <li class="camera-afer df">
-                            <div class="camera-after-icon">icon</div>
-                            <p>12.0 MP + 12.0 MP</p>
+                            <div class="camera-after-icon"><i class="fa-solid fa-camera-rotate"></i></div>
+                            <p>13.0 MP + 12.0 MP</p>
                         </li>
                         <li class="camere-selfie df">
-                            <div class="camera-selfie-icon">icon</div>
-                            <p>12.0 MP</p>
+                            <div class="camera-selfie-icon"><i class="fa-solid fa-camera"></i></div>
+                            <p>5.0 MP</p>
                         </li>
                         <li class="cpu df">
-                            <div class="cpu-icon">icon</div>
-                            <p>Apple A13 Bionic</p>
+                            <div class="cpu-icon"><i class="fa-solid fa-microchip"></i></div>
+                            <p>Spreadtrum SC9863A</p>
                         </li>
                         <li class="memory df">
-                            <div class="memory-icon">icon</div>
-                            <p>64 GB</p>
+                            <div class="memory-icon"><i class="fa-solid fa-memory"></i></div>
+                            <p>32 GB</p>
                         </li>
                     </ul>
                     <a href="" class="more-describe">Xem chi tiết thông số kỹ thuật</a>
                 </div>
                 <div class="product-news df">
                     <div class="news-header df">
-                        <h3>Tin tức về iPhone 11 64GB</h3>
+                        <h3>Tin tức về NokiaC31 4GB/128GB</h3>
                         <a href="">Xem tất cả</a>
                     </div>
                     <div class="news-contents df">
                         <div class="content df">
-                            <img src="../picture/iPhone11-1.webp" alt="">
-                            <a href="">Apple sẽ ngừng bán dòng iPhone 11 sau khi iPhone 14 series ra mắt</a>
+                            <img src="../picture/637816482588373593_nokia-c21-1.webp" alt="">
+                            <a href="">Nokia C21 Plus, Nokia C21 ra mắt với giá siêu rẻ từ 2.5 triệu đồng</a>
                         </div>
                         <div class="content df">
-                            <img src="../picture/iPhone11-2.webp" alt="">
-                            <a href="">Nghiên cứu cho thấy iPhone 12 giữ giá trị tốt hơn so với iPhone 11</a>
+                            <img src="../picture/637816482588373593_nokia-c21-1.webp" alt="">
+                            <a href="">Nokia C31 ra mắt - Màn hình lớn. Sạc 10W. MicroUSB. Giá 5.6 triệu đồng</a>
                         </div>
-                        <div class="content df">
-                            <img src="../picture/iPhone11-3.webp" alt="">
-                            <a href="">Hưaei bị Apple chiếm thị phần tại chính quê nhà Trung Quốc</a>
-                        </div>
-                        <div class="content df">
-                            <img src="../picture/iPhone11-4.webp" alt="">
-                            <a href="">Apple thay đổi chính sách bảo hành iPhone</a>
-                        </div>
+                       
+                        
                     </div>
                 </div>
             </div>
@@ -349,10 +409,9 @@
                         <img src="../picture/facebook.png" alt="">
                     </div>
                     <div class="user df">
-                        <div class="name">Quế Trân</div>
+                        <div class="name">Võ Nguyễn Bảo Nguyên</div>
                         <div class="rate"><img src="../picture/Rating 1 (1).png" alt=""></div>
-                        <div class="cmt">Máy có cấu hình tốt, mức giá hợp lý và thiết kế đẹp. Tuy nhiên hệ thống giao
-                            dịch bên shop đôi lúc khó thanh toán, shop kiểm tra lại phần này nhé.</div>
+                        <div class="cmt">Máy rất thích hợp cho khách hàng lớn tuổi như tôi.</div>
                     </div>
                 </div>
                 <div class="user-rate df">
@@ -360,10 +419,9 @@
                         <img src="../picture/facebook.png" alt="">
                     </div>
                     <div class="user df">
-                        <div class="name">Tiến Bảo</div>
+                        <div class="name">Huy</div>
                         <div class="rate"><img src="../picture/Rating 1 (3).png" alt=""></div>
-                        <div class="cmt">sản phẩm dùng rất tốt, shop giao hàng cũng nhanh lắm mọi người ạ. Rất hài lòng
-                            về chất lượng sản phẩm và dịch vụ</div>
+                        <div class="cmt">Tôi lựa chọn sản phẩm này để làm quà tặng cho mẹ tôi</div>
                     </div>
                 </div>
                 <div class="user-rate df">
@@ -371,9 +429,9 @@
                         <img src="../picture/facebook.png" alt="">
                     </div>
                     <div class="user df">
-                        <div class="name">Thanh Lộc</div>
+                        <div class="name">Lê Na</div>
                         <div class="rate"><img src="../picture/Rating 1 (3).png" alt=""></div>
-                        <div class="cmt">Thấy xài ổn, nhưng dung lượng hơi ít</div>
+                        <div class="cmt">Máy xài tốt. Pin khá ổn. Coi phim thoải mái</div>
                     </div>
                 </div>
                 <div class="user-rate df">
@@ -381,12 +439,9 @@
                         <img src="../picture/facebook.png" alt="">
                     </div>
                     <div class="user df">
-                        <div class="name">Hải Hoàng</div>
-                        <div class="rate"><img src="../picture/Rating 1 (2).png" alt=""></div>
-                        <div class="cmt">mình mua điện thoại ở CPhone có lỗi về màn hình, sensor và mình đã quay video
-                            và điện thoại đến cửa hàng về lỗi đó và cửa hàng báo lại là máy bình thường không có lỗi gì
-                            trong vòng 30 ngày và không chịu đổi trả theo chính sách mà CPhone đã nói trước đó. mọi
-                            người cẩn thận hàng CPhone trước khi mua.</div>
+                        <div class="name">Vũ Minh Đạt</div>
+                        <div class="rate"><img src="../picture/Rating 1 (1).png" alt=""></div>
+                        <div class="cmt">Hài lòng.</div>
                     </div>
                 </div>
                 <div class="pages df">
@@ -446,20 +501,19 @@
                     <div class="sub">Subscribe</div>
                 </div>
                 <div class="social df">
-                    <a href="https://twitter.com/?lang=vi" target="_blank"> <img src="../picture/Twitter 1.png"
-                            alt="twitter" class="twitter"></a>
-                    <a href="https://www.facebook.com" target="_blank"><img src="../picture/Facebook 1.png" alt="fb"
-                            class="fb"></a>
-                    <a href="https://www.linkedin.com" target="_blank"> <img src="../picture/LinkedIn 1.png" alt="in"
-                            class="inlink"></a>
-                    <a href="https://www.youtube.com" target="_blank"><img src="../picture/YouTube 1.png" alt="ytb"
-                            class="ytb"></a>
+                    <a href="https://twitter.com/?lang=vi" target="_blank"> <img src="../picture/Twitter 1.png" alt="twitter" class="twitter"></a>
+                    <a href="https://www.facebook.com" target="_blank"><img src="../picture/Facebook 1.png" alt="fb" class="fb"></a>
+                    <a href="https://www.linkedin.com" target="_blank"> <img src="../picture/LinkedIn 1.png" alt="in" class="inlink"></a>
+                    <a href="https://www.youtube.com" target="_blank"><img src="../picture/YouTube 1.png" alt="ytb" class="ytb"></a>
                 </div>
                 <div class="address">Address: 12 Nguyen Van Bao, Go Vap, Ho Chi Minh City</div>
             </div>
 
         </div>
     </div>
+    <script src="../JavaScript/deataill.js"></script>
+    <script src="../JavaScript/thanhtoan.js"></script>
+    <script src="../JavaScript/main.js"></script>
 </body>
 
 </html>
