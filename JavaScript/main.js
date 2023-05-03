@@ -71,6 +71,13 @@ function signUp(e) {
   var retypepassword = document.getElementById("retypepassword-res").value;
 
 
+  if(username==""){
+    document.querySelector("#tbRegister").innerHTML("Không để trống username")
+    return ;
+  }
+
+
+
 
   if (password == retypepassword) {
     var user =
@@ -115,6 +122,8 @@ function login(e) {
     // document.getElementById("btn_login-line").style.display="none";
     document.getElementById("info_user").innerHTML = "";
     document.getElementById("info_user").innerHTML = username;
+    document.querySelector("body").style.overflow ="auto"
+    contentList.style.zIndex = '0';
 
   } else alert("Đăng nhập thất bại !")
 }

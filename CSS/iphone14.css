@@ -663,3 +663,7 @@ color: #fff; margin: 10px 20px; text-align: end; cursor: pointer;
 .product-img{
     margin-left: 74px;
 }
+
+.product-img{
+    margin-left: 0px;
+}
