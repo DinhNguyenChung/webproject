@@ -71,12 +71,25 @@ function signUp(e) {
   var retypepassword = document.getElementById("retypepassword-res").value;
 
 
-  if(username==""){
-    document.querySelector("#tbRegister").innerHTML("Không để trống username")
-    return ;
-  }
-
-
+  // if(username==""){
+  //   document.querySelector("#tbRegister").innerHTML ="Không để trống username"
+  //   return ;
+  // }
+  
+  // if(email==""){
+  //   document.querySelector("#tbRegister").innerHTML ="Không để trống email"
+  //   return ;
+  // }
+  
+  // if(password==""){
+  //   document.querySelector("#tbRegister").innerHTML ="Không để trống password"
+  //   return ;
+  // }
+  
+  // if(retypepassword==""){
+  //   document.querySelector("#tbRegister").innerHTML ="Không để trống xác nhận mật khẩu"
+  //   return ;
+  // }
 
 
   if (password == retypepassword) {
