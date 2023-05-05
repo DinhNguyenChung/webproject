@@ -1,21 +1,21 @@
 * {
-    margin: auto;
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.container {
+.containerTK {
     margin: 0px 120px;
     margin-top: 50px;
     height: fit-content;
 }
 
-.df-col {
+.df-cols {
     display: flex;
     flex-direction: column;
 }
 
-.df-row {
+.df-rows {
     display: flex;
     flex-direction: row;
 }
@@ -79,4 +79,18 @@
 
 .product-describe {
     font-size: 12px;
+}
+
+#timkiem{
+    display: none;
+}
+.optionTK{
+    gap: 8px;
+    width: 100%;
+    height: calc(25%);
+    padding: 30px 30px;
+}
+.df-rows{
+    display: flex;
+    flex-direction: row;
 }

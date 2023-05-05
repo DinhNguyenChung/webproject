@@ -202,3 +202,6 @@ table th{
     display: flex;
     justify-content: space-between;
 }
+.conntent{
+    display: none;
+}

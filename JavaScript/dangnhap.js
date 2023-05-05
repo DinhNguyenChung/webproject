@@ -1,5 +1,16 @@
+// Hover danh muc 
+var contentList = document.querySelector('.content-list');
+var hoverBtn = document.querySelector('.header-category');
 
-//Dang nhap
+hoverBtn.addEventListener('mouseover', function() {
+  contentList.style.zIndex = '-1';
+});
+
+hoverBtn.addEventListener('mouseout', function() {
+  contentList.style.zIndex = '0';
+});
+
+//Dagd nhap
 
 const wrapper = document.querySelector('.wrapper');
 const loginlink = document.querySelector('.login-link');
@@ -47,15 +58,23 @@ document.addEventListener('DOMContentLoaded', () => {
   // });
 });
 
+
 function signUp(e) {
   event.preventDefault();
+
+
   var username = document.getElementById("username-res").value;
   var email = document.getElementById("email-res").value;
   var password = document.getElementById("password-res").value;
   var retypepassword = document.getElementById("retypepassword-res").value;
 
-
-
+  var isValidUsername = validateInput(username, /^[a-zA-Z0-9_-]{3,16}$/);
+  if (isValidUsername) {
+    console.log("Username is valid.");
+  } else {
+    console.log("Username is invalid.");
+  }
+  
   if (password == retypepassword) {
     var user =
     {
@@ -70,6 +89,9 @@ function signUp(e) {
   else alert("Mật khẩu không khớp !")
 
 }
+
+
+
 
 document.addEventListener('DOMContentLoaded', () => {
   const dangnhap = document.getElementsByClassName(".btndangnhap");
@@ -99,6 +121,58 @@ function login(e) {
     // document.getElementById("btn_login-line").style.display="none";
     document.getElementById("info_user").innerHTML = "";
     document.getElementById("info_user").innerHTML = username;
+    document.querySelector("body").style.overflow ="auto"
+    contentList.style.zIndex = '0';
+    document.querySelector(".btnSignUp").classList.add("show");
+
 
   } else alert("Đăng nhập thất bại !")
 }
+
+var SignUp = document.querySelector(".btnSignUp");
+
+SignUp.addEventListener("click",function(event){
+  event.preventDefault();
+  SignUp.classList.remove("show");
+  document.getElementById("info_user").innerHTML = "Đăng Nhập";
+})
+
+
+
+// Biểu thức Chính Quy
+
+
+function validateInput(inputValue, regexPattern) {
+  var regex = new RegExp(regexPattern);
+  return regex.test(inputValue);
+}
+
+
+
+//Mở modal thành viên nhóm
+var btnShowmembers = document.querySelector("#modal-member");
+var closeMembers = document.querySelector("#close");
+var bodymembers = document.querySelector("#members");
+var notclose = document.querySelector("#notclose")
+
+btnShowmembers.addEventListener("click",function(){
+  document.querySelector("#members").style.display ="block";
+  document.body.style.overflow = "hidden"
+})
+
+closeMembers.addEventListener("click",function(){
+  document.querySelector("#members").style.display ="none";
+  document.body.style.overflow = "auto"
+})
+
+bodymembers.addEventListener("click",function(event){
+  if(event.target.closest("form")){
+    return;
+  }
+  document.querySelector("#members").style.display ="none";
+  document.body.style.overflow = "auto"
+})
+
+
+
+

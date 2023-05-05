@@ -1082,3 +1082,33 @@ p {
 .content-list{
     z-index: 0;
 }
+
+.header-Title{
+    margin-right: 5px;
+}
+
+.header-user{
+    display: flex;
+}
+.btnLogin{
+    display: block;
+}
+.btnSignUp{
+    width: 50px;
+    display: none !important ;
+
+}
+.btnSignUp.show {
+    display: block !important;
+}
+
+#info_user{
+    display: flex;
+    justify-content: center;
+}
+#modal-member{
+    display: block;
+    text-align: center;
+    padding: 4px 10px;
+}
+

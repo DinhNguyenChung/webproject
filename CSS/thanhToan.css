@@ -86,3 +86,7 @@
 .option:hover {
     cursor: pointer;
 }
+
+#thanhtoan{
+    display: none;
+}
