@@ -2,11 +2,11 @@
 var contentList = document.querySelector('.content-list');
 var hoverBtn = document.querySelector('.header-category');
 
-hoverBtn.addEventListener('mouseover', function() {
+hoverBtn.addEventListener('mouseover', function () {
   contentList.style.zIndex = '-1';
 });
 
-hoverBtn.addEventListener('mouseout', function() {
+hoverBtn.addEventListener('mouseout', function () {
   contentList.style.zIndex = '0';
 });
 
@@ -31,23 +31,23 @@ document.addEventListener('DOMContentLoaded', () => {
   btnLogin.addEventListener('click', () => {
     wrapper.classList.add('active-btnlogin');
     document.body.style.overflow = "hidden"
-    document.querySelector(".content-list").style.zIndex ="-1"
+    document.querySelector(".content-list").style.zIndex = "-1"
   });
   close.addEventListener('click', () => {
     wrapper.classList.remove('active-btnlogin');
     document.body.style.overflow = "auto"
-    document.querySelector(".content-list").style.zIndex ="0"
+    document.querySelector(".content-list").style.zIndex = "0"
   });
   var bgr_close = document.getElementById("handle_close-modal")
 
 
-  bgr_close.addEventListener('click',function (event){
-    if(event.target.closest(".form-box")){
+  bgr_close.addEventListener('click', function (event) {
+    if (event.target.closest(".form-box")) {
       return;
     }
     wrapper.classList.remove('active-btnlogin');
     document.body.style.overflow = "auto"
-    document.querySelector(".content-list").style.zIndex ="0"
+    document.querySelector(".content-list").style.zIndex = "0"
   });
 
   // bodyclose.addEventListener('click',()=>{
@@ -74,7 +74,7 @@ function signUp(e) {
   } else {
     console.log("Username is invalid.");
   }
-  
+
   if (password == retypepassword) {
     var user =
     {
@@ -121,7 +121,7 @@ function login(e) {
     // document.getElementById("btn_login-line").style.display="none";
     document.getElementById("info_user").innerHTML = "";
     document.getElementById("info_user").innerHTML = username;
-    document.querySelector("body").style.overflow ="auto"
+    document.querySelector("body").style.overflow = "auto"
     contentList.style.zIndex = '0';
     document.querySelector(".btnSignUp").classList.add("show");
 
@@ -131,7 +131,7 @@ function login(e) {
 
 var SignUp = document.querySelector(".btnSignUp");
 
-SignUp.addEventListener("click",function(event){
+SignUp.addEventListener("click", function (event) {
   event.preventDefault();
   SignUp.classList.remove("show");
   document.getElementById("info_user").innerHTML = "Đăng Nhập";
@@ -145,19 +145,28 @@ function validateInput(inputValue, regexPattern) {
   return regex.test(inputValue);
 }
 
+var toast = document.querySelector('.toast');
+
 function checkUser() {
   let input = document.getElementById("username-res");
   let value = input.value;
   let error = document.getElementById("chkUser");
   const regex = /^[a-zA-Z0-9!@#$%^&*]{6,}$/;
   if (value === "") {
-    error.innerHTML = "User không được để trống!";
-    error.style.marginBottom = "8px";
+    document.querySelector('.toast_msg').innerHTML = "User không được để trống!";
+    toast.classList.add('animation-fadeIn');
+    setTimeout(function () {
+      toast.classList.remove('animation-fadeIn');
+    }, 4000);
   }
   else if (regex.test(value)) {
-      error.innerHTML = "";
+    error.innerHTML = "";
   } else {
-      error.innerHTML = "User không hợp lệ!";
+    document.querySelector('.toast_msg').innerHTML = "User phải có ít nhất 8 ký tự (có thể có chữ, số và ký tự đặc biệt!)";
+    toast.classList.add('animation-fadeIn');
+    setTimeout(function () {
+      toast.classList.remove('animation-fadeIn');
+    }, 4000);
   }
 }
 
@@ -167,12 +176,20 @@ function checkEmail() {
   let error = document.getElementById("chkEmail");
   const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (value === "") {
-    error.innerHTML = "Email không được để trống!";
+    document.querySelector('.toast_msg').innerHTML = "Email không được để trống!";
+    toast.classList.add('animation-fadeIn');
+    setTimeout(function () {
+      toast.classList.remove('animation-fadeIn');
+    }, 4000);
   }
   else if (regex.test(value)) {
-      error.innerHTML = "";
+    error.innerHTML = "";
   } else {
-      error.innerHTML = "Email không hợp lệ!";
+    document.querySelector('.toast_msg').innerHTML = "Email không hợp lệ";
+    toast.classList.add('animation-fadeIn');
+    setTimeout(function () {
+      toast.classList.remove('animation-fadeIn');
+    }, 4000);
   }
 }
 
@@ -182,13 +199,20 @@ function checkPassword() {
   let error = document.getElementById("chkPassword");
   const regex = /^[a-zA-Z0-9!@#$%&\.]{8,}/;
   if (value === "") {
-    document.querySelector('.toast_msg').innerHTML = "Password không được để trống!"
-    document.querySelector('#toast').style.display = "flex";
+    document.querySelector('.toast_msg').innerHTML = "Password không được để trống!";
+    toast.classList.add('animation-fadeIn');
+    setTimeout(function () {
+      toast.classList.remove('animation-fadeIn');
+    }, 4000);
   }
   else if (regex.test(value)) {
-      error.innerHTML = "";
+    error.innerHTML = "";
   } else {
-      error.innerHTML = "Password không đủ mạnh!";
+    document.querySelector('.toast_msg').innerHTML = "Password phải có ít nhất 8 ký tự (bao gồm chữ, số và ký tự đặc biệt)";
+    toast.classList.add('animation-fadeIn');
+    setTimeout(function () {
+      toast.classList.remove('animation-fadeIn');
+    }, 4000);
   }
 }
 
@@ -198,10 +222,14 @@ function checkRetypePassword() {
   mk2 = document.getElementById('retypepassword-res').value;
   let error = document.getElementById("chkRetypePassword");
   if (mk == mk2) {
-      error.innerHTML = "";
+    error.innerHTML = "";
   } else {
-      error.innerHTML = "Mật khẩu không khớp!";
-      return false;
+    document.querySelector('.toast_msg').innerHTML = "Password không khớp!";
+    toast.classList.add('animation-fadeIn');
+    setTimeout(function () {
+      toast.classList.remove('animation-fadeIn');
+    }, 4000);
+    return false;
   }
 }
 
@@ -211,21 +239,21 @@ var closeMembers = document.querySelector("#close");
 var bodymembers = document.querySelector("#members");
 var notclose = document.querySelector("#notclose")
 
-btnShowmembers.addEventListener("click",function(){
-  document.querySelector("#members").style.display ="block";
+btnShowmembers.addEventListener("click", function () {
+  document.querySelector("#members").style.display = "block";
   document.body.style.overflow = "hidden"
 })
 
-closeMembers.addEventListener("click",function(){
-  document.querySelector("#members").style.display ="none";
+closeMembers.addEventListener("click", function () {
+  document.querySelector("#members").style.display = "none";
   document.body.style.overflow = "auto"
 })
 
-bodymembers.addEventListener("click",function(event){
-  if(event.target.closest("form")){
+bodymembers.addEventListener("click", function (event) {
+  if (event.target.closest("form")) {
     return;
   }
-  document.querySelector("#members").style.display ="none";
+  document.querySelector("#members").style.display = "none";
   document.body.style.overflow = "auto"
 })
 
