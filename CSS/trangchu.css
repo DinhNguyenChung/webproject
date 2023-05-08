@@ -1128,17 +1128,22 @@ p {
     padding: 20px 0;
     max-width: 460px;
     min-width: 400px;
-    z-index: 1;
-    animation: fadeOut linear 4.5s;
+    transform: translateX(calc(100% + 32px));
+}
+
+.animation-fadeIn {
+    animation: fadeIn ease 0.3s forwards;
 }
 
 
-@keyframes fadeOut {
+@keyframes fadeIn {
     from {
-        opacity: 1;
+        opacity: 0;
+        transform: translateX(calc(100% + 32px));
     }
     to {
-        opacity: 0;
+        opacity: 1;
+        transform: translateX(0);
     }
 }
 
@@ -1175,7 +1180,6 @@ p {
 
 #toast {
     position: fixed;
-    display: none;
     top: 32px;
     right: 32px;
 
