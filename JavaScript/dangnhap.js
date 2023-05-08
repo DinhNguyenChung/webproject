@@ -12,11 +12,11 @@ hoverBtn.addEventListener('mouseout', function () {
 
 //Dagd nhap
 
-const wrapper = document.querySelector('.wrapper');
-const loginlink = document.querySelector('.login-link');
-const registerlink = document.querySelector('.register-link');
-const btnLogin = document.querySelector('.btnLogin');
-const close = document.querySelector('.icon-close');
+var wrapper = document.querySelector('.wrapper');
+var loginlink = document.querySelector('.login-link');
+var registerlink = document.querySelector('.register-link');
+var btnLogin = document.querySelector('.btnLogin');
+var close = document.querySelector('.icon-close');
 document.addEventListener('DOMContentLoaded', () => {
   // const bodyclose = document.querySelector('#body');
 

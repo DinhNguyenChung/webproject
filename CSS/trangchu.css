@@ -267,7 +267,7 @@ html {
 }
 
 .wrapper {
-    position: fixed;
+    position: absolute;
     top: 0px;
     left: 0px;
     width: 100%;
@@ -1004,10 +1004,14 @@ p {
 }
 
 .social>a {
-    border-radius: 4px;
-    border: 1px solid black;
+    border-radius: 10px;
+    /* border: 1px solid black; */
     padding: 4px 4px 0px 4px;
     background-color: antiquewhite;
+}
+.social>a:hover{
+    background-color: #3e3e3e;
+    transition: 0.7ms;
 }
 
 .social>img:hover {

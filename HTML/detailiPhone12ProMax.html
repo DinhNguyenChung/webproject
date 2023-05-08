@@ -200,6 +200,18 @@
                                 <img class="img-items" src="../picture/iphone12promax.webp"
                                     alt="iPhone 14 Pro Max 128GB">
                             </div>
+                            <div class="image-container cl-vang">
+                                <img class="img-items" src="../picture/iphone12proMax-hong.webp"
+                                    alt="iPhone 14 Pro Max 128GB">
+                            </div>
+                            <div class="image-container cl-den">
+                                <img class="img-items" src="../picture/iphone12proMax-xanh.webp"
+                                    alt="iPhone 14 Pro Max 128GB">
+                            </div>
+                            <div class="image-container cl-bac">
+                                <img class="img-items" src="../picture/iphone12proMax-bac.webp"
+                                    alt="iPhone 14 Pro Max 128GB">
+                            </div>
 
                             <button onclick="nextImage()" class="button-right button-right-tim"><i
                                     class="fa-solid fa-greater-than"></i></button>
@@ -307,14 +319,23 @@
                     </div>
                     <div class="product-colors df">
                         <p style="margin-right: 8px;">Màu sắc sản phẩm: </p>
-                        <div class="color">
-                            <input type="radio" name="cl" id="den" class="den">
-                            <label for="cl">Đen</label>
-                        </div>
-                        <div class="color">
-                            <input type="radio" name="cl" id="bac" class="bac">
-                            <label for="cl">Bạc</label>
-                        </div>
+                        <button class="btn-product-colors color-button" onclick="productTim()">
+                            <img src="../picture/iphone12promax.webp" alt="">
+                            <span>Vàng</span>
+                        </button>
+                        <button class="btn-product-colors color-button" onclick="productVang()">
+                            <img src="../picture/iphone12proMax-hong.webp" alt="">
+                            <span>Đen</span>
+                        </button>
+                        <button class="btn-product-colors color-button" onclick="productDen()">
+                            <img src="../picture/iphone12proMax-xanh.webp" alt="">
+                            <span>Vàng</span>
+                        </button>
+                        <button class="btn-product-colors color-button" onclick="productBac()">
+                            <img src="../picture/iphone12proMax-bac.webp" alt="">
+                            <span>Đen</span>
+                        </button>
+                      
                     </div>
                     <div class="product-endow">
                         <h4>Nhận ngay khuyến khuyến mãi đặc biệt</h4>
@@ -450,7 +471,7 @@
                     <ul class="page df">
                         <li class="page-idex-before">
                             <a href="">
-                                < </a>
+                                 </a>
                         </li>
                         <li class="page-idex">
                             <a href="">1</a>
@@ -517,6 +538,7 @@
 
         </div>
     </div>
+    <script src="../JavaScript/deataill.js"></script>
 </body>
 
 </html>
