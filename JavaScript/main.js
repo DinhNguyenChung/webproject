@@ -232,7 +232,7 @@ giohang.addEventListener("click", function(){
   document.querySelector(".trangchu").style.display ="none"
   document.querySelector("#thanhtoan").style.display ="none"
   document.querySelector("#timkiem").style.display ="none"
-  document.querySelector(".conntent").style.display = "block"
+  document.querySelector("#conntent").style.display = "block"
   document.querySelector("#tonext").innerHTML ="Giỏ Hàng"
 })
 
@@ -242,7 +242,7 @@ var BackHome = document.querySelector("#backHome")
 
 BackHome.addEventListener("click",function(){
   document.querySelector(".trangchu").style.display ="block"
-  document.querySelector(".conntent").style.display = "none"
+  document.querySelector("#conntent").style.display = "none"
   document.querySelector("#thanhtoan").style.display ="none"
   document.querySelector("#timkiem").style.display ="none"
   document.querySelector("#tonext").innerHTML ="Điện Thoại "
@@ -255,7 +255,7 @@ var thanhToan = document.querySelector(".header-call")
 thanhToan.addEventListener("click",function(){
   document.querySelector("#thanhtoan").style.display ="block"
   document.querySelector(".trangchu").style.display ="none"
-  document.querySelector(".conntent").style.display = "none"
+  document.querySelector("#conntent").style.display = "none"
   document.querySelector("#timkiem").style.display ="none"
   document.querySelector("#tonext").innerHTML ="Thanh Toán "
 })
@@ -266,6 +266,16 @@ timkiem.addEventListener("click",function(){
   document.querySelector("#timkiem").style.display ="flex"
   document.querySelector("#thanhtoan").style.display ="none"
   document.querySelector(".trangchu").style.display ="none"
-  document.querySelector(".conntent").style.display = "none"
+  document.querySelector("#conntent").style.display = "none"
+  document.querySelector("#tonext").innerHTML ="Tìm Kiếm "
+})
+
+var TK = document.querySelector("#dtpt");
+
+TK.addEventListener("click",function(){
+  document.querySelector("#timkiem").style.display ="flex"
+  document.querySelector("#thanhtoan").style.display ="none"
+  document.querySelector(".trangchu").style.display ="none"
+  document.querySelector("#conntent").style.display = "none"
   document.querySelector("#tonext").innerHTML ="Tìm Kiếm "
 })

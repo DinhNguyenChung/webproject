@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gio hang</title>
+    ;<link rel="stylesheet" href="../CSS/trangchu.css">
+    <link rel="stylesheet" href="../CSS/giohang.css">
+    <link rel="stylesheet" href="../fontawesome-free-6.3.0-web/css/all.min.css">
+    
+    
+</head>
+<body>
+
+        
+        <div class="header">
+            <div class="header-Title">
+                <h1>
+                    CPhone
+                </h1>
+                <!-- <img src="../picture/Logo_phone-removebg-preview.png" alt="logo"> -->
+            </div>
+            <div class="hover header-category">
+                <a href="#"><i class="fa-solid fa-bars"></i></a>
+                <p>Danh Mục</p>
+                <ul>
+                    <li>Sản phẩm mới</li>
+                    <li>Khuyến Mãi</li>
+                    <li>Trả góp</li>
+                </ul>
+            </div>
+            <div class="hover header-viewPrice">
+                <a href="#"><i class="fa-solid fa-location-dot"></i></a>
+                <div class="header-viewPrice-position">
+                    <p>Xem giá tại </p>
+                    <h1>Hồ Chí Minh</h1>
+                </div>
+            </div>
+            <div class="header-seach">
+                <a href="#" id="seach-item"> <button><i class="fa-solid fa-magnifying-glass"></i></button></a>
+                <input type="text" name="" id="text" placeholder="Bạn cần tìm gì ?">
+            </div>
+            <div class="hover header-call df">
+                <a href="../HTML/thanhToan.html"><i class="fa-solid fa-phone"></i></a>
+                <div class="header-call-text">
+                    <a href="../HTML/thanhToan.html">Gọi mua hàng</a>
+                    <a href="../HTML/thanhToan.html">1800.2097</a>
+                </div>
+            </div>
+            <div class="hover header-position df">
+                <a href=""><i class="fa-solid fa-location-dot"></i></a>
+                <a href="">Cửa hàng gần bạn</a>
+            </div>
+            <div class="hover header-check df">
+                <a href=""><i class="fa-solid fa-truck-fast"></i></a>
+                <a href="">Tra cứu đơn hàng</a>
+            </div>
+            <div class="hover header-shopping df">
+                <a href="./Giohang.html"><i class="fa-solid fa-cart-plus"></i></a>
+                <a href="./Giohang.html">Giỏ hàng</a>
+            </div>
+            <div class="header-user df" id="btn_login-line">
+                <!-- <a href="../../FormDangNhap/CodeNew/index.html">Đăng Nhập</a> -->
+                <button class="hover btn btnLogin" id="">
+                    <i class="fa-regular fa-circle-user"></i>
+                    <span id="info_user">Đăng nhập</span>
+                </button>
+                <button class="hover btn btnSignUp" id="">
+                    <i class="fa-solid fa-right-to-bracket"></i>
+                </button>
+            </div>
+    
+            <div class="wrapper" id="handle_close-modal">
+                <div class="wrap-box-form">
+                    <div class="set-width-box-sg">
+                        <span class="icon-close"><i class="fa-solid fa-xmark"></i></span>
+                        <div class="form-box login">
+                            <h2>Login</h2>
+                            <form action="#" onsubmit="login()">
+                                <div class="input-box">
+                                    <span class="icon">
+                                        <i class="fa-solid fa-user"></i>
+                                    </span>
+                                    <input type="text" name="" id="username-login" required>
+                                    <label for="">Username</label>
+                                </div>
+                                <div class="input-box">
+                                    <span class="icon">
+                                        <i class="fa-solid fa-envelope"></i>
+                                    </span>
+                                    <input type="email" name="" id="email-login" required>
+                                    <label for="">Email</label>
+                                </div>
+                                <div class="input-box">
+                                    <span class="icon">
+                                        <i class="fa-solid fa-lock"></i>
+                                    </span>
+                                    <input type="password" name="" id="password-login" required>
+                                    <label for="">Password</label>
+                                </div>
+                                <div class="remember-forgot">
+                                    <label for="#">
+                                        <input type="checkbox">
+                                        Remember me
+                                    </label>
+                                    <a href="#">Forgot Password ?</a>
+    
+                                </div>
+                                <button type="submit" class="btn btndangnhap">Login</button>
+                                <div class="login-register">
+                                    <p>Don't have an account ?
+                                        <a href="#" class="register-link">Register</a>
+                                    </p>
+    
+                                </div>
+                            </form>
+                        </div>
+                        <div class="form-box register">
+                            <h2>Registration</h2>
+                            <form action="#" onsubmit="signUp()">
+    
+                                <div class="input-box">
+                                    <span class="icon">
+                                        <i class="fa-solid fa-user"></i>
+                                    </span>
+                                    <input type="text" name="" id="username-res" onblur="checkUser()" required>
+                                    <label for="">Username</label>
+                                    <div class="chk" id="chkUser"></div>
+                                </div>
+                                <div class="input-box">
+                                    <span class="icon">
+                                        <i class="fa-solid fa-envelope"></i>
+                                    </span>
+                                    <input type="email" name="" id="email-res" onblur="checkEmail()" required>
+                                    <label for="">Email</label>
+                                    <div class="chk" id="chkEmail"></div>
+                                </div>
+                                <div class="input-box">
+                                    <span class="icon">
+                                        <i class="fa-solid fa-lock"></i>
+                                    </span>
+                                    <input type="password" name="" id="password-res" onblur="checkPassword()" required>
+                                    <label for="">Password</label>
+                                    <div class="chk" id="chkPassword"></div>
+                                </div>
+                                <div class="input-box">
+                                    <span class="icon">
+                                        <i class="fa-solid fa-lock"></i>
+                                    </span>
+                                    <input type="password" name="" id="retypepassword-res" onblur="checkRetypePassword()"
+                                        required>
+                                    <label for="">Retype Password</label>
+                                    <div class="chk" id="chkRetypePassword"></div>
+                                </div>
+                                <div class=""><span id="tbRegister" style="color: red;"></span></div>
+                                <div class="remember-forgot">
+                                    <label for="#">
+                                        <input type="checkbox">
+                                        I agree to the term & condittions
+                                    </label>
+                                   
+    
+                                </div>
+                                <button type="submit" class="btn">Register</button>
+                                <div class="login-register">
+                                    <p>Already have an Account ?
+                                        <a href="#" class="login-link">Login</a>
+                                    </p>
+    
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+    
+                </div>
+    
+            </div>
+    
+
+
+    </div>
+            <!-- Thông báo của form đăng nhập -->
+            <div id="toast">
+                <div class="toast">
+                    <div class="toast_icon">
+                        <i class="fa-sharp fa-solid fa-brake-warning"></i>
+                    </div>
+                    <div class="toast_body">
+                        <h3 class="toast_title">Cảnh báo</h3>
+                        <p class="toast_msg"></p>
+                    </div>
+                    <div class="toast_close">
+                        <i class="fa-light fa-circle-xmark"></i>
+                    </div>
+                </div>
+            </div>
+    
+    
+        </div>
+    
+        <div class="height-header"></div>
+    
+        <div class="content-list">
+            <div class="list" id="backHome">
+                <a href="../HTML/Trangchu.html"><i class="fa-solid fa-house"></i></a>
+                <a href="../HTML/Trangchu.html">Trang chủ</a>
+            </div>
+            <div class="list">
+                <a href=""><i class="fa-thin fa-greater-than"></i></a>
+                <a href="#"><span id="tonext">Điện thoại</span></a>
+            </div>
+        </div>
+
+    <div class="conntent" style="margin-top: 50px;">
+        <!-- <div class="backhome" style="margin-top: 10px; text-align: right;"><i class="fa-solid fa-house"></i> <span>Về Trang Chủ</span></div> -->
+        <div class="cart-icon"><i class="fa-solid fa-cart-plus"></i><span class="prices">0</span><sup>đ</sup>
+            <span id="tb" style="color: rgb(255, 0, 0);"></span>
+        </div>
+        <div class="content-cotai">
+            <section class="products">
+                <div class="container" style="margin: 0;">
+                    <div class="product-items df">
+                        <div class="product-item">
+                            <img src="../picture/ip14proMax128Gb.webp" alt="" class="img-items">
+                            <div class="product-item-text">
+                                <p><span>36.000.000</span><sup>đ</sup>
+                                    <span
+                                        style="color: rgb(87, 87, 87); font-size: 12px; text-decoration: line-through;">36.490.000
+                                        <sup>đ</sup></span>
+                                </p>
+                                <h1 style="font-weight: bold;">Iphone 14 ProMax</h1>
+                            </div>
+                            <button class="button">Add</button>
+                            <div class="ratting">
+
+                                <img src="../picture/Rating 1 (3).png" alt="">
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <img src="../picture/iPhone11 128Gb.webp" alt="" class="img-items">
+                            <div class="product-item-text">
+                                <p><span>11.390.000</span><sup>đ</sup></p>
+                                <h1 style="font-weight: bold;">Iphone 11</h1>
+                            </div>
+                            <button class="button">Add</button>
+                            <div class="ratting">
+                                <img src="../picture/Rating 1 (3).png" alt="">
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <img src="../picture/iPhone12 64Gb.webp" alt="" class="img-items">
+                            <div class="product-item-text">
+                                <p><span>12.000.000</span><sup>đ</sup></p>
+                                <h1 style="font-weight: bold;">Iphone 12</h1>
+                            </div>
+                            <button class="button">Add</button>
+
+                            <div class="ratting">
+                                <img src="../picture/Rating 1 (3).png" alt="">
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <img src="../picture/NokiaC21Plus3Gb64Gb.webp" alt="" class="img-items">
+                            <div class="product-item-text">
+                                <p><span>3.000.000</span><sup>đ</sup></p>
+                                <h1 style="font-weight: bold;">Nokia C21 Plus</h1>
+                            </div>
+                            <button class="button">Add</button>
+                            <div class="ratting">
+                                <img src="../picture/Rating 1 (3).png" alt="">
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <img src="../picture/SSglaxyS23Ultra256GB.webp" alt="" class="img-items">
+                            <div class="product-item-text">
+                                <p><span>36.590.000</span><sup>đ</sup>
+                                    <span
+                                        style="color: rgb(87, 87, 87); font-size: 12px; text-decoration: line-through;">36.990.000
+                                        <sup>đ</sup></span>
+                                </p>
+                                <h1 style="font-weight: bold;">SamSung GalaXy S23 ultra</h1>
+                            </div>
+                            <button class="button">Add</button>
+                            <div class="ratting">
+                                <img src="../picture/Rating 1 (3).png" alt="">
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <img src="../picture/Xiaomi12T.webp" alt="" class="img-items">
+                            <div class="product-item-text">
+                                <p><span>4.290.000</span><sup>đ</sup></p>
+                                <h1 style="font-weight: bold;">Xiaomi 12T</h1>
+                            </div>
+                            <button class="button">Add</button>
+                            <div class="ratting">
+                                <img src="../picture/Rating 1 (3).png" alt="">
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <img src="../picture/ViVoT1X.webp" alt="" class="img-items">
+                            <div class="product-item-text">
+                                <p><span>3.660.000</span><sup>đ</sup></p>
+                                <h1 style="font-weight: bold;">ViVo T1X</h1>
+                            </div>
+                            <button class="button">Add</button>
+                            <div class="ratting">
+                                <img src="../picture/Rating 1 (3).png" alt="">
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <img src="../picture/iPhone1164Gb.webp" alt="" class="img-items">
+                            <div class="product-item-text">
+                                <p><span>12.290.000</span><sup>đ</sup>
+                                    <span
+                                        style="color: rgb(87, 87, 87); font-size: 12px; text-decoration: line-through;">13.390.000
+                                        <sup>đ</sup></span>
+                                </p>
+                                <h1 style="font-weight: bold;">iPhone11 64Gb</h1>
+                            </div>
+                            <button class="button">Add</button>
+                            <div class="ratting">
+                                <img src="../picture/Rating 1 (3).png" alt="">
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <img src="../picture/iPhone12ProMax128Gb.webp" alt="" class="img-items">
+                            <div class="product-item-text">
+                                <p><span>12.990.000</span><sup>đ</sup>
+                                    <span
+                                        style="color: rgb(86, 83, 83); font-size: 12px; text-decoration: line-through;">13.220.000
+                                        <sup>đ</sup></span>
+                                </p>
+                                <h1 style="font-weight: bold;">Iphone 12 ProMax</h1>
+                            </div>
+                            <button class="button">Add</button>
+                            <div class="ratting">
+                                <img src="../picture/Rating 1 (3).png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="cart df">
+                <div class="model-container">
+                    <div class="header-cart df">
+                        <h2>Giỏ hàng</h2>
+                        <div class="close"> <i class="fa-regular fa-circle-xmark"></i></div>
+                    </div>
+                    <form style=" padding-bottom: 30px;" action="">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Sản Phẩm</th>
+                                    <th>Giá</th>
+                                    <th>Số Lượng</th>
+                                    <th>Chọn</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                        </table>
+                        <div style="text-align:right;" class="price-total">
+                            <p style="font-weight: bold;">Tổng tiền:<span>0</span><sup>đ</sup></p>
+                        </div>
+                        <button class="">Đặt Hàng</button>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </div>
+    <div class="footer df">
+        <div class="footer-left df">
+            <div class="about df ">
+                <h2>About</h2>
+                <a href="" class="home" id="">Home</a>
+                <a href="" class="shop">Shop</a>
+                <a href="" class="our-story">Our story</a>
+                <a href="" class="blogs">Blogs</a>
+            </div>
+            <div class="help df">
+                <h2>Help</h2>
+                <a href="" class="ship-and-return" id="">Shipping & Returns</a>
+                <a href="" class="track-order">Track Order</a>
+                <a href="" class="FAQs">FAQs</a>
+            </div>
+            <div class="contact df">
+                <h2>Contact</h2>
+                <div class="phone">Phone: </div>
+                <div class="ph">(+84) 345 444 356</div>
+                <div class="email">Email: </div>
+                <div class="em">cphone@email.com</div>
+            </div>
+        </div>
+        <div class="receive df">
+            <h2>Receive new promotions</h2>
+            <span>Send me your comments or wishes</span>
+            <div class="sub-email df">
+                <input type="text" class="emai" placeholder="Input your email">
+                <div class="sub">Subscribe</div>
+            </div>
+            <div class="social df">
+                <a href="https://twitter.com/?lang=vi" target="_blank"> <img src="../picture/Twitter 1.png"
+                        alt="twitter" class="twitter"></a>
+                <a href="https://www.facebook.com" target="_blank"><img src="../picture/Facebook 1.png" alt="fb"
+                        class="fb"></a>
+                <a href="https://www.linkedin.com" target="_blank"> <img src="../picture/LinkedIn 1.png" alt="in"
+                        class="inlink"></a>
+                <a href="https://www.youtube.com" target="_blank"><img src="../picture/YouTube 1.png" alt="ytb"
+                        class="ytb"></a>
+            </div>
+            <div class="address">Address: 12 Nguyen Van Bao, Go Vap, Ho Chi Minh City</div>
+        </div>
+
+    </div>
+    <script src="../JavaScript/dangnhap.js"></script>
+    <script src="../JavaScript/giohang.js"></script>
+</body>
+</html>
