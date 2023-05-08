@@ -140,14 +140,70 @@ SignUp.addEventListener("click",function(event){
 
 
 // Biểu thức Chính Quy
-
-
 function validateInput(inputValue, regexPattern) {
   var regex = new RegExp(regexPattern);
   return regex.test(inputValue);
 }
 
+function checkUser() {
+  let input = document.getElementById("username-res");
+  let value = input.value;
+  let error = document.getElementById("chkUser");
+  const regex = /^[a-zA-Z0-9!@#$%^&*]{6,}$/;
+  if (value === "") {
+    error.innerHTML = "User không được để trống!";
+    error.style.marginBottom = "8px";
+  }
+  else if (regex.test(value)) {
+      error.innerHTML = "";
+  } else {
+      error.innerHTML = "User không hợp lệ!";
+  }
+}
 
+function checkEmail() {
+  let input = document.getElementById("email-res");
+  let value = input.value;
+  let error = document.getElementById("chkEmail");
+  const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (value === "") {
+    error.innerHTML = "Email không được để trống!";
+  }
+  else if (regex.test(value)) {
+      error.innerHTML = "";
+  } else {
+      error.innerHTML = "Email không hợp lệ!";
+  }
+}
+
+function checkPassword() {
+  let input = document.getElementById("password-res");
+  let value = input.value;
+  let error = document.getElementById("chkPassword");
+  const regex = /^[a-zA-Z0-9!@#$%&\.]{8,}/;
+  if (value === "") {
+    document.querySelector('.toast_msg').innerHTML = "Password không được để trống!"
+    document.querySelector('#toast').style.display = "flex";
+  }
+  else if (regex.test(value)) {
+      error.innerHTML = "";
+  } else {
+      error.innerHTML = "Password không đủ mạnh!";
+  }
+}
+
+function checkRetypePassword() {
+  let mk, mk2;
+  mk = document.getElementById('password-res').value;
+  mk2 = document.getElementById('retypepassword-res').value;
+  let error = document.getElementById("chkRetypePassword");
+  if (mk == mk2) {
+      error.innerHTML = "";
+  } else {
+      error.innerHTML = "Mật khẩu không khớp!";
+      return false;
+  }
+}
 
 //Mở modal thành viên nhóm
 var btnShowmembers = document.querySelector("#modal-member");

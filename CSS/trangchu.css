@@ -412,6 +412,12 @@ html {
 
 }
 
+.chk {
+    margin-top: 8px;
+    text-align: right;
+    color: red;
+}
+
 .remember-forgot {
     display: flex;
     justify-content: space-between;
@@ -1112,3 +1118,65 @@ p {
     padding: 4px 10px;
 }
 
+.toast {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 2px;
+    border-left: 4px solid;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.08);
+    padding: 20px 0;
+    max-width: 460px;
+    min-width: 400px;
+    z-index: 1;
+    animation: fadeOut linear 4.5s;
+}
+
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.toast_icon {
+    padding: 0 16px;
+    font-size: 20px;
+
+}
+
+.toast_body {
+    flex-grow: 1;
+}
+
+.toast_title {
+    font-size: 16px;
+    font-weight: 600;
+    color: red;
+}
+
+.toast_msg {
+    font-size: 14px;
+    font-weight: 600;
+    color: #000;
+    margin-top: 6px;
+    line-height: 1.5;
+}
+
+.toast_close {
+    padding: 0 16px;
+    font-size: 20px;
+    color: rgba(0, 0, 0, .3);
+    cursor: pointer;
+}
+
+#toast {
+    position: fixed;
+    display: none;
+    top: 32px;
+    right: 32px;
+
+}
