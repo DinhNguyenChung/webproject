@@ -11,180 +11,17 @@
     <link rel="stylesheet" href="../Font/fontawesome-free-6.3.0-web/css/all.css">
     <script src="../JavaScript/jquery-3.3.1.min.js"></script>
     <script src="../JavaScript/bootstrap.min.js"></script>
+    <script >
+        $(function(){
+            $("#header").load("./header.html")
+        })
+    </script>
 </head>
 
 <body>
-    <div class="header">
-        <div class="header-Title">
-            <h1>
-                CPhone
-            </h1>
-            <!-- <img src="../picture/Logo_phone-removebg-preview.png" alt="logo"> -->
-        </div>
-        <div class="hover header-category">
-            <a href="#"><i class="fa-solid fa-bars"></i></a>
-            <p>Danh Mục</p>
-            <ul>
-                <li>Sản phẩm mới</li>
-                <li>Khuyến Mãi</li>
-                <li>Trả góp</li>
-            </ul>
-        </div>
-        <div class="hover header-viewPrice">
-            <a href="#"><i class="fa-solid fa-location-dot"></i></a>
-            <div class="header-viewPrice-position">
-                <p>Xem giá tại </p>
-                <h1>Hồ Chí Minh</h1>
-            </div>
-        </div>
-        <div class="header-seach">
-            <a href="./timKiem.html"> <button><i class="fa-solid fa-magnifying-glass"></i></button></a>
-            <input type="text" name="" id="text" placeholder="Bạn cần tìm gì ?">
-        </div>
-        <div class="hover header-call df">
-            <a href="../HTML/thanhToan.html"><i class="fa-solid fa-phone"></i></a>
-            <div class="header-call-text">
-                <a href="../HTML/thanhToan.html">Gọi mua hàng</a>
-                <a href="../HTML/thanhToan.html">1800.2097</a>
-            </div>
-        </div>
-        <div class="hover header-position df">
-            <a href=""><i class="fa-solid fa-location-dot"></i></a>
-            <a href="">Cửa hàng gần bạn</a>
-        </div>
-        <div class="hover header-check df">
-            <a href=""><i class="fa-solid fa-truck-fast"></i></a>
-            <a href="">Tra cứu đơn hàng</a>
-        </div>
-        <div class="hover header-shopping df">
-            <a href="../HTML/Giohang.html"><i class="fa-solid fa-cart-plus"></i></a>
-            <a href="../HTML/Giohang.html">Giỏ hàng</a>
-        </div>
-        <div class="header-user df" id="btn_login-line">
-            <!-- <a href="../../FormDangNhap/CodeNew/index.html">Đăng Nhập</a> -->
-            <button class="hover btn btnLogin">
-                <i class="fa-regular fa-circle-user"></i>
-                <span id="info_user">Đăng nhập</span>
-            </button>
-        </div>
-        <div class="header-user">
-            <!-- <i class="fa-regular fa-circle-user"></i> -->
-            <span id="info_user"></span>
-        </div>
+    <header id="header"></header>
 
-        <div class="wrapper" id="handle_close-modal">
-            <div class="wrap-box-form">
-                <div class="set-width-box-sg">
-                    <span class="icon-close"><i class="fa-solid fa-xmark"></i></span>
-                    <div class="form-box login">
-                        <h2>Login</h2>
-                        <form action="#" onsubmit="login()">
-                            <div class="input-box">
-                                <span class="icon">
-                                    <i class="fa-solid fa-user"></i>
-                                </span>
-                                <input type="text" name="" id="username-login" required>
-                                <label for="">Username</label>
-                            </div>
-                            <div class="input-box">
-                                <span class="icon">
-                                    <i class="fa-solid fa-envelope"></i>
-                                </span>
-                                <input type="email" name="" id="email-login" required>
-                                <label for="">Email</label>
-                            </div>
-                            <div class="input-box">
-                                <span class="icon">
-                                    <i class="fa-solid fa-lock"></i>
-                                </span>
-                                <input type="password" name="" id="password-login" required>
-                                <label for="">Password</label>
-                            </div>
-                            <div class="remember-forgot">
-                                <label for="#">
-                                    <input type="checkbox">
-                                    Remember me
-                                </label>
-                                <a href="#">Forgot Password ?</a>
-
-                            </div>
-                            <button type="submit" class="btn btndangnhap">Login</button>
-                            <div class="login-register">
-                                <p>Don't have an account ?
-                                    <a href="#" class="register-link">Register</a>
-                                </p>
-
-                            </div>
-                        </form>
-                    </div>
-                    <div class="form-box register">
-                        <h2>Registration</h2>
-                        <form action="#" onsubmit="signUp()">
-
-                            <div class="input-box">
-                                <span class="icon">
-                                    <i class="fa-solid fa-user"></i>
-                                </span>
-                                <input type="text" name="" id="username-res" required>
-                                <label for="">Username</label>
-                            </div>
-                            <div class="input-box">
-                                <span class="icon">
-                                    <i class="fa-solid fa-envelope"></i>
-                                </span>
-                                <input type="email" name="" id="email-res" required>
-                                <label for="">Email</label>
-                            </div>
-                            <div class="input-box">
-                                <span class="icon">
-                                    <i class="fa-solid fa-lock"></i>
-                                </span>
-                                <input type="password" name="" id="password-res" required>
-                                <label for="">Password</label>
-                            </div>
-                            <div class="input-box">
-                                <span class="icon">
-                                    <i class="fa-solid fa-lock"></i>
-                                </span>
-                                <input type="password" name="" id="retypepassword-res" required>
-                                <label for="">Retype Password</label>
-                            </div>
-                            <div class="remember-forgot">
-                                <label for="#">
-                                    <input type="checkbox">
-                                    I agree to the term & condittions
-                                </label>
-                                <!-- <a href="#">Forgot Password ?</a> -->
-
-                            </div>
-                            <button type="submit" class="btn">Register</button>
-                            <div class="login-register">
-                                <p>Already have an Account ?
-                                    <a href="#" class="login-link">Login</a>
-                                </p>
-
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-    </div>
-    <div class="height-header"></div>
-    <div class="content-list">
-        <div class="list">
-            <a href="../HTML/Trangchu.html"><i class="fa-solid fa-house"></i></a>
-            <a href="./Trangchu.html">Trang chủ</a>
-        </div>
-        <div class="list">
-            <a href=""><i class="fa-thin fa-greater-than"></i></a>
-            <a href="#">Tin tức</a>
-        </div>
-    </div>
-
-    <div class="container">
+    <div class="container" id="tintuc">
         <h1 id="title">TIN MỚI</h1>
         <div class="list-containers df">
             <div class="tin-moi">TIN MỚI</div>
@@ -970,7 +807,7 @@
 
     </div>
     <script src="../JavaScript/tinTuc.js"></script>
-    <script src="../JavaScript/thanhtoan.js"></script>
+    
     
 </body>
 
