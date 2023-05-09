@@ -946,6 +946,9 @@ p {
     height: max-content;
     background-color: rgb(0, 174, 255);
 }
+.footer a:hover{
+    color: #ffffff;
+}
 
 .footer h2 {
     color: #ffffff;
@@ -955,7 +958,10 @@ p {
     gap: 64px;
     text-align: left;
 }
-
+.contact div:hover{
+    color: #fff;
+    cursor: pointer;
+}
 .about,
 .help,
 .contact,
