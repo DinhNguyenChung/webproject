@@ -1189,3 +1189,95 @@ p {
 .content-list{
     top: 64px;
 }
+
+
+.form-bank{
+   
+    width: 801px;
+    height: 600px;
+    
+    display: flex;
+   
+    background-color:rgb(103 202 235);
+    border-radius: 10px;
+    display: none;
+}
+.form-bank form{
+    width: 100%;
+    /* background-color:rgb(103 202 235); */
+    padding: 10px;
+    border-radius: 10px;
+
+}
+.form-bank form span{
+    margin-bottom: 10px;
+}
+.form-bank h1{
+    text-align: center;
+}
+.form-bank input{
+    height: 40px;
+    width: 100%;
+    outline: none;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background: aliceblue;
+}
+.form-bank .Name{
+    display: flex;
+    /* justify-content: space-around; */
+}
+.form-bank .Name span{
+    display: flex;
+}
+.firt-name{
+    margin-right:149px ;
+}
+.form-bank .Name input{
+    width: 100%;
+    /* height: 30px; */
+}
+
+
+.form-bank .dress{
+    /* display: flex;    */
+}
+.form-bank .dress span{
+    display: flex;
+}
+.form-bank .dress input{
+    width: 100%;
+    /* height: 30px; */
+}
+.form-bank .mail span{
+ display: flex;
+}
+.form-bank .phone span{
+    display: flex;
+}
+
+.form-cthd{
+    margin-top: 20px;
+}
+.form-bank .new-user{
+    margin-top: 20px;
+}
+.info-kh{
+    cursor: pointer;
+    margin-bottom: 20px;
+    margin-top: 5px;
+}
+.info-kh:hover{
+    color: blue;
+}
+.fa-cart-plus:hover{
+    color: blue;
+}
+.product-cotai{
+    display: none;
+}
+#close:hover {
+    color: red;
+    cursor: pointer;
+}

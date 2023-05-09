@@ -118,37 +118,6 @@ btnClose.addEventListener("click", function () {
     document.querySelector("#tb").innerHTML ="";
 });
 
-
-
-//Đây là JS mới để mở bảng thanh toán
-
-// const buyBtns = document.querySelectorAll('.cart-icon') //gom 3 nut thanh 1 bien
-// const model = document.querySelector('.cart')
-// const modelClose = document.querySelector('.close')
-// const modelContainer = document.querySelector('.model-container')
-
-// //Hàm hiển thị model mua vé, them class open vào class model
-// function showBuyTicket() {
-//     model.classList.add('open')
-// }
-// //Hàm ẩn model mua vé, loại bỏ class open trong class model
-// function hideBuyTickets() {
-//     model.classList.remove('open')
-// }
-
-// for (const buyBtn of buyBtns) { // mot bien btn nam trong btns
-//     buyBtn.addEventListener('click', showBuyTicket)
-// }
-
-// modelClose.addEventListener('click', hideBuyTickets)
-
-// //Tránh bị ẩn buy-model khi click vào trong form (liên quna đến đến nổi bọt)
-// model.addEventListener('click', hideBuyTickets)
-// modelContainer.addEventListener('click', function (event) {
-//     event.stopPropagation()
-// })
-
-
 //Hover danh mujc
 var contentList = document.querySelector('.content-list');
 var hoverBtn = document.querySelector('.header-category');
@@ -161,3 +130,17 @@ hoverBtn.addEventListener('mouseout', function() {
   contentList.style.zIndex = '0';
 });
 
+// Mở thông tin khách hang
+
+var openttkh = document.querySelector(".info-kh")
+openttkh.addEventListener('click',function(){
+    document.querySelector("#product-cotai").style.display ="none"
+    document.querySelector(".form-bank").style.display ="flex"
+    
+})
+
+var closettkh = document.querySelector("#close")
+closettkh.addEventListener('click',function(){
+    document.querySelector("#product-cotai").style.display ="block"
+    document.querySelector(".form-bank").style.display ="none"
+})
