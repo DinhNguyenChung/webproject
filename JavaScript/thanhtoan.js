@@ -1,8 +1,4 @@
 
-//Thanh toasn
-
-
-
 var thanhtoan = document.querySelector("#thanhtoan");
 
 var header = document.querySelector(".header");
