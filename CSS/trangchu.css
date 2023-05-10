@@ -303,6 +303,7 @@ html {
 
 .set-width-box-sg {
     width: 400px;
+    height: 535px;
     margin: 0px auto;
     border: 2px solid rgb(255, 255, 255, .5);
     border-radius: 20px;

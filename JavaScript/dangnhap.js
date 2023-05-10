@@ -62,28 +62,25 @@ document.addEventListener('DOMContentLoaded', () => {
 function signUp(e) {
   event.preventDefault();
 
-
+  var fisrtname = document.getElementById("fisrtname-res").value
+  var lastname = document.getElementById("lastname-res").value
   var username = document.getElementById("username-res").value;
   var email = document.getElementById("email-res").value;
   var password = document.getElementById("password-res").value;
   var retypepassword = document.getElementById("retypepassword-res").value;
 
-  var isValidUsername = validateInput(username, /^[a-zA-Z0-9_-]{3,16}$/);
-  if (isValidUsername) {
-    console.log("Username is valid.");
-  } else {
-    console.log("Username is invalid.");
-  }
 
   if (password == retypepassword) {
     var user =
     {
+      fisrtname:fisrtname,
+      lastname:lastname,
       username: username,
       email: email,
       password: password,
     }
     var json = JSON.stringify(user);
-    localStorage.setItem(username, json);
+    localStorage.setItem(email, json);
     alert("Đăng ký thành công");
   }
   else alert("Mật khẩu không khớp !")
@@ -100,27 +97,31 @@ document.addEventListener('DOMContentLoaded', () => {
 function login(e) {
   console.log("click");
   event.preventDefault();
-  var username = document.getElementById("username-login").value;
+  // var username = document.getElementById("username-login").value;
   var email = document.getElementById("email-login").value;
   var password = document.getElementById("password-login").value;
 
-  if (username == "" || email == "" || password == "") alert("Vui lòng nhập thông tin ");
+  if ( email == "" || password == "") alert("Vui lòng nhập thông tin ");
   else {
 
-    var user = localStorage.getItem(username);
+    var user = localStorage.getItem(email);
     var data = JSON.parse(user);
+    if(data){
+      var firstname = data.fisrtname; // Thay "firstname" bằng tên trường chứa thông tin firstname trong đối tượng user
+      var lastname = data.lastname; // Thay "lastname" bằng tên trường chứa thông tin lastname trong đối tượng user
+    }
   }
-  console.log(user)
-  console.log(data)
+  console.log(firstname)
+  console.log(lastname)
   if (user == null) {
     alert("Tài khoản không tồn tại")
   }
-  else if (username == data.username && email == data.email && password == data.password) {
+  else if (email == data.email && password == data.password) {
     alert("dang nhap thanh cong")
     wrapper.classList.remove('active-btnlogin');
     // document.getElementById("btn_login-line").style.display="none";
     document.getElementById("info_user").innerHTML = "";
-    document.getElementById("info_user").innerHTML = username;
+    document.getElementById("info_user").innerHTML = firstname +" "+lastname;
     document.querySelector("body").style.overflow = "auto"
     contentList.style.zIndex = '0';
     document.querySelector(".btnSignUp").classList.add("show");
