@@ -26,6 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   loginlink.addEventListener('click', () => {
     wrapper.classList.remove('active');
+    // document.querySelector(".set-width-box-sg").style.height = "0px"
   });
   btnLogin.addEventListener('click', () => {
     wrapper.classList.add('active-btnlogin');
@@ -108,7 +109,7 @@ function login(e) {
   if (user == null) {
     alert("Tài khoản không tồn tại")
   }
-  else if (email == data.email && password == data.password) {
+  else if ((email == data.email && password == data.password )|| (email == data.username && password == data.password ) ) {
     alert("dang nhap thanh cong")
     wrapper.classList.remove('active-btnlogin');
     // document.getElementById("btn_login-line").style.display="none";
