@@ -1,5 +1,3 @@
-
-
 .products {
     width: 100%;
 }
@@ -12,8 +10,8 @@
     padding: 12px;
     /* overflow-x: scroll;
      */
-     flex-wrap: wrap;
-    margin-bottom:20px ;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
     overflow-y: scroll;
     height: 100vh;
 }
@@ -22,7 +20,7 @@
     width: 28%;
     text-align: center;
     align-items: center;
-    padding: 20px ;
+    padding: 20px;
     padding-bottom: 0px;
     border: 1px solid #fdfd;
     border-radius: 20px;
@@ -42,10 +40,12 @@
     display: flex;
     justify-content: space-between;
 }
-.product-item-text h1{
+
+.product-item-text h1 {
     font-size: 15px;
 }
-.product-item-text p{
+
+.product-item-text p {
     font-size: 13px;
     /* text-decoration: line-through; */
     color: rgb(255, 0, 0);
@@ -74,7 +74,7 @@
     margin: auto;
     text-align: center;
     padding-top: 30px;
-   
+
     /* display: none; */
 }
 
@@ -107,9 +107,9 @@
 
 .cart {
     margin-top: 0px;
-    height: 100vh;
     width: 580px;
-    
+    max-height: max-content;
+    min-height: 400px;
     background-color: #ddd;
     padding: 10px 20px;
     overflow-y: scroll;
@@ -141,7 +141,7 @@
     cursor: pointer;
     display: flex;
     justify-content: end;
-    
+
 }
 
 .close:hover i {
@@ -151,34 +151,39 @@
 .conntent {
     margin: 0 50px;
 }
-.ratting{
+
+.ratting {
     display: flex;
     justify-content: end;
     margin-top: 20px;
     padding-bottom: 0px;
     margin-bottom: 0;
 }
-.ratting img{
+
+.ratting img {
     width: 80px;
 }
 
-.content-cotai{
+.content-cotai {
     display: grid;
     grid-template-columns: 60% 40%;
-    
+
     /* width: 100%;  */
 }
-.title{
+
+.title {
     font-size: 14px;
     margin-right: 20px;
     margin-left: 10px;
     font-weight: bold;
 }
-#number{
+
+#number {
     border: none;
     border-radius: 5px;
 }
-table th{
+
+table th {
     font-size: 14px;
 }
 
@@ -194,14 +199,28 @@ table th{
     flex-direction: column;
 } */
 
-.model-container{
+.model-container {
     width: 100%;
 }
-.header-cart{
+
+.model-container .form-thanhtoan {
+
+}
+
+.header-cart {
     width: 100%;
     display: flex;
     justify-content: space-between;
 }
-#conntent{
+
+.price-total {
+
+}
+
+.btn-order {
+
+}
+
+#conntent {
     display: none;
 }

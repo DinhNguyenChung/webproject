@@ -1192,9 +1192,9 @@ p {
 
 
 .form-bank{
-   
-    width: 801px;
-    height: 600px;
+   margin-left: 130px;
+    width: 478px;
+    height: fit-content;
     
     display: flex;
    
@@ -1226,16 +1226,16 @@ p {
 }
 .form-bank .Name{
     display: flex;
-    /* justify-content: space-around; */
+    gap: 32px;
 }
 .form-bank .Name span{
     display: flex;
 }
 .firt-name{
-    margin-right:149px ;
+    /* margin-right:149px ; */
 }
 .form-bank .Name input{
-    width: 100%;
+    width: 210px;
     /* height: 30px; */
 }
 
