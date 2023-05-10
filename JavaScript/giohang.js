@@ -97,7 +97,7 @@ var btnClose = document.querySelector(".close")
 var btnshow = document.querySelector(".cart-icon")
 
 btnshow.addEventListener("click", function () {
-    document.querySelector(".cart").style.display = "block"
+    document.querySelector(".cart").style.display = "flex"
     document.querySelector(".content-cotai").style.display = "grid"
     document.querySelector(".content-cotai").style.gridtemplatecolumns = "60% 40%"
     var items = document.querySelectorAll(".product-item"); // Đã sửa lại từ 'document.querySelectorAllA' sang 'document.querySelectorAll'

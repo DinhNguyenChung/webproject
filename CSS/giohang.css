@@ -74,7 +74,7 @@
     margin: auto;
     text-align: center;
     padding-top: 30px;
-
+    position: static;
     /* display: none; */
 }
 
@@ -201,6 +201,8 @@ table th {
 
 .model-container {
     width: 100%;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .model-container .form-thanhtoan {

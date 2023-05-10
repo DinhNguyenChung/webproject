@@ -1,216 +1,219 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gio hang</title>
-    ;<link rel="stylesheet" href="../CSS/trangchu.css">
+    ;
+    <link rel="stylesheet" href="../CSS/trangchu.css">
     <link rel="stylesheet" href="../CSS/giohang.css">
     <link rel="stylesheet" href="../fontawesome-free-6.3.0-web/css/all.min.css">
-    
-    
+
+
 </head>
+
 <body>
 
-        
-        <div class="header">
-            <div class="header-Title">
-                <h1>
-                    CPhone
-                </h1>
-                <!-- <img src="../picture/Logo_phone-removebg-preview.png" alt="logo"> -->
+
+    <div class="header">
+        <div class="header-Title">
+            <h1>
+                CPhone
+            </h1>
+            <!-- <img src="../picture/Logo_phone-removebg-preview.png" alt="logo"> -->
+        </div>
+        <div class="hover header-category">
+            <a href="#"><i class="fa-solid fa-bars"></i></a>
+            <p>Danh Mục</p>
+            <ul>
+                <li>Sản phẩm mới</li>
+                <li>Khuyến Mãi</li>
+                <li>Trả góp</li>
+            </ul>
+        </div>
+        <div class="hover header-viewPrice">
+            <a href="#"><i class="fa-solid fa-location-dot"></i></a>
+            <div class="header-viewPrice-position">
+                <p>Xem giá tại </p>
+                <h1>Hồ Chí Minh</h1>
             </div>
-            <div class="hover header-category">
-                <a href="#"><i class="fa-solid fa-bars"></i></a>
-                <p>Danh Mục</p>
-                <ul>
-                    <li>Sản phẩm mới</li>
-                    <li>Khuyến Mãi</li>
-                    <li>Trả góp</li>
-                </ul>
+        </div>
+        <div class="header-seach">
+            <a href="#" id="seach-item"> <button><i class="fa-solid fa-magnifying-glass"></i></button></a>
+            <input type="text" name="" id="text" placeholder="Bạn cần tìm gì ?">
+        </div>
+        <div class="hover header-call df">
+            <a href="../HTML/thanhToan.html"><i class="fa-solid fa-phone"></i></a>
+            <div class="header-call-text">
+                <a href="../HTML/thanhToan.html">Gọi mua hàng</a>
+                <a href="../HTML/thanhToan.html">1800.2097</a>
             </div>
-            <div class="hover header-viewPrice">
-                <a href="#"><i class="fa-solid fa-location-dot"></i></a>
-                <div class="header-viewPrice-position">
-                    <p>Xem giá tại </p>
-                    <h1>Hồ Chí Minh</h1>
-                </div>
-            </div>
-            <div class="header-seach">
-                <a href="#" id="seach-item"> <button><i class="fa-solid fa-magnifying-glass"></i></button></a>
-                <input type="text" name="" id="text" placeholder="Bạn cần tìm gì ?">
-            </div>
-            <div class="hover header-call df">
-                <a href="../HTML/thanhToan.html"><i class="fa-solid fa-phone"></i></a>
-                <div class="header-call-text">
-                    <a href="../HTML/thanhToan.html">Gọi mua hàng</a>
-                    <a href="../HTML/thanhToan.html">1800.2097</a>
-                </div>
-            </div>
-            <div class="hover header-position df">
-                <a href=""><i class="fa-solid fa-location-dot"></i></a>
-                <a href="">Cửa hàng gần bạn</a>
-            </div>
-            <div class="hover header-check df">
-                <a href=""><i class="fa-solid fa-truck-fast"></i></a>
-                <a href="">Tra cứu đơn hàng</a>
-            </div>
-            <div class="hover header-shopping df">
-                <a href="./Giohang.html"><i class="fa-solid fa-cart-plus"></i></a>
-                <a href="./Giohang.html">Giỏ hàng</a>
-            </div>
-            <div class="header-user df" id="btn_login-line">
-                <!-- <a href="../../FormDangNhap/CodeNew/index.html">Đăng Nhập</a> -->
-                <button class="hover btn btnLogin" id="">
-                    <i class="fa-regular fa-circle-user"></i>
-                    <span id="info_user">Đăng nhập</span>
-                </button>
-                <button class="hover btn btnSignUp" id="">
-                    <i class="fa-solid fa-right-to-bracket"></i>
-                </button>
-            </div>
-    
-            <div class="wrapper" id="handle_close-modal">
-                <div class="wrap-box-form">
-                    <div class="set-width-box-sg">
-                        <span class="icon-close"><i class="fa-solid fa-xmark"></i></span>
-                        <div class="form-box login">
-                            <h2>Login</h2>
-                            <form action="#" onsubmit="login()">
-                                <div class="input-box">
-                                    <span class="icon">
-                                        <i class="fa-solid fa-user"></i>
-                                    </span>
-                                    <input type="text" name="" id="username-login" required>
-                                    <label for="">Username</label>
-                                </div>
-                                <div class="input-box">
-                                    <span class="icon">
-                                        <i class="fa-solid fa-envelope"></i>
-                                    </span>
-                                    <input type="email" name="" id="email-login" required>
-                                    <label for="">Email</label>
-                                </div>
-                                <div class="input-box">
-                                    <span class="icon">
-                                        <i class="fa-solid fa-lock"></i>
-                                    </span>
-                                    <input type="password" name="" id="password-login" required>
-                                    <label for="">Password</label>
-                                </div>
-                                <div class="remember-forgot">
-                                    <label for="#">
-                                        <input type="checkbox">
-                                        Remember me
-                                    </label>
-                                    <a href="#">Forgot Password ?</a>
-    
-                                </div>
-                                <button type="submit" class="btn btndangnhap">Login</button>
-                                <div class="login-register">
-                                    <p>Don't have an account ?
-                                        <a href="#" class="register-link">Register</a>
-                                    </p>
-    
-                                </div>
-                            </form>
-                        </div>
-                        <div class="form-box register">
-                            <h2>Registration</h2>
-                            <form action="#" onsubmit="signUp()">
-    
-                                <div class="input-box">
-                                    <span class="icon">
-                                        <i class="fa-solid fa-user"></i>
-                                    </span>
-                                    <input type="text" name="" id="username-res" onblur="checkUser()" required>
-                                    <label for="">Username</label>
-                                    <div class="chk" id="chkUser"></div>
-                                </div>
-                                <div class="input-box">
-                                    <span class="icon">
-                                        <i class="fa-solid fa-envelope"></i>
-                                    </span>
-                                    <input type="email" name="" id="email-res" onblur="checkEmail()" required>
-                                    <label for="">Email</label>
-                                    <div class="chk" id="chkEmail"></div>
-                                </div>
-                                <div class="input-box">
-                                    <span class="icon">
-                                        <i class="fa-solid fa-lock"></i>
-                                    </span>
-                                    <input type="password" name="" id="password-res" onblur="checkPassword()" required>
-                                    <label for="">Password</label>
-                                    <div class="chk" id="chkPassword"></div>
-                                </div>
-                                <div class="input-box">
-                                    <span class="icon">
-                                        <i class="fa-solid fa-lock"></i>
-                                    </span>
-                                    <input type="password" name="" id="retypepassword-res" onblur="checkRetypePassword()"
-                                        required>
-                                    <label for="">Retype Password</label>
-                                    <div class="chk" id="chkRetypePassword"></div>
-                                </div>
-                                <div class=""><span id="tbRegister" style="color: red;"></span></div>
-                                <div class="remember-forgot">
-                                    <label for="#">
-                                        <input type="checkbox">
-                                        I agree to the term & condittions
-                                    </label>
-                                   
-    
-                                </div>
-                                <button type="submit" class="btn">Register</button>
-                                <div class="login-register">
-                                    <p>Already have an Account ?
-                                        <a href="#" class="login-link">Login</a>
-                                    </p>
-    
-                                </div>
-                            </form>
-                        </div>
+        </div>
+        <div class="hover header-position df">
+            <a href=""><i class="fa-solid fa-location-dot"></i></a>
+            <a href="">Cửa hàng gần bạn</a>
+        </div>
+        <div class="hover header-check df">
+            <a href=""><i class="fa-solid fa-truck-fast"></i></a>
+            <a href="">Tra cứu đơn hàng</a>
+        </div>
+        <div class="hover header-shopping df">
+            <a href="./Giohang.html"><i class="fa-solid fa-cart-plus"></i></a>
+            <a href="./Giohang.html">Giỏ hàng</a>
+        </div>
+        <div class="header-user df" id="btn_login-line">
+            <!-- <a href="../../FormDangNhap/CodeNew/index.html">Đăng Nhập</a> -->
+            <button class="hover btn btnLogin" id="">
+                <i class="fa-regular fa-circle-user"></i>
+                <span id="info_user">Đăng nhập</span>
+            </button>
+            <button class="hover btn btnSignUp" id="">
+                <i class="fa-solid fa-right-to-bracket"></i>
+            </button>
+        </div>
+
+        <div class="wrapper" id="handle_close-modal">
+            <div class="wrap-box-form">
+                <div class="set-width-box-sg">
+                    <span class="icon-close"><i class="fa-solid fa-xmark"></i></span>
+                    <div class="form-box login">
+                        <h2>Login</h2>
+                        <form action="#" onsubmit="login()">
+                            <div class="input-box">
+                                <span class="icon">
+                                    <i class="fa-solid fa-user"></i>
+                                </span>
+                                <input type="text" name="" id="username-login" required>
+                                <label for="">Username</label>
+                            </div>
+                            <div class="input-box">
+                                <span class="icon">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </span>
+                                <input type="email" name="" id="email-login" required>
+                                <label for="">Email</label>
+                            </div>
+                            <div class="input-box">
+                                <span class="icon">
+                                    <i class="fa-solid fa-lock"></i>
+                                </span>
+                                <input type="password" name="" id="password-login" required>
+                                <label for="">Password</label>
+                            </div>
+                            <div class="remember-forgot">
+                                <label for="#">
+                                    <input type="checkbox">
+                                    Remember me
+                                </label>
+                                <a href="#">Forgot Password ?</a>
+
+                            </div>
+                            <button type="submit" class="btn btndangnhap">Login</button>
+                            <div class="login-register">
+                                <p>Don't have an account ?
+                                    <a href="#" class="register-link">Register</a>
+                                </p>
+
+                            </div>
+                        </form>
                     </div>
-    
+                    <div class="form-box register">
+                        <h2>Registration</h2>
+                        <form action="#" onsubmit="signUp()">
+
+                            <div class="input-box">
+                                <span class="icon">
+                                    <i class="fa-solid fa-user"></i>
+                                </span>
+                                <input type="text" name="" id="username-res" onblur="checkUser()" required>
+                                <label for="">Username</label>
+                                <div class="chk" id="chkUser"></div>
+                            </div>
+                            <div class="input-box">
+                                <span class="icon">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </span>
+                                <input type="email" name="" id="email-res" onblur="checkEmail()" required>
+                                <label for="">Email</label>
+                                <div class="chk" id="chkEmail"></div>
+                            </div>
+                            <div class="input-box">
+                                <span class="icon">
+                                    <i class="fa-solid fa-lock"></i>
+                                </span>
+                                <input type="password" name="" id="password-res" onblur="checkPassword()" required>
+                                <label for="">Password</label>
+                                <div class="chk" id="chkPassword"></div>
+                            </div>
+                            <div class="input-box">
+                                <span class="icon">
+                                    <i class="fa-solid fa-lock"></i>
+                                </span>
+                                <input type="password" name="" id="retypepassword-res" onblur="checkRetypePassword()"
+                                    required>
+                                <label for="">Retype Password</label>
+                                <div class="chk" id="chkRetypePassword"></div>
+                            </div>
+                            <div class=""><span id="tbRegister" style="color: red;"></span></div>
+                            <div class="remember-forgot">
+                                <label for="#">
+                                    <input type="checkbox">
+                                    I agree to the term & condittions
+                                </label>
+
+
+                            </div>
+                            <button type="submit" class="btn">Register</button>
+                            <div class="login-register">
+                                <p>Already have an Account ?
+                                    <a href="#" class="login-link">Login</a>
+                                </p>
+
+                            </div>
+                        </form>
+                    </div>
                 </div>
-    
+
             </div>
-    
+
+        </div>
+
 
 
     </div>
-            <!-- Thông báo của form đăng nhập -->
-            <div id="toast">
-                <div class="toast">
-                    <div class="toast_icon">
-                        <i class="fa-sharp fa-solid fa-brake-warning"></i>
-                    </div>
-                    <div class="toast_body">
-                        <h3 class="toast_title">Cảnh báo</h3>
-                        <p class="toast_msg"></p>
-                    </div>
-                    <div class="toast_close">
-                        <i class="fa-light fa-circle-xmark"></i>
-                    </div>
-                </div>
+    <!-- Thông báo của form đăng nhập -->
+    <div id="toast">
+        <div class="toast">
+            <div class="toast_icon">
+                <i class="fa-sharp fa-solid fa-brake-warning"></i>
             </div>
-    
-    
-        </div>
-    
-        <div class="height-header"></div>
-    
-        <div class="content-list">
-            <div class="list" id="backHome">
-                <a href="../HTML/Trangchu.html"><i class="fa-solid fa-house"></i></a>
-                <a href="../HTML/Trangchu.html">Trang chủ</a>
+            <div class="toast_body">
+                <h3 class="toast_title">Cảnh báo</h3>
+                <p class="toast_msg"></p>
             </div>
-            <div class="list">
-                <a href=""><i class="fa-thin fa-greater-than"></i></a>
-                <a href="#"><span id="tonext">Điện thoại</span></a>
+            <div class="toast_close">
+                <i class="fa-light fa-circle-xmark"></i>
             </div>
         </div>
+    </div>
+
+
+    </div>
+
+    <div class="height-header"></div>
+
+    <div class="content-list">
+        <div class="list" id="backHome">
+            <a href="../HTML/Trangchu.html"><i class="fa-solid fa-house"></i></a>
+            <a href="../HTML/Trangchu.html">Trang chủ</a>
+        </div>
+        <div class="list">
+            <a href=""><i class="fa-thin fa-greater-than"></i></a>
+            <a href="#"><span id="tonext">Điện thoại</span></a>
+        </div>
+    </div>
 
     <div class="conntent" style="margin-top: 50px;">
         <!-- <div class="backhome" style="margin-top: 10px; text-align: right;"><i class="fa-solid fa-house"></i> <span>Về Trang Chủ</span></div> -->
@@ -220,14 +223,14 @@
             <span id="tb" style="color: rgb(255, 0, 0);"></span>
         </div>
         <div class="info-kh"> <i class="fa-solid fa-user fa-sm"></i>
-                                <span>Thông tin khách hàng</span>
+            <span>Thông tin khách hàng</span>
         </div>
-        
+
         <div class="content-cotai">
             <section class="products">
                 <div class="form-bank">
                     <form action="">
-                        
+
                         <div id="close"> <i class="fa-regular fa-circle-xmark"></i></div>
                         <h1>Thông tin khách hàng</h1>
                         <div class="form-cthd Name">
@@ -241,7 +244,7 @@
                                 <input type="text">
                             </div>
                         </div>
-                      
+
                         <div class="form-cthd mail">
                             <span>Địa chỉ mail *</span>
                             <input type="email" name="" id="">
@@ -383,30 +386,35 @@
                 </div>
             </section>
             <section class="cart df">
-                <div class="model-container">
-                    <div class="header-cart df">
-                        <h2>Giỏ hàng</h2>
-                        <div class="close"> <i class="fa-regular fa-circle-xmark"></i></div>
+                <div class="model-container df">
+                    <div class="cart-content">
+                        <div class="header-cart df">
+                            <h2>Giỏ hàng</h2>
+                            <div class="close"> <i class="fa-regular fa-circle-xmark"></i></div>
+                        </div>
+                        <form style=" padding-bottom: 16px;" action="" class="form-thanhtoan">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Sản Phẩm</th>
+                                        <th>Giá</th>
+                                        <th>Số Lượng</th>
+                                        <th>Chọn</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+    
+                                </tbody>
+                            </table>
+    
+                        </form>
                     </div>
-                    <form style=" padding-bottom: 16px;" action="" class="form-thanhtoan">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Sản Phẩm</th>
-                                    <th>Giá</th>
-                                    <th>Số Lượng</th>
-                                    <th>Chọn</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-
-                            </tbody>
-                        </table>
+                    <div class="cart-bottom">
                         <div style="text-align:right;" class="price-total">
                             <p style="font-weight: bold;">Tổng tiền:<span>0</span><sup>đ</sup></p>
                         </div>
                         <button class="btn-order">Đặt Hàng</button>
-                    </form>
+                    </div>
                 </div>
             </section>
         </div>
@@ -458,4 +466,5 @@
     <script src="../JavaScript/dangnhap.js"></script>
     <script src="../JavaScript/giohang.js"></script>
 </body>
+
 </html>
