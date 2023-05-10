@@ -18,7 +18,6 @@ var registerlink = document.querySelector('.register-link');
 var btnLogin = document.querySelector('.btnLogin');
 var close = document.querySelector('.icon-close');
 document.addEventListener('DOMContentLoaded', () => {
-  // const bodyclose = document.querySelector('#body');
 
 
   registerlink.addEventListener('click', () => {
@@ -49,13 +48,6 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.style.overflow = "auto"
     document.querySelector(".content-list").style.zIndex = "0"
   });
-
-  // bodyclose.addEventListener('click',()=>{
-  //   wrapper.classList.add('active-btnlogin');
-  // });
-  // bodyclose.addEventListener('click',()=>{
-  //   wrapper.classList.remove('active-btnlogin');
-  // });
 });
 
 
@@ -147,6 +139,53 @@ function validateInput(inputValue, regexPattern) {
 }
 
 var toast = document.querySelector('.toast');
+
+function checkFirstName() {
+  let input = document.getElementById("fisrtname-res");
+  let value = input.value;
+  let error = document.getElementById("chkUser");
+  const regex = /^([\p{L}\s'-]+)+$/u;
+  if (value === "") {
+    document.querySelector('.toast_msg').innerHTML = "FirstName không được để trống!";
+    toast.classList.add('animation-fadeIn');
+    setTimeout(function () {
+      toast.classList.remove('animation-fadeIn');
+    }, 5000);
+  }
+  else if (regex.test(value)) {
+    error.innerHTML = "";
+  } else {
+    document.querySelector('.toast_msg').innerHTML = "FirstName phải là chữ (có thể có ' và -)";
+    toast.classList.add('animation-fadeIn');
+    setTimeout(function () {
+      toast.classList.remove('animation-fadeIn');
+    }, 5000);
+  }
+}
+
+function checkLastName() {
+  let input = document.getElementById("lastname-res");
+  let value = input.value;
+  let error = document.getElementById("chkUser");
+  const regex = /^([\p{L}\s'-]+)+$/u;
+  if (value === "") {
+    document.querySelector('.toast_msg').innerHTML = "LastName không được để trống!";
+    toast.classList.add('animation-fadeIn');
+    setTimeout(function () {
+      toast.classList.remove('animation-fadeIn');
+    }, 4000);
+  }
+  else if (regex.test(value)) {
+    error.innerHTML = "";
+  } else {
+    document.querySelector('.toast_msg').innerHTML = "LastName phải là chữ (có thể có ' và -)";
+    toast.classList.add('animation-fadeIn');
+    setTimeout(function () {
+      toast.classList.remove('animation-fadeIn');
+    }, 4000);
+  }
+}
+
 
 function checkUser() {
   let input = document.getElementById("username-res");
