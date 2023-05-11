@@ -238,7 +238,7 @@ function checkPassword() {
   let input = document.getElementById("password-res");
   let value = input.value;
   let error = document.getElementById("chkPassword");
-  const regex = /^[a-zA-Z0-9!@#$%&\.]{8,}/;
+  const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
   if (value === "") {
     document.querySelector('.toast_msg').innerHTML = "Password không được để trống!";
     toast.classList.add('animation-fadeIn');
